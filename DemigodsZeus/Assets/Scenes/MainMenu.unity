@@ -257,6 +257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 1191340809}
+  t: {fileID: 1733976671}
+  posX: 1160
+  posY: 170
 --- !u!1 &22213946
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 22213949}
+  t: {fileID: 0}
+  posX: 0
+  posY: 0
 --- !u!114 &22213949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,6 +575,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 1424930462}
+  t: {fileID: 1733976671}
+  posX: 1160
+  posY: 490
 --- !u!1 &724755320
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 22213949}
+  t: {fileID: 1733976671}
+  posX: 1160
+  posY: 410
 --- !u!1 &825387351
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +766,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 825387354}
+  t: {fileID: 0}
+  posX: 0
+  posY: 0
 --- !u!114 &825387354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +862,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 1191340809}
+  t: {fileID: 0}
+  posX: 0
+  posY: 0
 --- !u!114 &1191340809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,6 +1116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 1493935114}
+  t: {fileID: 0}
+  posX: 0
+  posY: 0
 --- !u!114 &1493935114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,6 +1394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 825387354}
+  t: {fileID: 1733976671}
+  posX: 1160
+  posY: 330
 --- !u!1 &1719663816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: -39.604}
+  m_AnchoredPosition: {x: 76, y: -615}
   m_SizeDelta: {x: 0.7626343, y: 0.90063477}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1733976673
@@ -1743,6 +1767,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 1493935114}
+  t: {fileID: 1733976671}
+  posX: 1160
+  posY: 250
 --- !u!1 &2050297135
 GameObject:
   m_ObjectHideFlags: 0
