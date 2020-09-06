@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class HighlightTextColour : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Text theText;
+    //?Burnt orange
+    private Color32 highlightColour = new Color32(207, 78, 8, 255);
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        theText.color = Color.red; //or however else you do color
+        theText.color = highlightColour;
     }
 
     public void OnPointerExit(PointerEventData eventData)
