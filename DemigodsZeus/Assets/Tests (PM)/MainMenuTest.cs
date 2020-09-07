@@ -17,6 +17,7 @@ public class MainMenuTest
         yield return null;
         //Tests Main Menu is active GameObject
         Assert.IsTrue(menuGameObject.activeInHierarchy);
+        //needs to check instructions active and main menu not
     }
 }
 
