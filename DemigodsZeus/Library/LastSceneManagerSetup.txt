@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Testie.unity
+- path: Assets/Scenes/CharacterAnimation.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
