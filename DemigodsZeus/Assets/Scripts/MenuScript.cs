@@ -94,31 +94,31 @@ public class MenuScript : MonoBehaviour
     /**
      * 
      */
-    private void switchMenu(MenuStates menu)
-    {
-        GameObject newState;
+    //private void switchMenu(MenuStates menu)
+    //{
+    //    GameObject newState;
 
-        switch (menu)
-        {
-            case MenuStates.Main:
-                newState = mainMenu;
-                break;
-            case MenuStates.Instructions:
-                newState = instructionsMenu;
-                break;
-            case MenuStates.CharacterSelection:
-                newState = characterMenu;
-                break;
-            case MenuStates.Options:
-                newState = optionsMenu;
-                break;
-            default:
-                newState = mainMenu;
-                break;
-        }
+    //    switch (menu)
+    //    {
+    //        case MenuStates.Main:
+    //            newState = mainMenu;
+    //            break;
+    //        case MenuStates.Instructions:
+    //            newState = instructionsMenu;
+    //            break;
+    //        case MenuStates.CharacterSelection:
+    //            newState = characterMenu;
+    //            break;
+    //        case MenuStates.Options:
+    //            newState = optionsMenu;
+    //            break;
+    //        default:
+    //            newState = mainMenu;
+    //            break;
+    //    }
 
-        currentState.SetActive(false);
-        currentState = newState;
-        currentState.SetActive(true);
-    }
+    //    currentState.SetActive(false);
+    //    currentState = newState;
+    //    currentState.SetActive(true);
+    //}
 }

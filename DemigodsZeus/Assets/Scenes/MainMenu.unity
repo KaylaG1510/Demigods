@@ -156,6 +156,7 @@ MonoBehaviour:
   instructionsMenu: {fileID: 1475345542}
   characterMenu: {fileID: 1871956090}
   optionsMenu: {fileID: 0}
+  currentState: 0
 --- !u!4 &49918483
 Transform:
   m_ObjectHideFlags: 0
@@ -197,7 +198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &848072512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -533,7 +534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1871956091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -715,6 +716,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1424240680}
     m_Modifications:
+    - target: {fileID: 7801896153296276307, guid: 3efdbe010c2d243eb892f0c00ea4672e, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7801896153296276316, guid: 3efdbe010c2d243eb892f0c00ea4672e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -802,6 +807,10 @@ PrefabInstance:
     - target: {fileID: 7801896153296276317, guid: 3efdbe010c2d243eb892f0c00ea4672e, type: 3}
       propertyPath: m_Name
       value: InstructionsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7801896153296276317, guid: 3efdbe010c2d243eb892f0c00ea4672e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7801896153645844421, guid: 3efdbe010c2d243eb892f0c00ea4672e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
