@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class MenuScript : MonoBehaviour
     public void OnInstructions()
     {
         Debug.Log("You have entered Instructions Menu");
+
+        //Change menu states
     }
 
     //When Character Selection button is pressed
@@ -30,6 +33,12 @@ public class MenuScript : MonoBehaviour
 
     //When Exit button is pressed
     public void OnExit()
+    {
+
+    }
+
+    //When Back button is pressed
+    public void OnBack()
     {
 
     }
