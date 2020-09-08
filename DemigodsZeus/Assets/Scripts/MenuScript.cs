@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuScript : MonoBehaviour
 {
     //Menu States
     public enum MenuStates { Main, Instructions, CharacterSelection, Options };
 
+    //each menu option from main menu
     public GameObject mainMenu;
     public GameObject instructionsMenu;
     public GameObject characterMenu;
@@ -15,43 +17,12 @@ public class MenuScript : MonoBehaviour
 
     //current menu state
     public GameObject currentState;
-    
-    //public MenuStates currentState;
-
-    //when script first starts
-    //private void Awake()
-    //{
-    //    currentState = MenuStates.Main;
-    //}
-
-    //private void Update()
-    //{
-    //    switch (currentState)
-    //    {
-    //        case MenuStates.Main:
-    //            mainMenu.SetActive(true);
-    //            instructionsMenu.SetActive(false);
-    //            break;
-    //        case MenuStates.Instructions:
-    //            mainMenu.SetActive(false);
-    //            instructionsMenu.SetActive(true);
-    //            break;
-    //        default:
-    //            mainMenu.SetActive(true);
-    //            instructionsMenu.SetActive(false);
-    //            break;
-    //    }
-    //}
 
     //On Main Menu
     public void OnMainMenu()
     {
         Debug.Log("on main menu!");
         switchMenu(MenuStates.Main);
-        //currentState = MenuStates.Main;
-        //currentState.SetActive(false);
-        //currentState = mainMenu;
-        //currentState.SetActive(true);
     }
 
     //When New Game button is pressed
@@ -66,10 +37,6 @@ public class MenuScript : MonoBehaviour
     {
         Debug.Log("You have entered Instructions Menu");
         switchMenu(MenuStates.Instructions);
-        //currentState = MenuStates.Instructions;
-        //currentState.SetActive(false);
-        //currentState = mainMenu;
-        //currentState.SetActive(true);
     }
 
     //When Character Selection button is pressed
@@ -117,7 +84,7 @@ public class MenuScript : MonoBehaviour
                 newState = mainMenu;
                 break;
         }
-
+        currentState.GetComponentInChildren<Text>().color = Color.white;
         currentState.SetActive(false);
         currentState = newState;
         currentState.SetActive(true);

@@ -35,4 +35,10 @@ public class HighlightTextColour : MonoBehaviour, IPointerEnterHandler, IPointer
         theText.color = Color.white;
         t.GetComponent<Renderer>().enabled = false;
     }
+
+    public void OnDisable()
+    {
+        theText.color = Color.white;
+        t.GetComponent<Renderer>().enabled = false;
+    }
 }
