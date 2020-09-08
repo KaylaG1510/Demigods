@@ -57,6 +57,7 @@ public class MenuScript : MonoBehaviour
     public void OnExit()
     {
         Debug.Log("Exit game");
+        Application.Quit();
     }
 
     /**
@@ -84,6 +85,7 @@ public class MenuScript : MonoBehaviour
                 newState = mainMenu;
                 break;
         }
+        //stops text from staying orange
         currentState.GetComponentInChildren<Text>().color = Color.white;
         currentState.SetActive(false);
         currentState = newState;
