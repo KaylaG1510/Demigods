@@ -88,7 +88,9 @@ public class MenuScript : MonoBehaviour
         //stops text from staying orange
         currentState.GetComponentInChildren<Text>().color = Color.white;
         currentState.SetActive(false);
+        //currentState.GetComponent<CanvasGroup>().interactable = false;
         currentState = newState;
         currentState.SetActive(true);
+        //currentState.GetComponent<CanvasGroup>().interactable = true;
     }
 }

@@ -666,4 +666,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
-  playerPath: /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Game.app
+  playerPath: /Users/mikayla/Desktop/DemigodsDemo1.0.1.app
