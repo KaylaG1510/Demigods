@@ -5,19 +5,24 @@ using System.Collections;
 
 public class MainMenuTest
 {
-    private MenuScript menu = new MenuScript();
-
     [UnityTest]
     public IEnumerator MainMenuStarts()
     {
-        GameObject menuGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/MainMenu"));
+        GameObject InstructionMenuGameObject = GameObject.Find("InstructionsMenu");
+        GameObject MainMenuGameObject = GameObject.Find("MainMenu");
 
-        menu = menuGameObject.GetComponent<MenuScript>();
+        //MenuScript script = new MenuScript();
+        MainMenuGameObject.AddComponent<MenuScript>();
+
+        MenuScript script = InstructionMenuGameObject.AddComponent<MenuScript>();
+
+        script.OnInstructions();
+
+        //Checks instructions menu is ative panel when instructions button is clicked
+        //and main menu is disabled (only way to call onInstructions is through main menu
+        Assert.IsTrue(InstructionMenuGameObject.activeSelf);
 
         yield return null;
-        //Tests Main Menu is active GameObject
-        Assert.IsTrue(menuGameObject.activeInHierarchy);
-        //needs to check instructions active and main menu not
     }
 }
 
