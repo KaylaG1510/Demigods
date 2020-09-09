@@ -60,6 +60,7 @@ public class Movement : MonoBehaviour
     private bool IsGrounded()
     {
         // BoxCast will only collide with platform layer
+        // Make sure in editor to set platform layer to platform 
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(Collider2D.bounds.center, Collider2D.bounds.size, 0f, Vector2.down, .1f, PlatformLayerMask);
         return raycastHit2D.collider != null;
     }
