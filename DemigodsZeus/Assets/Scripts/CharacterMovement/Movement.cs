@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float MovementSpeed, Jump;
+    public float MovementSpeed, Stationary, Jump;
     public bool Jumping;
     public Rigidbody2D RG2D;
     // SerializeField to make variable private but show up in the editor
@@ -17,13 +17,17 @@ public class Movement : MonoBehaviour
         RG2D = GetComponent<Rigidbody2D>();
         Collider2D = transform.GetComponent<BoxCollider2D>();
         MovementSpeed = 10.0f;
-        Jump = 15.0f;
+        Jump = 20.0f;
+        Stationary = 0.0f;
         Jumping = true;
+
     }
     
     // Update is called once per frame
     void Update()
     {
+        RG2D.velocity = new Vector2(Stationary, RG2D.velocity.y);
+
         // Horizontal Movement
         if (Input.GetKey(KeyCode.LeftArrow))
         {
