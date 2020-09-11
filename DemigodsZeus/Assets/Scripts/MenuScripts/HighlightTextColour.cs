@@ -36,6 +36,7 @@ public class HighlightTextColour : MonoBehaviour, IPointerEnterHandler, IPointer
         t.GetComponent<Renderer>().enabled = false;
     }
 
+    //Button disabled
     public void OnDisable()
     {
         theText.color = Color.white;
