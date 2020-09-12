@@ -9,18 +9,20 @@ public class MainMenuTest
     public IEnumerator MainMenuStarts()
     {
         GameObject InstructionMenuGameObject = GameObject.Find("InstructionsMenu");
-        GameObject MainMenuGameObject = GameObject.Find("MainMenu");
+        //GameObject MainMenuGameObject = GameObject.Find("MainMenu");
 
-        //MenuScript script = new MenuScript();
-        MainMenuGameObject.AddComponent<MenuScript>();
+        GameObject Canvas = GameObject.Find("Canvas");
+        GameObject menu = Canvas.transform.GetChild(0).gameObject;
 
-        MenuScript script = InstructionMenuGameObject.AddComponent<MenuScript>();
+        Assert.True(menu.activeInHierarchy);
 
-        script.OnInstructions();
+        //MenuScript script = InstructionMenuGameObject.AddComponent<MenuScript>();
+
+        //script.OnInstructions();
 
         //Checks instructions menu is ative panel when instructions button is clicked
         //and main menu is disabled (only way to call onInstructions is through main menu
-        Assert.IsTrue(InstructionMenuGameObject.activeSelf);
+        //Assert.IsTrue(InstructionMenuGameObject.activeSelf);
 
         yield return null;
     }
