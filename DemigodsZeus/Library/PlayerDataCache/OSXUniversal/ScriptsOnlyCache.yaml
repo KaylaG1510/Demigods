@@ -56,7 +56,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/InitTestScene637355113199272410.unity:
+    Assets/InitTestScene637356179121681920.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -817,6 +817,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 2
   scenePathNames:
-  - Assets/InitTestScene637355113199272410.unity
+  - Assets/InitTestScene637356179121681920.unity
   - Assets/Scenes/MainMenu.unity
-  playerPath: /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Temp/UnityTempFile-916611d6941ab4354ba902b05943a0ed/PlayerWithTests/PlayerWithTests.app
+  playerPath: /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Temp/UnityTempFile-e846d62a314304470bcaae1901b1b81e/PlayerWithTests/PlayerWithTests.app

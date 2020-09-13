@@ -44,4 +44,9 @@ public class SetVolume : MonoBehaviour
             setLevel(1);    //max slider value
         }
     }
+
+    public bool getMutedState()
+    {
+        return isMuted;
+    }
 }

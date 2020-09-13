@@ -1,72 +1,57 @@
 ﻿using UnityEngine;
 using UnityEngine.TestTools;
-using NUnit.Framework;
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine.UI;
 
-public class MainMenuTest
+public class MainMenuTest : UITest
 {
-    private bool clicked;
-
     [UnityTest]
-    public IEnumerator InstructionsButtonWorks()
+    public IEnumerator InstructionsMenuLoadsFromButton()
     {
-        //GameObject InstructionMenuGameObject = GameObject.Find("InstructionsMenu");
-        //GameObject MainMenuGameObject = GameObject.Find("MainMenu");
-
-        //GameObject Canvas = GameObject.Find("Canvas");
-        //GameObject menu = Canvas.transform.GetChild(0).gameObject;
-        //var menupanel = menu.GetComponent<>
-
-        //Assert.True(menu.activeInHierarchy);
-
-        //MenuScript script = InstructionMenuGameObject.AddComponent<MenuScript>();
-
-        //script.OnInstructions();
-
-        //Checks instructions menu is ative panel when instructions button is clicked
-        //and main menu is disabled (only way to call onInstructions is through main menu
-        //Assert.IsTrue(InstructionMenuGameObject.activeSelf);
-
-        yield return null;
-
-        //GameObject gameGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Canvas").gameObject);
-        //Assert.NotNull(gameGameObject);
-        //var canvasGameObject = GameObject.FindGameObjectWithTag("test");
-        //Assert.NotNull(canvasGameObject);
-        //var MainMenuUI = canvasGameObject.transform.Find("MainMenu");
-        GameObject MainMenuUI = GameObject.Find("MainMenu").gameObject;
-        Assert.NotNull(MainMenuUI);
-        //var instructionsButton = GameObject.Find("InstructionsButton");
-        //var instructionsButtonGO = MainMenuUI.transform.Find("InstructionsButton");
-        //var mainTransform = MainMenuUI.transform;
-        //Assert.NotNull(mainTransform);
-        GameObject instructionsButtonGO = MainMenuUI.transform.Find("InstructionsButton").gameObject;
-        Assert.NotNull(instructionsButtonGO);
-        var instructionsButton = instructionsButtonGO.GetComponent<Button>();
-
-        Assert.NotNull(instructionsButton);
-        clicked = false;
-
-        instructionsButton.onClick.AddListener(Clicked);
-        instructionsButton.onClick.Invoke();
-
-        Assert.True(clicked);
-        yield return null;
-        yield return new WaitForSeconds(1);
-
-        //MainMenuUI = canvasGameObject.transform.Find("InstructionsMenu");
-        MainMenuUI = GameObject.Find("InstructionsMenu");
-        Assert.NotNull(MainMenuUI);
-        Transform MainMenuUI_Transform = MainMenuUI.transform;
-
-        Assert.NotNull(MainMenuUI_Transform);
-        Assert.True(MainMenuUI.gameObject.activeSelf);
+        //INSTRUCTIONS TEST
+        //Load the scene
+        yield return LoadScene("MainMenu");
+        //Wait 3 seconds
+        yield return new WaitForSecondsRealtime(3);
+        //Click instructions button
+        //Expected Output: Instructions Menu appears
+        yield return Press("InstructionsButton");
+        //Make sure InstructionsMenu loads properly and is active
+        yield return WaitFor(new ObjectAppeared("InstructionsMenu"));
+        //Wait 3 more seconds
+        yield return new WaitForSecondsRealtime(3);
+        //return to main menu by pressing back button
+        yield return Press("BackButton");
+        yield return new WaitForSecondsRealtime(1);
     }
 
-    private void Clicked()
+    [UnityTest]
+    public IEnumerator OptionsWindowedMode()
     {
-        clicked = true;
+        yield return LoadScene("MainMenu");
+
+        yield return Press("OptionsButton");
+
+        yield return WaitFor(new ObjectAppeared("OptionsMenu"));
+
+        yield return Press("WindowedButton");
+
+        yield return WaitFor(new BoolCondition(() => !Screen.fullScreen)); 
+    }
+
+    [UnityTest]
+    public IEnumerator OptionsFullscreenMode()
+    {
+        yield return LoadScene("MainMenu");
+
+        yield return Press("OptionsButton");
+
+        yield return WaitFor(new ObjectAppeared("OptionsMenu"));
+
+        yield return Press("FullscreenButton");
+
+        yield return WaitFor(new BoolCondition(() => Screen.fullScreen));
     }
 }
 
