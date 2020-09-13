@@ -1,5 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - DestroyEvent_HeroKnight
+    - HeroKnight
+    - Sensor_HeroKnight
     NewAssembly.dll:
     - HighlightTextColour
     - MenuScript
@@ -7,9 +11,14 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -64,29 +73,49 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 66
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 632}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 11848}
     - Class: 114
       Script: {instanceID: 12216}
     - Class: 114
       Script: {instanceID: 12934}
     - Class: 114
+      Script: {instanceID: 14312}
+    - Class: 114
       Script: {instanceID: 14558}
+    - Class: 114
+      Script: {instanceID: 14634}
+    - Class: 114
+      Script: {instanceID: 14666}
     - Class: 114
       Script: {instanceID: 15208}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -95,6 +124,14 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -188,12 +225,6 @@ ScriptsOnlyBuild:
     - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 5611871a5c7d7c75e5d1e17623e14abf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_SceneTransition
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -304,12 +335,6 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 27f3e47d43e6f066bb9ac59fc6b021ee
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_Window
-  - hash:
-      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -406,12 +431,6 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 6b594516dda2dcdb46a0de686133e0cc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_ElementAudio
-  - hash:
-      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -460,24 +479,6 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_Menu
-  - hash:
-      serializedVersion: 2
-      Hash: 548fef78b40a06715770a477e5e2f67d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_ElementAudioPreset
-  - hash:
-      serializedVersion: 2
-      Hash: 27f3e47d43e6f066bb9ac59fc6b021ee
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_Tab
-  - hash:
-      serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -494,18 +495,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
-  - hash:
-      serializedVersion: 2
-      Hash: 566b3fd8f13f8214ca6d70e8b47b0047
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_SwitchToggle
-  - hash:
-      serializedVersion: 2
-      Hash: 940e1c15dc343b95060a9636b39b9f5d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_TabGroup
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -542,12 +531,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 8b9c3ce5034f2d1d93d08ba0e2ad193d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_TabWindow
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -622,12 +605,6 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 2a6dc207e71300e9443440159e537722
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_OptionList
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -658,12 +635,6 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 2a448b21d47e8670129d2e2928c97ce6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_Bar
-  - hash:
-      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -686,12 +657,6 @@ ScriptsOnlyBuild:
     assemblyName: NewAssembly.dll
     namespaceName: 
     className: Movement
-  - hash:
-      serializedVersion: 2
-      Hash: 790442c015a4dbcdf9903595fc3f131e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_ElementAnimationPreset
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -794,12 +759,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: 575d7dcc18aad705af08468ac3184f95
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: QuantumTek.QuantumUI
-    className: QUI_ElementAnimator
   - hash:
       serializedVersion: 2
       Hash: 0c05f2bfb402def3f0a85a62a2323c7f
