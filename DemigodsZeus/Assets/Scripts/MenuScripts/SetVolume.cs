@@ -45,6 +45,7 @@ public class SetVolume : MonoBehaviour
         }
     }
 
+    //Retrieve whether or not volume is muted (For testing)
     public bool getMutedState()
     {
         return isMuted;
