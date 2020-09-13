@@ -53,5 +53,17 @@ public class MainMenuTest : UITest
 
         yield return WaitFor(new BoolCondition(() => Screen.fullScreen));
     }
+
+    [UnityTest]
+    public IEnumerator NewGameButtonLoadsLevel()
+    {
+        yield return LoadScene("MainMenu");
+
+        yield return Press("NewGameButton");
+
+        yield return WaitFor(new ObjectAppeared("Level1"));
+
+        yield return new WaitForSecondsRealtime(3);
+    }
 }
 

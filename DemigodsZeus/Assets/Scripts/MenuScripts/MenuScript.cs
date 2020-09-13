@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -30,8 +31,9 @@ public class MenuScript : MonoBehaviour
     public void OnNewGame()
     {
         Debug.Log("On New Game");
-        //starts game scene (level1?)
+        //starts game scene (level1)
         //will load new scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 
     //When Instructions button is pressed

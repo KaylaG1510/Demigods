@@ -39,12 +39,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     - UnityEditor.TestTools.TestRunner.TestRunnerWindow
-    UnityEngine.TestRunner.dll:
-    - UnityEngine.TestRunner.Utils.TestRunCallbackListener
-    - UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
-    - UnityEngine.TestTools.TestRunner.Callbacks.PlayerQuitHandler
-    - UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
-    - UnityEngine.TestTools.TestRunner.PlaymodeTestsController
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -56,10 +50,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/InitTestScene637356179121681920.unity:
+    Assets/Scenes/LevelOne.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
@@ -67,28 +63,22 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
+    - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12052}
+      Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 13598}
+      Script: {instanceID: 12216}
     - Class: 114
-      Script: {instanceID: 14102}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 14122}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 14860}
-    - Class: 114
-      Script: {instanceID: 15056}
-    - Class: 114
-      Script: {instanceID: 15150}
-    - Class: 114
-      Script: {instanceID: 15170}
+      Script: {instanceID: 15208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -96,6 +86,14 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -109,6 +107,8 @@ ScriptsOnlyBuild:
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -135,9 +135,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12960}
     - Class: 114
+      Script: {instanceID: 12996}
+    - Class: 114
       Script: {instanceID: 13726}
     - Class: 114
       Script: {instanceID: 14102}
+    - Class: 114
+      Script: {instanceID: 14122}
     - Class: 114
       Script: {instanceID: 14162}
     - Class: 114
@@ -146,6 +150,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14474}
     - Class: 114
       Script: {instanceID: 14558}
+    - Class: 114
+      Script: {instanceID: 14860}
     - Class: 114
       Script: {instanceID: 15034}
     - Class: 114
@@ -817,6 +823,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 2
   scenePathNames:
-  - Assets/InitTestScene637356179121681920.unity
   - Assets/Scenes/MainMenu.unity
-  playerPath: /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Temp/UnityTempFile-e846d62a314304470bcaae1901b1b81e/PlayerWithTests/PlayerWithTests.app
+  - Assets/Scenes/LevelOne.unity
+  playerPath: /Users/mikayla/Desktop/DemigodsDemo1.0.1.app
