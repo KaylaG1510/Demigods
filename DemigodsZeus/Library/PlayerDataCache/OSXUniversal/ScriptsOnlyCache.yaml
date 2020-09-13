@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     NewAssembly.dll:
     - HighlightTextColour
     - MenuScript
+    - Movement
     - SetVolume
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -96,11 +97,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11848}
     - Class: 114
+      Script: {instanceID: 12162}
+    - Class: 114
       Script: {instanceID: 12216}
     - Class: 114
       Script: {instanceID: 12934}
     - Class: 114
+      Script: {instanceID: 13726}
+    - Class: 114
+      Script: {instanceID: 14102}
+    - Class: 114
+      Script: {instanceID: 14162}
+    - Class: 114
       Script: {instanceID: 14312}
+    - Class: 114
+      Script: {instanceID: 14452}
+    - Class: 114
+      Script: {instanceID: 14474}
     - Class: 114
       Script: {instanceID: 14558}
     - Class: 114
@@ -108,8 +121,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14666}
     - Class: 114
+      Script: {instanceID: 14728}
+    - Class: 114
+      Script: {instanceID: 15034}
+    - Class: 114
+      Script: {instanceID: 15130}
+    - Class: 114
       Script: {instanceID: 15208}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -777,6 +798,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NewAssembly.dll
+    namespaceName: 
+    className: GameManager
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

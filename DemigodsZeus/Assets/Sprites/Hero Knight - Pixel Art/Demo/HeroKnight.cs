@@ -23,6 +23,7 @@ public class HeroKnight : MonoBehaviour {
     private float               m_timeSinceAttack = 0.0f;
     private float               m_delayToIdle = 0.0f;
 
+    bool readyToClear;
 
     // Use this for initialization
     void Start ()
@@ -39,6 +40,14 @@ public class HeroKnight : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        ClearInput();
+        //Self Added*** for GameOver
+        //if (GameManager.IsGameOver())
+        //{
+        //    return;
+        //}
+
+
         // Increase timer that controls attack combo
         m_timeSinceAttack += Time.deltaTime;
 
@@ -84,18 +93,19 @@ public class HeroKnight : MonoBehaviour {
         m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
 
         //Death
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("s"))
         {
             m_animator.SetBool("noBlood", m_noBlood);
             m_animator.SetTrigger("Death");
         }
-            
+
         //Hurt
-        else if (Input.GetKeyDown("q"))
-            m_animator.SetTrigger("Hurt");
+        //else if (Input.GetKeyDown("q"))
+        //    m_animator.SetTrigger("Hurt");
 
         //Attack
-        else if(Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f)
+        //else if(Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f)
+        else if(Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
         {
             m_currentAttack++;
 
@@ -115,13 +125,15 @@ public class HeroKnight : MonoBehaviour {
         }
 
         // Block
-        else if (Input.GetMouseButtonDown(1))
+        //else if (Input.GetMouseButtonDown(1))
+        else if(Input.GetKeyDown("e"))
         {
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
         }
 
-        else if (Input.GetMouseButtonUp(1))
+        //else if (Input.GetMouseButtonUp(1))
+        else if(Input.GetKeyUp("e"))
             m_animator.SetBool("IdleBlock", false);
 
         // Roll
@@ -185,5 +197,24 @@ public class HeroKnight : MonoBehaviour {
             // Turn arrow in correct direction
             dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
         }
+    }
+
+    void FixedUpdate()
+    {
+        //In FixedUpdate(), we set a flag that lets input be cleared out during the next
+        //Update(). This ensures that all code gets to use the current inputs.
+        readyToClear = true;
+    }
+
+    void ClearInput()
+    {
+        //If we're not ready to clear input, exit
+        if (!readyToClear)
+            return;
+
+        //Reset all inputs
+        //https://www.youtube.com/watch?v=83xn7QYpS_s&list=PLX2vGYjWbI0REfhDHPpdIBjjrzDHDP-xT&index=6
+
+        readyToClear = false;
     }
 }

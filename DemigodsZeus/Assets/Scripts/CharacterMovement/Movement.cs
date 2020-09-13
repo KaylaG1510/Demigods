@@ -43,16 +43,6 @@ public class Movement : MonoBehaviour
         {
             RG2D.velocity = new Vector2(RG2D.velocity.x, Jump);
         }
-        
-        // Crouch 
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.localScale = new Vector2(1f, 0.5f);
-        }
-        else
-        {
-            transform.localScale = new Vector2(1f, 1f);
-        }
     }
 
     // To make object jump more than once
