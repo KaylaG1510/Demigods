@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
     //Menu States
     public enum MenuStates { Main, Instructions, CharacterSelection, Options };
 
-    //each menu option from main menu
+    //each menu option from main menu, set from Inspector
     public GameObject mainMenu;
     public GameObject instructionsMenu;
     public GameObject characterMenu;
@@ -30,8 +31,9 @@ public class MenuScript : MonoBehaviour
     public void OnNewGame()
     {
         Debug.Log("On New Game");
-        //starts game scene (level1?)
-        //will load new scene
+        //starts game scene (level1)
+        //will load new level scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1); //Scene 0 = Main Menu, Scene 1 = Level One
     }
 
     //When Instructions button is pressed
@@ -70,6 +72,7 @@ public class MenuScript : MonoBehaviour
     public void OnFullScreen()
     {
         Debug.Log("Entering fullscreen!");
+        //set screen to fullscreen
         Screen.fullScreen = true;
     }
 
@@ -77,6 +80,7 @@ public class MenuScript : MonoBehaviour
     public void OnWindowed()
     {
         Debug.Log("Entering Windowed mode!");
+        //exit fullscreen mode
         Screen.fullScreen = false;
     }
 
