@@ -82,7 +82,7 @@ public class HeroKnight : MonoBehaviour {
         }
 
         // Move
-        if (!m_rolling )
+        if (!m_rolling)
             m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
 
         //Set AirSpeed in animator
@@ -146,7 +146,7 @@ public class HeroKnight : MonoBehaviour {
             
 
         //Jump
-        else if (Input.GetKeyDown("space") && m_grounded)
+        else if ((Input.GetKeyDown("space") && m_grounded) || (Input.GetKeyDown("up") && m_grounded))
         {
             m_animator.SetTrigger("Jump");
             m_grounded = false;
