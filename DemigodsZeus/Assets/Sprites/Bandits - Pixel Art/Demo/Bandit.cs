@@ -38,10 +38,10 @@ public class Bandit : MonoBehaviour {
         float inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
-        if (inputX > 0)
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (inputX < 0)
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        //if (inputX > 0)
+        //    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        //else if (inputX < 0)
+        //    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         // Move
         m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
