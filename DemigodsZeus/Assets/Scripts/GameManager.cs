@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         //Get UIManager to display Game Over
         UIManager.DisplayGameOver();
         //AudioManager to play Game Over music
-        AudioManager.PlayGameWonAudio();
+        //AudioManager.PlayGameWonAudio();
     }
 
     void RestartScene()
