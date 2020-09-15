@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 547
-    y: 128
-    width: 1180
-    height: 981
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -40,11 +40,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 620
-    width: 340
-    height: 311
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    y: 631
+    width: 553
+    height: 316
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -67,14 +67,14 @@ MonoBehaviour:
   - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 840
+    x: 1367
     y: 0
-    width: 340
-    height: 931
+    width: 553
+    height: 947
   m_MinSize: {x: 276, y: 192}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 2493
+  controlID: 200
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -95,9 +95,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1180
-    height: 981
-  m_MinSize: {x: 875, y: 300}
+    width: 1920
+    height: 997
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -120,7 +120,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1180
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 961
-    width: 1180
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -168,12 +168,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1180
-    height: 931
-  m_MinSize: {x: 881, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+    width: 1920
+    height: 947
+  m_MinSize: {x: 877, y: 492}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 169
+  controlID: 199
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,12 +193,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 840
-    height: 931
-  m_MinSize: {x: 605, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
+    width: 1367
+    height: 947
+  m_MinSize: {x: 601, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 62
+  controlID: 205
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,12 +219,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 840
-    height: 591
-  m_MinSize: {x: 605, y: 221}
-  m_MaxSize: {x: 12005, y: 4021}
+    width: 1367
+    height: 601
+  m_MinSize: {x: 601, y: 221}
+  m_MaxSize: {x: 12001, y: 4021}
   vertical: 0
-  controlID: 63
+  controlID: 206
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,8 +242,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 245
-    height: 591
+    width: 399
+    height: 601
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
@@ -266,12 +266,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 245
+    x: 399
     y: 0
-    width: 247
-    height: 591
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    width: 402
+    height: 601
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -292,12 +292,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 492
+    x: 801
     y: 0
-    width: 348
-    height: 591
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    width: 566
+    height: 601
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -322,13 +322,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 591
-    width: 840
-    height: 340
-  m_MinSize: {x: 333, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+    y: 601
+    width: 1367
+    height: 346
+  m_MinSize: {x: 332, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 117
+  controlID: 82
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,10 +346,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 436
-    height: 340
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 693
+    height: 346
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -370,10 +370,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 436
+    x: 693
     y: 0
-    width: 404
-    height: 340
+    width: 674
+    height: 346
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 24}
@@ -400,10 +400,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 340
-    height: 620
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 553
+    height: 631
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 26}
   m_Panes:
   - {fileID: 26}
@@ -429,18 +429,18 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 639
-    width: 339
-    height: 290
+    x: 1367
+    y: 704
+    width: 552
+    height: 295
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 2941
+    ID: 226
     splitterInitialOffset: 168
     currentActiveSplitter: -1
     realSizes:
-    - 94
-    - 126
+    - 96
+    - 129
     relativeSizes:
     - 0.42666668
     - 0.5733333
@@ -450,7 +450,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 220
+    lastTotalSize: 225
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -478,13 +478,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1013
+    - id: 1010
       uniqueId: '[Tests(PM)][C:/Users/brenk/Documents/GitHub/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
       name: Tests(PM).dll
       fullName: C:/Users/brenk/Documents/GitHub/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll
-      resultStatus: 2
-      duration: 0.082662
-      messages: One or more child tests had errors
+      resultStatus: 0
+      duration: 0
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1013
+      parentId: 1010
       parentUniqueId: '[Tests(PM)][C:/Users/brenk/Documents/GitHub/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
     - id: 1002
       uniqueId: Tests(PM).dll/MainMenuTest/[Tests(PM)][MainMenuTest.InstructionsMenuLoadsFromButton]
@@ -532,14 +532,9 @@ MonoBehaviour:
       name: NewGameButtonLoadsLevel
       fullName: MainMenuTest.NewGameButtonLoadsLevel
       resultStatus: 0
-      duration: 3.3502333
+      duration: 0
       messages: 
-      output: 'Button pressed: NewGameButton (UnityEngine.GameObject)
-
-        On
-        New Game
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -555,33 +550,8 @@ MonoBehaviour:
       fullName: MainMenuTest.OptionsFullscreenMode
       resultStatus: 0
       duration: 0
-      messages: Cancelled by user
-      output: "Button pressed: OptionsButton (UnityEngine.GameObject)\r\nOn options\r\nButton
-        pressed: FullscreenButton (UnityEngine.GameObject)\r\nEntering fullscreen!\r\nException:
-        Operation timed out: BoolCondition(System.Func`1[System.Boolean])\n  at System.Environment.get_StackTrace
-        () [0x00000] in <fb001e01371b4adca20013e0ac763896>:0 \r\n  at UITest.WaitFor
-        (UITest+Condition condition) [0x00006] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Assets\\Tests
-        (PM)\\UITest\\UITest.cs:33 \r\n  at MainMenuTest+<OptionsFullscreenMode>d__2.MoveNext
-        () [0x000be] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Assets\\Tests
-        (PM)\\MainMenuTest.cs:54 \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__5.MoveNext
-        () [0x00038] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:31
-        \r\n  at UnityEngine.TestTools.EnumerableTestMethodCommand+<ExecuteEnumerableAndRecordExceptions>d__3.MoveNext
-        () [0x00023] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\EnumerableTestMethodCommand.cs:68
-        \r\n  at UnityEngine.TestTools.EnumerableTestMethodCommand+<ExecuteEnumerable>d__2.MoveNext
-        () [0x000ef] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\EnumerableTestMethodCommand.cs:48
-        \r\n  at UnityEngine.TestRunner.NUnitExtensions.Runner.UnityLogCheckDelegatingCommand+<ExecuteEnumerable>d__3.MoveNext
-        () [0x00145] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Runner\\UnityLogCheckDelegatingCommand.cs:48
-        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__9[T].MoveNext
-        () [0x00309] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:114
-        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__9[T].MoveNext
-        () [0x00309] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:114
-        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__9[T].MoveNext
-        () [0x00309] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:114
-        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__9[T].MoveNext
-        () [0x00309] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:114
-        \r\n  at UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator
-        enumerator, System.IntPtr returnValueAddress) [0x00000] in <49f4e7e791cc4fffacd88f729e2b1e4c>:0
-        \r\n"
+      messages: 
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -608,60 +578,6 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests(PM).dll/[Tests(PM)][MainMenuTest][suite]
-    - id: 1014
-      uniqueId: Tests(PM).dll/[Tests(PM)][Tests][suite]
-      name: Tests
-      fullName: Tests
-      resultStatus: 2
-      duration: 0.0691651
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1013
-      parentUniqueId: '[Tests(PM)][C:/Users/brenk/Documents/GitHub/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
-    - id: 1010
-      uniqueId: Tests(PM).dll/Tests/[Tests(PM)][Tests.MovementTest][suite]
-      name: MovementTest
-      fullName: Tests.MovementTest
-      resultStatus: 2
-      duration: 0.0634123
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1014
-      parentUniqueId: Tests(PM).dll/[Tests(PM)][Tests][suite]
-    - id: 1011
-      uniqueId: Tests(PM).dll/Tests/MovementTest/[Tests(PM)][Tests.MovementTest.Move_Character_Left_Using_Left_Arrow_Key]
-      name: Move_Character_Left_Using_Left_Arrow_Key
-      fullName: Tests.MovementTest.Move_Character_Left_Using_Left_Arrow_Key
-      resultStatus: 2
-      duration: 0.038969
-      messages: 'System.ArgumentException : The Object you want to instantiate is
-        null.'
-      output: 
-      stacktrace: "  at UnityEngine.Object.Instantiate[T] (T original) [0x0003d]
-        in <49f4e7e791cc4fffacd88f729e2b1e4c>:0 \r\n  at Tests.MovementTest+<Move_Character_Left_Using_Left_Arrow_Key>d__1.MoveNext
-        () [0x0001e] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Assets\\Tests
-        (PM)\\MovementTest.cs:17 \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__5.MoveNext
-        () [0x00038] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:31 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: Tests(PM).dll/Tests/[Tests(PM)][Tests.MovementTest][suite]
     - id: 1006
       uniqueId: Tests(PM).dll/[Tests(PM)][UITestExample][suite]
       name: UITestExample
@@ -676,7 +592,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1013
+      parentId: 1010
       parentUniqueId: '[Tests(PM)][C:/Users/brenk/Documents/GitHub/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
     - id: 1009
       uniqueId: Tests(PM).dll/UITestExample/[Tests(PM)][UITestExample.FailingBoolCondition]
@@ -741,7 +657,7 @@ MonoBehaviour:
       (PM)\\MovementTest.cs:17 \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__5.MoveNext
       () [0x00038] in C:\\Users\\brenk\\Documents\\GitHub\\Demigods\\DemigodsZeus\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:31 "
     m_TestListState:
-      scrollPos: {x: 0, y: 20}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: a5013316
       m_LastClickedID: 372441509
       m_ExpandedIDs: fe3600a749d614c8addb311a364af447ffffff7f
@@ -1208,17 +1124,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 547
-    y: 158
-    width: 244
-    height: 570
+    x: 0
+    y: 73
+    width: 398
+    height: 580
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32c2ffff4ec2ffffe2c2ffff96c3ffffb2c3ffff3ec4ffff56c4ffff72c4ffff6ac7ffff5ac9ffff76c9ffff02caffff88cbffffa0cbffffc2cbffff14cfffff40cfffff26d0ffff3ad0ffffa2d0ffffe0d0fffff2d0ffffb6d3ffffd2d3ffffcad6ffff1ed7ffff48d7ffff16daffff50daffff60daffff74daffff5edcffffa8dcffffbcdcffff76ddffff2adfffff
+      m_ExpandedIDs: 08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1262,10 +1178,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 792
-    y: 158
-    width: 245
-    height: 570
+    x: 399
+    y: 73
+    width: 400
+    height: 580
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -1278,9 +1194,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.066373944, y: 0.5309932, z: 0}
+    m_Target: {x: 967.62354, y: 271.80106, z: -1900.3394}
     speed: 2
-    m_Value: {x: 0.066373944, y: 0.5309932, z: 0}
+    m_Value: {x: 967.62354, y: 271.80106, z: -1900.3394}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1331,9 +1247,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.71414286
+    m_Target: 636.2567
     speed: 2
-    m_Value: 0.71414286
+    m_Value: 636.2567
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1378,10 +1294,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1039
-    y: 158
-    width: 346
-    height: 570
+    x: 801
+    y: 73
+    width: 564
+    height: 580
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1413,7 +1329,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
+    m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -1425,23 +1341,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 346
-      height: 549
-    m_Scale: {x: 0.18020834, y: 0.18020834}
-    m_Translation: {x: 172.99998, y: 274.5}
+      width: 564
+      height: 559
+    m_Scale: {x: 0.29375, y: 0.29375}
+    m_Translation: {x: 282, y: 279.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -959.9999
-      y: -1523.2369
-      width: 1919.9999
-      height: 3046.4739
+      x: -960.00006
+      y: -951.4894
+      width: 1920.0001
+      height: 1902.9788
     m_MinimalGUI: 1
-  m_defaultScale: 0.18020834
-  m_LastWindowPixelSize: {x: 346, y: 570}
+  m_defaultScale: 0.29375
+  m_LastWindowPixelSize: {x: 564, y: 580}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1468,9 +1384,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 19
-    width: 435
-    height: 319
+    y: 674
+    width: 692
+    height: 325
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &24
 MonoBehaviour:
@@ -1492,10 +1408,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 437
-    y: 19
-    width: 402
-    height: 319
+    x: 693
+    y: 674
+    width: 672
+    height: 325
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1510,21 +1426,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/CharacterMovement
+    - Assets/Scripts/MenuScripts/CharacterMovement
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/CharacterMovement
+  - Assets/Scripts/MenuScripts/CharacterMovement
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\brenk\Documents\GitHub\Demigods\DemigodsZeus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 84.33465}
-    m_SelectedIDs: fa480000
-    m_LastClickedID: 18682
-    m_ExpandedIDs: 00000000e2480000e4480000e6480000e8480000ea480000ec4800000449000024490000224d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 19}
+    m_SelectedIDs: 944e0000
+    m_LastClickedID: 20116
+    m_ExpandedIDs: 00000000063d0000083d00000a3d00000c3d00000e3d0000103d00001e3d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1552,7 +1468,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e2480000e4480000e6480000e8480000ea480000ec480000
+    m_ExpandedIDs: 00000000063d0000083d00000a3d00000c3d00000e3d0000103d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1579,7 +1495,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000001a6f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1607,7 +1523,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 183
+  m_DirectoriesAreaWidth: 209
 --- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1656,10 +1572,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1387
-    y: 158
-    width: 339
-    height: 599
+    x: 1367
+    y: 73
+    width: 552
+    height: 610
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
