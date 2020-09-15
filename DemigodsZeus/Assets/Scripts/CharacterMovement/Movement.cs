@@ -10,61 +10,20 @@ public class Movement : MonoBehaviour
     public Rigidbody2D RG2D;
     // SerializeField to make variable private but show up in the editor
     [SerializeField] LayerMask PlatformLayerMask;
-    private BoxCollider2D Collider2D;
+    public BoxCollider2D Collider2D;
+    LetsMove letsMove;
 
     // Start is called before the first frame update
     void Start()
     {
-        RG2D = GetComponent<Rigidbody2D>();
-        Collider2D = transform.GetComponent<BoxCollider2D>();
-        MovementSpeed = 10.0f;
-        Jump = 20.0f;
-        Stationary = 0.0f;
-        Jumping = true;
+        letsMove = new LetsMove(10.0f, 0.0f, 20.0f, true, RG2D = GetComponent<Rigidbody2D>(), Collider2D = transform.GetComponent<BoxCollider2D>());
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        MoveCharacterHorizontal(MovementSpeed, RG2D.velocity.y);
-        CharacterJump(RG2D.velocity.x, Jump);
-    }
-
-    public Vector2 MoveCharacterHorizontal(float x, float y)
-    {
-        //RG2D.velocity = new Vector2(Stationary, RG2D.velocity.y);
-
-        // Horizontal Movement
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            RG2D.velocity = new Vector2(-x, y);
-            return RG2D.velocity;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            RG2D.velocity = new Vector2(x, y);
-            return RG2D.velocity;
-        }
-        RG2D.velocity = new Vector2(Stationary, y);
-        return RG2D.velocity;
-    }
-
-    private bool IsGrounded()
-    {
-        // BoxCast will only collide with platform layer
-        // Make sure in editor to set platform layer to platform 
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(Collider2D.bounds.center, Collider2D.bounds.size, 0f, Vector2.down, .1f, PlatformLayerMask);
-        return raycastHit2D.collider != null;
-    }
-
-    public Vector2 CharacterJump(float z, float h)
-    {
-        // Jumping 
-        if (IsGrounded() && Input.GetKey(KeyCode.UpArrow) || (IsGrounded() && Input.GetKey(KeyCode.Space)))
-        {
-            RG2D.velocity = new Vector2(z, h);
-        }
-        return RG2D.velocity;
+        letsMove.MoveCharacterHorizontal(MovementSpeed, RG2D.velocity.y);
+        letsMove.CharacterJump(RG2D.velocity.x, Jump);
     }
 
     // To make object jump more than once
@@ -73,3 +32,4 @@ public class Movement : MonoBehaviour
         Jumping = true;
     }
 }
+
