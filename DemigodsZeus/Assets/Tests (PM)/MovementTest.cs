@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-public class CharacterMovementTests : UITest
-{
+//public class CharacterMovementTests : UITest
+//{
     
-    private Movement movement;
+    //private Movement movement;
 
-    [UnityTest]
-    public IEnumerator Move_Character_Left_Using_Left_Arrow_Key()
-    {
+ //   [UnityTest]
+ //   public IEnumerator Move_Character_Left_Using_Left_Arrow_Key()
+ //   {
         //GameObject gameGameObject =
         //    MonoBehaviour.Instantiate(Resources.Load<GameObject>("Scripts/CharacterMovement"));
         //movement = gameGameObject.GetComponent<Movement>();
@@ -23,17 +23,19 @@ public class CharacterMovementTests : UITest
         //Assert.Less(movement.transform.position.x, initialXPos);
         //Object.Destroy(movement.gameObject);
 
-        yield return LoadScene("CharacterMovement");
+        ////////////////////////////////////////////////
+        
+        //yield return LoadScene("CharacterMovement");
 
-        GameObject playerGameObject =
-            MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
-        movement = playerGameObject.GetComponent<Movement>();
+        //GameObject playerGameObject =
+        //  MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
+        //movement = playerGameObject.GetComponent<Movement>();
 
-        float initialPosX = movement.transform.position.x;
-        yield return new WaitForSecondsRealtime(1);
+        //float initialPosX = movement.transform.position.x;
+        //yield return new WaitForSecondsRealtime(1);
 
-        Assert.Less(movement.transform.position.x, initialPosX);
-        Object.Destroy(movement.gameObject);
-    }
+       // Assert.Less(movement.transform.position.x, initialPosX);
+       // Object.Destroy(movement.gameObject);
+ //   }
 
-}
+//}
