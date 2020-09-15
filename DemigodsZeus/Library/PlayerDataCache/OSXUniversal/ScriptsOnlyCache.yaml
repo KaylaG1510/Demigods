@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - HeroKnight
     - Sensor_HeroKnight
     NewAssembly.dll:
+    - CameraFolllow
     - HighlightTextColour
     - MenuScript
     - Movement
@@ -132,6 +133,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15130}
     - Class: 114
       Script: {instanceID: 15208}
+    - Class: 114
+      Script: {instanceID: 167470}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -808,6 +811,12 @@ ScriptsOnlyBuild:
     assemblyName: NewAssembly.dll
     namespaceName: 
     className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 48c156021bdc7fa0a4546fa27035660e
+    assemblyName: NewAssembly.dll
+    namespaceName: 
+    className: CameraFolllow
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
