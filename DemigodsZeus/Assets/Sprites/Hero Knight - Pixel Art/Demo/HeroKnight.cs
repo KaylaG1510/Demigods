@@ -40,12 +40,11 @@ public class HeroKnight : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        ClearInput();
-        //Self Added*** for GameOver
-        //if (GameManager.IsGameOver())
-        //{
-        //    return;
-        //}
+        //Game is over
+        if (GameManager.IsGameOver())
+            {
+                return;
+            }
 
 
         // Increase timer that controls attack combo
@@ -73,8 +72,7 @@ public class HeroKnight : MonoBehaviour {
         {
             GetComponent<SpriteRenderer>().flipX = false;
             m_facingDirection = 1;
-        }
-            
+        }       
         else if (inputX < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
@@ -104,7 +102,6 @@ public class HeroKnight : MonoBehaviour {
         //    m_animator.SetTrigger("Hurt");
 
         //Attack
-        //else if(Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f)
         else if(Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
         {
             m_currentAttack++;
@@ -123,19 +120,16 @@ public class HeroKnight : MonoBehaviour {
             // Reset timer
             m_timeSinceAttack = 0.0f;
         }
-
         // Block
-        //else if (Input.GetMouseButtonDown(1))
         else if(Input.GetKeyDown("e"))
         {
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
         }
-
-        //else if (Input.GetMouseButtonUp(1))
         else if(Input.GetKeyUp("e"))
+        {
             m_animator.SetBool("IdleBlock", false);
-
+        }
         // Roll
         else if (Input.GetKeyDown("left shift") && !m_rolling)
         {
@@ -143,8 +137,6 @@ public class HeroKnight : MonoBehaviour {
             m_animator.SetTrigger("Roll");
             m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
         }
-            
-
         //Jump
         else if ((Input.GetKeyDown("space") && m_grounded) || (Input.GetKeyDown("up") && m_grounded))
         {
@@ -154,7 +146,6 @@ public class HeroKnight : MonoBehaviour {
             m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
             m_groundSensor.Disable(0.2f);
         }
-
         //Run
         else if (Mathf.Abs(inputX) > Mathf.Epsilon)
         {
@@ -162,7 +153,6 @@ public class HeroKnight : MonoBehaviour {
             m_delayToIdle = 0.05f;
             m_animator.SetInteger("AnimState", 1);
         }
-
         //Idle
         else
         {
@@ -197,24 +187,5 @@ public class HeroKnight : MonoBehaviour {
             // Turn arrow in correct direction
             dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
         }
-    }
-
-    void FixedUpdate()
-    {
-        //In FixedUpdate(), we set a flag that lets input be cleared out during the next
-        //Update(). This ensures that all code gets to use the current inputs.
-        readyToClear = true;
-    }
-
-    void ClearInput()
-    {
-        //If we're not ready to clear input, exit
-        if (!readyToClear)
-            return;
-
-        //Reset all inputs
-        //https://www.youtube.com/watch?v=83xn7QYpS_s&list=PLX2vGYjWbI0REfhDHPpdIBjjrzDHDP-xT&index=6
-
-        readyToClear = false;
     }
 }
