@@ -16,20 +16,40 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        letsMove = new LetsMove(10.0f, 0.0f, 20.0f, true, RG2D = GetComponent<Rigidbody2D>(), Collider2D = transform.GetComponent<BoxCollider2D>());
+        Jump = 20.0f;
+        letsMove = new LetsMove(10.0f, 0.0f, RG2D = GetComponent<Rigidbody2D>(), Collider2D = transform.GetComponent<BoxCollider2D>());
     }
 
     // Update is called once per frame
     void Update()
     {
         letsMove.MoveCharacterHorizontal(MovementSpeed, RG2D.velocity.y);
-        letsMove.CharacterJump(RG2D.velocity.x, Jump);
+        //letsMove.CharacterJump(RG2D.velocity.x, Jump);
+        CharacterJump(RG2D.velocity.x, Jump);
+    }
+
+    public Vector2 CharacterJump(float z, float h)
+    {
+        // Jumping 
+        if (IsGrounded() && Input.GetKey(KeyCode.UpArrow) || (IsGrounded() && Input.GetKey(KeyCode.Space)))
+        {
+            RG2D.velocity = new Vector2(z, h);
+        }
+        return RG2D.velocity;
     }
 
     // To make object jump more than once
     void OnCollisionEnter2D(Collision2D collision)
     {
         Jumping = true;
+    }
+
+    private bool IsGrounded()
+    {
+        // BoxCast will only collide with platform layer
+        // Make sure in editor to set platform layer to platform 
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(Collider2D.bounds.center, Collider2D.bounds.size, 0f, Vector2.down, .1f, PlatformLayerMask);
+        return raycastHit2D.collider != null;
     }
 }
 
