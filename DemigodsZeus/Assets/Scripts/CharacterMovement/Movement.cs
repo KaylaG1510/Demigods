@@ -17,14 +17,14 @@ public class Movement : MonoBehaviour
     void Start()
     {
         Jump = 20.0f;
-        letsMove = new LetsMove(10.0f, 0.0f, RG2D = GetComponent<Rigidbody2D>(), Collider2D = transform.GetComponent<BoxCollider2D>());
+        Collider2D = transform.GetComponent<BoxCollider2D>();
+        letsMove = new LetsMove(10.0f, 0.0f, RG2D = GetComponent<Rigidbody2D>());
     }
 
     // Update is called once per frame
     void Update()
     {
         letsMove.MoveCharacterHorizontal(MovementSpeed, RG2D.velocity.y);
-        //letsMove.CharacterJump(RG2D.velocity.x, Jump);
         CharacterJump(RG2D.velocity.x, Jump);
     }
 
