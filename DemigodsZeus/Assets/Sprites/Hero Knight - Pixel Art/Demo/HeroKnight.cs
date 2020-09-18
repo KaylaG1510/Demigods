@@ -46,7 +46,6 @@ public class HeroKnight : MonoBehaviour {
                 return;
             }
 
-
         // Increase timer that controls attack combo
         m_timeSinceAttack += Time.deltaTime;
 
@@ -83,6 +82,7 @@ public class HeroKnight : MonoBehaviour {
         if (!m_rolling)
         {
             m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+            AudioManager.PlayFootstepAudio();
         }
 
         //Set AirSpeed in animator

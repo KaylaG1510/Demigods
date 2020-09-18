@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip buttonClickClip;
     public AudioClip gameOverDiedClip;
     public AudioClip gameWonClip;
+    public AudioClip levelStingClip;	//The sting played when the scene loads
 
     [Header("Player Audio")]
     public AudioClip runFootstepsClip;
@@ -46,6 +47,7 @@ public class AudioManager : MonoBehaviour
         }
 
         //current AudioManager should stay between scene loads
+        current = this;
         DontDestroyOnLoad(gameObject);
 
         //Generates AudioScource "channels" for game audio
@@ -58,8 +60,29 @@ public class AudioManager : MonoBehaviour
         stingSource.outputAudioMixerGroup = stingGroup;
         playerSource.outputAudioMixerGroup = playerGroup;
     }
+    public static void PlayMusicAudio()
+    {
+        //Set the clip for music audio, tell it to loop, and then tell it to play
+        current.musicSource.clip = current.musicClip;
+        current.musicSource.loop = true;
+        current.musicSource.Play();
 
-    public void PlayFootstepAudio()
+        //Play the audio that repeats whenever the level reloads
+        PlaySceneRestartAudio();
+    }
+
+    public static void PlaySceneRestartAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the level reload sting clip and tell the source to play
+        current.stingSource.clip = current.levelStingClip;
+        current.stingSource.Play();
+    }
+
+    public static void PlayFootstepAudio()
     {
         if (current == null || current.playerSource.isPlaying)
         {
@@ -72,7 +95,7 @@ public class AudioManager : MonoBehaviour
         current.playerSource.Play();
     }
 
-    public void PlayJumpAudio()
+    public static void PlayJumpAudio()
     {
         if(current == null)
         {
@@ -82,4 +105,115 @@ public class AudioManager : MonoBehaviour
         current.playerSource.clip = current.jumpClip;
         current.playerSource.Play();
     }
+
+    public static void PlayButtonHoverAudio()
+    {
+        if(current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.buttonHoverClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayButtonCLickAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.buttonClickClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayGameOverAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.gameOverDiedClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayGameWonAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.gameWonClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayLevelStingAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.levelStingClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayRollAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.rollClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayBlockAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.blockClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayAttackAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.meleeClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayProjectileAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.projectileClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayDeathAudio()
+    {
+        if (current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.deathClip;
+        current.playerSource.Play();
+    }
+
 }
