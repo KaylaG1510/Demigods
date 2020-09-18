@@ -32,7 +32,6 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup stingGroup;
     public AudioMixerGroup playerGroup;
 
-
     AudioSource musicSource;
     AudioSource stingSource;
     AudioSource playerSource;
@@ -58,5 +57,29 @@ public class AudioManager : MonoBehaviour
         musicSource.outputAudioMixerGroup = musicGroup;
         stingSource.outputAudioMixerGroup = stingGroup;
         playerSource.outputAudioMixerGroup = playerGroup;
+    }
+
+    public void PlayFootstepAudio()
+    {
+        if (current == null || current.playerSource.isPlaying)
+        {
+            return;
+        }
+
+        //int index = Random.Range(0, current.runFootstepsClip.Length);
+
+        current.playerSource.clip = current.runFootstepsClip;
+        current.playerSource.Play();
+    }
+
+    public void PlayJumpAudio()
+    {
+        if(current == null)
+        {
+            return;
+        }
+
+        current.playerSource.clip = current.jumpClip;
+        current.playerSource.Play();
     }
 }

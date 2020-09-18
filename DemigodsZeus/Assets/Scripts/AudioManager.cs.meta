@@ -3,7 +3,22 @@ guid: d95e38134a3b14cea904628ed6b61239
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - musicClip: {instanceID: 0}
+  - buttonHoverClip: {instanceID: 0}
+  - buttonClickClip: {instanceID: 0}
+  - gameOverDiedClip: {instanceID: 0}
+  - gameWonClip: {instanceID: 0}
+  - runFootstepsClip: {fileID: 8300000, guid: 732d2402d109e724eae484bd5052d0bb, type: 3}
+  - rollClip: {instanceID: 0}
+  - jumpClip: {fileID: 8300000, guid: c5c8d5621cf0c0743b28cb7b36464840, type: 3}
+  - blockClip: {instanceID: 0}
+  - meleeClip: {instanceID: 0}
+  - projectileClip: {instanceID: 0}
+  - deathClip: {instanceID: 0}
+  - musicGroup: {instanceID: 0}
+  - stingGroup: {instanceID: 0}
+  - playerGroup: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
