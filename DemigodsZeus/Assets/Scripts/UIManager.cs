@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     //in existence at any given time, using 'Singleton' design.
     static UIManager current;
 
-    public Text gameOverText;
+    public GameObject gameOverMenu;
 
     //called when the script instance is first loaded
     void Awake()
@@ -33,6 +33,18 @@ public class UIManager : MonoBehaviour
             return;
 
         //show the game over text
-        current.gameOverText.enabled = true;
+        //current.gameOverText.enabled = true;
+    
+    }
+
+    public static void DisplayPause()
+    {
+
+    }
+
+    public static void DisplayMainMenu()
+    {
+        if (current == null)
+            return;
     }
 }
