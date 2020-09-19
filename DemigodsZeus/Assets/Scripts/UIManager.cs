@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     static UIManager current;
 
     public GameObject gameOverMenu;
+    public GameObject pauseMenu;
 
     //called when the script instance is first loaded
     void Awake()
@@ -24,9 +25,10 @@ public class UIManager : MonoBehaviour
         //set current UIManager to stay between scene loads
         current = this;
         DontDestroyOnLoad(gameObject);
+        pauseMenu.SetActive(false);
     }
 
-    public static void DisplayGameOver()
+    public void DisplayGameOver()
     {
         //No UIManager exists
         if (current == null)
@@ -37,12 +39,15 @@ public class UIManager : MonoBehaviour
     
     }
 
-    public static void DisplayPause()
+    public void DisplayPause()
     {
-
+        if (current == null)
+            return;
+        //display pause menu
+        pauseMenu.SetActive(true);
     }
 
-    public static void DisplayMainMenu()
+    public void DisplayMainMenu()
     {
         if (current == null)
             return;

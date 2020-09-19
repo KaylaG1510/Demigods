@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
      * GameManager in existence, 'Singleton'.
      */
     static GameManager current;
+    public UIManager uiManager;
 
     public float deathSequenceDuration = 1.5f;      //Player death duration before restarting scene
 
@@ -66,9 +67,18 @@ public class GameManager : MonoBehaviour
         current.isGameOver = true;
 
         //Get UIManager to display Game Over
-        UIManager.DisplayGameOver();
+        uiManager.DisplayGameOver();
         //AudioManager to play Game Over music
         //AudioManager.PlayGameWonAudio();
+    }
+
+    public void PlayerPause()
+    {
+        if(current == null)
+        {
+            return;
+        }
+        uiManager.DisplayPause();
     }
 
     void RestartScene()
