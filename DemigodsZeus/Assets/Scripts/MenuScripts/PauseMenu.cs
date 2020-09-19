@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
         thisButton.SetActive(false);
     }
 
+    //user clicks resume button
     public void OnResume()
     {
         Debug.Log("Resume activated");
