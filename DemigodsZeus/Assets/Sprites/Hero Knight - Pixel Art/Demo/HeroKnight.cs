@@ -35,6 +35,7 @@ public class HeroKnight : MonoBehaviour {
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
+       
     }
 
     // Update is called once per frame
@@ -82,7 +83,6 @@ public class HeroKnight : MonoBehaviour {
         if (!m_rolling)
         {
             m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
-            AudioManager.PlayFootstepAudio();
         }
 
         //Set AirSpeed in animator
