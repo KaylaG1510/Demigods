@@ -24,17 +24,21 @@ public class TESTheroSound : MonoBehaviour
     private float m_timeSinceAttack = 0.0f;
     private float m_delayToIdle = 0.0f;
 
+    AudioSource movementSrc;
+    public bool isMoving = false;
+
     // Use this for initialization
     void Start()
     {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
+        movementSrc = GetComponent<AudioSource>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
         m_wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
-
+      
     }
 
     // Update is called once per frame
@@ -54,6 +58,7 @@ public class TESTheroSound : MonoBehaviour
         {
             m_grounded = true;
             m_animator.SetBool("Grounded", m_grounded);
+            ManagingAudio.PlaySound("Landing");
         }
 
         //Check if character just started falling
@@ -82,6 +87,26 @@ public class TESTheroSound : MonoBehaviour
         if (!m_rolling)
         {
             m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+           
+            if (m_body2d.velocity.x != 0)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+
+            if (isMoving == true)
+            {
+                if (!movementSrc.isPlaying)
+                    movementSrc.PlayScheduled(2.0f);
+            }
+            else
+            {
+                movementSrc.Stop();
+            }
+
         }
 
         //Set AirSpeed in animator
@@ -91,12 +116,12 @@ public class TESTheroSound : MonoBehaviour
         //Wall Slide
         m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
 
-        //Death
-        //if (Input.GetKeyDown("s"))
-        //{
-        //    m_animator.SetBool("noBlood", m_noBlood);
-        //    m_animator.SetTrigger("Death");
-        //}
+        if (Input.GetKeyDown("s"))
+        {
+            m_animator.SetBool("noBlood", m_noBlood);
+            m_animator.SetTrigger("Death");
+            ManagingAudio.PlaySound("Death");
+        }
 
         //Hurt
         //else if (Input.GetKeyDown("q"))
@@ -105,6 +130,7 @@ public class TESTheroSound : MonoBehaviour
         //Attack *** used to be else if
         if (Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
         {
+            ManagingAudio.PlaySound("Melee");
             m_currentAttack++;
 
             // Loop back to one after third attack
@@ -126,21 +152,16 @@ public class TESTheroSound : MonoBehaviour
         {
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
+            ManagingAudio.PlaySound("ESkill");
         }
         else if (Input.GetKeyUp("e"))
         {
             m_animator.SetBool("IdleBlock", false);
         }
-        // Roll
-        else if (Input.GetKeyDown("left shift") && !m_rolling)
-        {
-            m_rolling = true;
-            m_animator.SetTrigger("Roll");
-            m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
-        }
         //Jump
         else if ((Input.GetKeyDown("space") && m_grounded) || (Input.GetKeyDown("up") && m_grounded))
         {
+            ManagingAudio.PlaySound("Jump");
             m_animator.SetTrigger("Jump");
             m_grounded = false;
             m_animator.SetBool("Grounded", m_grounded);
@@ -189,4 +210,6 @@ public class TESTheroSound : MonoBehaviour
             dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
         }
     }
+
+
 }
