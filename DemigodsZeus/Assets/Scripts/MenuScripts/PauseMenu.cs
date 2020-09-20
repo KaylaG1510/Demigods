@@ -22,6 +22,8 @@ public class PauseMenu : MonoBehaviour
         //hide pause button whilst paused
         pauseMenu.SetActive(true);
         thisButton.SetActive(false);
+        //pause/freeze any animated things
+        Time.timeScale = 0;
     }
 
     //user clicks resume button, return to game
@@ -31,6 +33,8 @@ public class PauseMenu : MonoBehaviour
         //disable pause menu and reactivate pause button
         pauseMenu.SetActive(false);
         thisButton.SetActive(true);
+        //Resume moving things
+        Time.timeScale = 1;
     }
 
     //user clicks restart button, restart scene
