@@ -2,16 +2,16 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Bandit
-    - DestroyEvent_HeroKnight
-    - HeroKnight
     - Sensor_Bandit
-    - Sensor_HeroKnight
     NewAssembly.dll:
     - CameraFolllow
+    - DestroyEvent_HeroKnight
+    - HeroKnight
     - HighlightTextColour
     - MenuScript
     - Movement
     - PauseMenu
+    - Sensor_HeroKnight
     - SetVolume
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -33,10 +33,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - TestRunner.Callbacks.WindowResultUpdaterDataHolder
@@ -125,41 +123,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 628}
+      Script: {instanceID: 632}
     - Class: 114
-      Script: {instanceID: 11738}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 12166}
     - Class: 114
-      Script: {instanceID: 12076}
+      Script: {instanceID: 12220}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 12692}
     - Class: 114
-      Script: {instanceID: 12628}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12960}
     - Class: 114
-      Script: {instanceID: 14050}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 14086}
+      Script: {instanceID: 13722}
     - Class: 114
-      Script: {instanceID: 14234}
+      Script: {instanceID: 14094}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 14118}
     - Class: 114
-      Script: {instanceID: 14558}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14590}
+      Script: {instanceID: 14302}
     - Class: 114
-      Script: {instanceID: 14650}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 15050}
+      Script: {instanceID: 14552}
     - Class: 114
-      Script: {instanceID: 15130}
+      Script: {instanceID: 14626}
     - Class: 114
-      Script: {instanceID: 15196}
+      Script: {instanceID: 14658}
     - Class: 114
-      Script: {instanceID: 26742}
+      Script: {instanceID: 14718}
+    - Class: 114
+      Script: {instanceID: 15118}
+    - Class: 114
+      Script: {instanceID: 15200}
+    - Class: 114
+      Script: {instanceID: 15222}
+    - Class: 114
+      Script: {instanceID: 15246}
+    - Class: 114
+      Script: {instanceID: 15266}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -222,43 +230,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11738}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 12166}
     - Class: 114
-      Script: {instanceID: 12076}
+      Script: {instanceID: 12220}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12960}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 13722}
     - Class: 114
-      Script: {instanceID: 14026}
+      Script: {instanceID: 14094}
     - Class: 114
-      Script: {instanceID: 14046}
+      Script: {instanceID: 14114}
     - Class: 114
-      Script: {instanceID: 14086}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 14398}
+      Script: {instanceID: 14466}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 14552}
     - Class: 114
-      Script: {instanceID: 14780}
+      Script: {instanceID: 14848}
     - Class: 114
-      Script: {instanceID: 14954}
+      Script: {instanceID: 15022}
     - Class: 114
-      Script: {instanceID: 15050}
+      Script: {instanceID: 15118}
     - Class: 114
-      Script: {instanceID: 15130}
+      Script: {instanceID: 15200}
     - Class: 114
-      Script: {instanceID: 15152}
+      Script: {instanceID: 15222}
     - Class: 114
-      Script: {instanceID: 15176}
+      Script: {instanceID: 15246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,12 +292,6 @@ ScriptsOnlyBuild:
     - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: f087c23fbfa15475a0d110af46fb0496
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -538,6 +540,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: a319dee2bcc44a92853d65b860a5c913
+    assemblyName: NewAssembly.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -590,6 +598,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: f087c23fbfa15475a0d110af46fb0496
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -677,7 +691,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: NewAssembly.dll
     namespaceName: 
     className: DestroyEvent_HeroKnight
   - hash:
@@ -725,13 +739,13 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 92be63aa6f75ced36ff26d92772a2746
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: NewAssembly.dll
     namespaceName: 
     className: HeroKnight
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: NewAssembly.dll
     namespaceName: 
     className: Sensor_HeroKnight
   - hash:
@@ -814,6 +828,12 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
+      Hash: 92be63aa6f75ced36ff26d92772a2746
+    assemblyName: NewAssembly.dll
+    namespaceName: 
+    className: TESTheroSound
+  - hash:
+      serializedVersion: 2
       Hash: c60c5cba0d5ed4f4a018240d6339217f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -872,12 +892,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a319dee2bcc44a92853d65b860a5c913
-    assemblyName: NewAssembly.dll
-    namespaceName: 
-    className: PauseMenu
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
