@@ -24,20 +24,21 @@ public class TESTheroSound : MonoBehaviour
     private float m_timeSinceAttack = 0.0f;
     private float m_delayToIdle = 0.0f;
 
+    AudioSource movementSrc;
     public bool isMoving = false;
-
 
     // Use this for initialization
     void Start()
     {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
+        movementSrc = GetComponent<AudioSource>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
         m_wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
-
+      
     }
 
     // Update is called once per frame
@@ -57,6 +58,7 @@ public class TESTheroSound : MonoBehaviour
         {
             m_grounded = true;
             m_animator.SetBool("Grounded", m_grounded);
+            ManagingAudio.PlaySound("Landing");
         }
 
         //Check if character just started falling
@@ -97,10 +99,12 @@ public class TESTheroSound : MonoBehaviour
 
             if (isMoving == true)
             {
+                if (!movementSrc.isPlaying)
+                    movementSrc.PlayScheduled(2.0f);
             }
             else
             {
-                ManagingAudio.PlaySound(null);
+                movementSrc.Stop();
             }
 
         }
@@ -206,4 +210,6 @@ public class TESTheroSound : MonoBehaviour
             dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
         }
     }
+
+
 }
