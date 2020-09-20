@@ -9,6 +9,9 @@ public class HeroKnight : MonoBehaviour {
     [SerializeField] bool       m_noBlood = false;
     [SerializeField] GameObject m_slideDust;
 
+    public GameObject           pauseMenu;
+    public GameObject           pauseButton;
+
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
     private Sensor_HeroKnight   m_groundSensor;
@@ -23,8 +26,6 @@ public class HeroKnight : MonoBehaviour {
     private float               m_timeSinceAttack = 0.0f;
     private float               m_delayToIdle = 0.0f;
 
-    bool readyToClear;
-
     // Use this for initialization
     void Start ()
     {
@@ -35,17 +36,23 @@ public class HeroKnight : MonoBehaviour {
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
-       
     }
 
     // Update is called once per frame
     void Update ()
     {
+        Time.timeScale = 1;
         //Game is over
         if (GameManager.IsGameOver())
-            {
-                return;
-            }
+            return;
+
+        if (Input.GetKeyDown("escape"))
+        {
+            pauseMenu.SetActive(true);
+            pauseButton.SetActive(false);
+            //pause/freeze any animated things
+            Time.timeScale = 0;
+        }
 
         // Increase timer that controls attack combo
         m_timeSinceAttack += Time.deltaTime;

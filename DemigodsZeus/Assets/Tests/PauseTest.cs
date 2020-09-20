@@ -4,47 +4,53 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace TestPause
+
+public class PauseTest : UITest
 {
-    public class PauseTest : UITest
+    [UnityTest]
+    public IEnumerator pauseMenuDisplays()
     {
-        [UnityTest]
-        public IEnumerator pauseMenuDisplays()
-        {
-            yield return LoadScene("LevelOne");
+        yield return LoadScene("LevelOne");
 
-            yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(2);
 
-            yield return Press("PauseButton");
+        yield return Press("PauseButton");
 
-            yield return WaitFor(new ObjectAppeared("PauseMenu"));
-        }
+        yield return WaitFor(new ObjectAppeared("PauseMenu"));
+    }
 
-        [UnityTest]
-        public IEnumerator gameplayFreezes()
-        {
-            yield return LoadScene("LevelOne");
+    [UnityTest]
+    public IEnumerator gameplayFreezes()
+    {
+        yield return LoadScene("LevelOne");
 
-            yield return Press("PauseButton");
+        yield return Press("PauseButton");
 
-            yield return WaitFor(new ObjectAppeared("PauseMenu"));
+        yield return WaitFor(new ObjectAppeared("PauseMenu"));
 
-            //yield return WaitFor(new BoolCondition(() => Time.timeScale == 0));
+        //yield return WaitFor(new BoolCondition(() => Time.timeScale == 0));
 
 
-            GameObject playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
-            //this.animator.GetCurrentAnimatorStateInfo(0).IsName("YourAnimationName");
-            //playerObject = GameObject.Instantiate(Resources.Load("Prefabs/Hero")) as GameObject;
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
+        //this.animator.GetCurrentAnimatorStateInfo(0).IsName("YourAnimationName");
+        //playerObject = GameObject.Instantiate(Resources.Load("Prefabs/Hero")) as GameObject;
 
-            Animator currentAnim = playerObject.GetComponent<Animator>();
+        Animator currentAnim = playerObject.GetComponent<Animator>();
 
-            yield return WaitFor(new BoolCondition(() => currentAnim.updateMode == AnimatorUpdateMode.Normal));
-        }
+        yield return WaitFor(new BoolCondition(() => currentAnim.updateMode == AnimatorUpdateMode.Normal));
+    }
 
-        [UnityTest]
-        public IEnumerator sceneRestarts()
-        {
-            yield return null;
-        }
+    [UnityTest]
+    public IEnumerator sceneRestarts()
+    {
+        yield return pauseMenuDisplays();
+
+        yield return Press("RestartButton");
+
+        yield return WaitFor(new ObjectDisappeared("PauseMenu"));
+
+        //yield return WaitFor(new ObjectDisappeared("Hero"));
+
+        yield return WaitFor(new ObjectAppeared("Hero"));
     }
 }

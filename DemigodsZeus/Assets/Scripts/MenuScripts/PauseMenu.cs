@@ -42,6 +42,8 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Restart button clicked");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //to fix freezing bug
+        OnResume();
     }
 
     //user clicks return to main menu button, load MainMenu scene (0)

@@ -34,6 +34,7 @@ public class MenuScript : MonoBehaviour
         //starts game scene (level1)
         //will load new level scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(1); //Scene 0 = Main Menu, Scene 1 = Level One
+        Time.timeScale = 1;
     }
 
     //When Instructions button is pressed
