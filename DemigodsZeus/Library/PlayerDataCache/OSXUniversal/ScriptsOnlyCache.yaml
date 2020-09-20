@@ -8,15 +8,17 @@ ScriptsOnlyBuild:
     - Sensor_HeroKnight
     NewAssembly.dll:
     - CameraFolllow
-    - GameManager
     - HighlightTextColour
     - MenuScript
     - Movement
+    - PauseMenu
     - SetVolume
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -31,8 +33,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - TestRunner.Callbacks.WindowResultUpdaterDataHolder
@@ -110,6 +114,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -133,9 +141,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14050}
     - Class: 114
-      Script: {instanceID: 14234}
+      Script: {instanceID: 14086}
     - Class: 114
-      Script: {instanceID: 14338}
+      Script: {instanceID: 14234}
     - Class: 114
       Script: {instanceID: 14484}
     - Class: 114
@@ -145,9 +153,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14650}
     - Class: 114
+      Script: {instanceID: 15050}
+    - Class: 114
       Script: {instanceID: 15130}
     - Class: 114
       Script: {instanceID: 15196}
+    - Class: 114
+      Script: {instanceID: 26742}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -165,6 +177,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     - Class: 19719996
       Script: {instanceID: 0}
@@ -664,7 +682,7 @@ ScriptsOnlyBuild:
     className: DestroyEvent_HeroKnight
   - hash:
       serializedVersion: 2
-      Hash: 7e123dd93cc3a71991ca386be50d45fa
+      Hash: 94a9dc2356a6e9a127a15d0c28dc6b39
     assemblyName: NewAssembly.dll
     namespaceName: 
     className: GameManager
@@ -784,7 +802,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: bc78e9c66fd336042cad5cee281505c2
+      Hash: 2975b88f4bcf11bc32e1efd6139a0415
     assemblyName: NewAssembly.dll
     namespaceName: 
     className: UIManager
@@ -854,6 +872,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a319dee2bcc44a92853d65b860a5c913
+    assemblyName: NewAssembly.dll
+    namespaceName: 
+    className: PauseMenu
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
