@@ -19,9 +19,9 @@ public class Bandit : MonoBehaviour {
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State()) {
             m_grounded = true;
@@ -29,7 +29,7 @@ public class Bandit : MonoBehaviour {
         }
 
         //Check if character just started falling
-        if(m_grounded && !m_groundSensor.State()) {
+        if (m_grounded && !m_groundSensor.State()) {
             m_grounded = false;
             m_animator.SetBool("Grounded", m_grounded);
         }
@@ -49,41 +49,42 @@ public class Bandit : MonoBehaviour {
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
 
+
         // -- Handle Animations --
         //Death
-        if (Input.GetKeyDown("e")) {
-            if(!m_isDead)
-                m_animator.SetTrigger("Death");
-            else
-                m_animator.SetTrigger("Recover");
+        //if (Input.GetKeyDown("e")) {
+        //    if(!m_isDead)
+        //        m_animator.SetTrigger("Death");
+        //    else
+        //        m_animator.SetTrigger("Recover");
 
-            m_isDead = !m_isDead;
-        }
+        //    m_isDead = !m_isDead;
+        //}
             
         //Hurt
-        else if (Input.GetKeyDown("q"))
-            m_animator.SetTrigger("Hurt");
+        //else if (Input.GetKeyDown("q"))
+        //    m_animator.SetTrigger("Hurt");
 
-        //Attack
-        else if(Input.GetMouseButtonDown(0)) {
-            m_animator.SetTrigger("Attack");
-        }
+        ////Attack
+        //else if(Input.GetMouseButtonDown(0)) {
+        //    m_animator.SetTrigger("Attack");
+        //}
 
-        //Change between idle and combat idle
-        else if (Input.GetKeyDown("f"))
-            m_combatIdle = !m_combatIdle;
+        ////Change between idle and combat idle
+        //else if (Input.GetKeyDown("f"))
+        //    m_combatIdle = !m_combatIdle;
 
         //Jump
-        else if (Input.GetKeyDown("space") && m_grounded) {
-            m_animator.SetTrigger("Jump");
-            m_grounded = false;
-            m_animator.SetBool("Grounded", m_grounded);
-            m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
-            m_groundSensor.Disable(0.2f);
-        }
+        //else if (Input.GetKeyDown("space") && m_grounded) {
+        //    m_animator.SetTrigger("Jump");
+        //    m_grounded = false;
+        //    m_animator.SetBool("Grounded", m_grounded);
+        //    m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
+        //    m_groundSensor.Disable(0.2f);
+        //}
 
-        //Run
-        else if (Mathf.Abs(inputX) > Mathf.Epsilon)
+        //Run ****used to be else if
+        if (Mathf.Abs(inputX) > Mathf.Epsilon)
             m_animator.SetInteger("AnimState", 2);
 
         //Combat Idle
