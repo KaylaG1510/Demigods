@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1717058473}
+    - target: {fileID: 8228591200206256915, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
 --- !u!1 &611130910 stripped
@@ -1647,6 +1651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 612755336791121453, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8951700529825675419, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

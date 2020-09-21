@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public enum GameStates { PLAY, PAUSE, DEAD, FIN };
-
     public GameObject pauseMenu;
     public GameObject thisButton;
 
@@ -23,7 +21,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         thisButton.SetActive(false);
         //pause/freeze any animated things
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
     }
 
     //user clicks resume button, return to game
@@ -34,7 +32,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         thisButton.SetActive(true);
         //Resume moving things
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
     }
 
     //user clicks restart button, restart scene

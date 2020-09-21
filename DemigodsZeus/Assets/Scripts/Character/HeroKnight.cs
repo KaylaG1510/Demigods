@@ -45,17 +45,17 @@ public class HeroKnight : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         //Game is over
         if (GameManager.IsGameOver())
             return;
 
         if (Input.GetKeyDown("escape"))
         {
+            //pause/freeze any animated things
+            Time.timeScale = 0f;
             pauseMenu.SetActive(true);
             pauseButton.SetActive(false);
-            //pause/freeze any animated things
-            Time.timeScale = 0;
         }
 
         // Increase timer that controls attack combo
@@ -84,7 +84,7 @@ public class HeroKnight : MonoBehaviour {
         {
             GetComponent<SpriteRenderer>().flipX = false;
             m_facingDirection = 1;
-        }       
+        }
         else if (inputX < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
@@ -105,7 +105,7 @@ public class HeroKnight : MonoBehaviour {
                 isMoving = false;
             }
 
-            if (isMoving && m_grounded)
+            if (isMoving && m_grounded && Time.timeScale == 1)
             {
                 if (!movementSrc.isPlaying)
                 {
@@ -137,7 +137,7 @@ public class HeroKnight : MonoBehaviour {
         //    m_animator.SetTrigger("Hurt");
 
         //Attack *****used to be else if
-        if(Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
+        if (Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
         {
             ManagingAudio.PlaySound("Melee");
             m_currentAttack++;
@@ -157,13 +157,13 @@ public class HeroKnight : MonoBehaviour {
             m_timeSinceAttack = 0.0f;
         }
         // Block
-        else if(Input.GetKeyDown("e"))
+        else if (Input.GetKeyDown("e"))
         {
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
             ManagingAudio.PlaySound("ESkill");
         }
-        else if(Input.GetKeyUp("e"))
+        else if (Input.GetKeyUp("e"))
         {
             m_animator.SetBool("IdleBlock", false);
         }
@@ -196,34 +196,34 @@ public class HeroKnight : MonoBehaviour {
         {
             // Prevents flickering transitions to idle
             m_delayToIdle -= Time.deltaTime;
-                if(m_delayToIdle < 0)
-                    m_animator.SetInteger("AnimState", 0);
+            if (m_delayToIdle < 0)
+                m_animator.SetInteger("AnimState", 0);
         }
-    }
 
-    // Animation Events
-    // Called in end of roll animation.
-    //void AE_ResetRoll()
-    //{
-    //    m_rolling = false;
-    //}
+        // Animation Events
+        // Called in end of roll animation.
+        //void AE_ResetRoll()
+        //{
+        //    m_rolling = false;
+        //}
 
-    // Called in slide animation.
-    void AE_SlideDust()
-    {
-        Vector3 spawnPosition;
-
-        if (m_facingDirection == 1)
-            spawnPosition = m_wallSensorR2.transform.position;
-        else
-            spawnPosition = m_wallSensorL2.transform.position;
-
-        if (m_slideDust != null)
+        // Called in slide animation.
+        void AE_SlideDust()
         {
-            // Set correct arrow spawn position
-            GameObject dust = Instantiate(m_slideDust, spawnPosition, gameObject.transform.localRotation) as GameObject;
-            // Turn arrow in correct direction
-            dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
+            Vector3 spawnPosition;
+
+            if (m_facingDirection == 1)
+                spawnPosition = m_wallSensorR2.transform.position;
+            else
+                spawnPosition = m_wallSensorL2.transform.position;
+
+            if (m_slideDust != null)
+            {
+                // Set correct arrow spawn position
+                GameObject dust = Instantiate(m_slideDust, spawnPosition, gameObject.transform.localRotation) as GameObject;
+                // Turn arrow in correct direction
+                dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
+            }
         }
     }
 }
