@@ -203,10 +203,10 @@ public class HeroKnight : MonoBehaviour {
 
     // Animation Events
     // Called in end of roll animation.
-    void AE_ResetRoll()
-    {
-        m_rolling = false;
-    }
+    //void AE_ResetRoll()
+    //{
+    //    m_rolling = false;
+    //}
 
     // Called in slide animation.
     void AE_SlideDust()
