@@ -27,6 +27,9 @@ public class TESTheroSound : MonoBehaviour
     AudioSource movementSrc;
     public bool isMoving = false;
 
+    public GameObject pauseMenu;
+    public GameObject pauseButton;
+
     // Use this for initialization
     void Start()
     {
@@ -44,10 +47,19 @@ public class TESTheroSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Time.timeScale = 1;
         //Game is over
         if (GameManager.IsGameOver())
         {
             return;
+        }
+
+        if (Input.GetKeyDown("escape"))
+        {
+            pauseMenu.SetActive(true);
+            pauseButton.SetActive(false);
+            //pause/freeze any animated things
+            Time.timeScale = 0;
         }
 
         // Increase timer that controls attack combo
@@ -114,14 +126,15 @@ public class TESTheroSound : MonoBehaviour
 
         // -- Handle Animations --
         //Wall Slide
-        m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
+        //m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
 
-        if (Input.GetKeyDown("s"))
-        {
-            m_animator.SetBool("noBlood", m_noBlood);
-            m_animator.SetTrigger("Death");
-            ManagingAudio.PlaySound("Death");
-        }
+        ////Death
+        //if (Input.GetKeyDown("s"))
+        //{
+        //    m_animator.SetBool("noBlood", m_noBlood);
+        //    m_animator.SetTrigger("Death");
+        //    ManagingAudio.PlaySound("Death");
+        //}
 
         //Hurt
         //else if (Input.GetKeyDown("q"))
@@ -158,6 +171,13 @@ public class TESTheroSound : MonoBehaviour
         {
             m_animator.SetBool("IdleBlock", false);
         }
+        //Roll
+        //else if (Input.GetKeyDown("left shift") && !m_rolling)
+        //{
+        //    m_rolling = true;
+        //    m_animator.SetTrigger("Roll");
+        //    m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
+        //}
         //Jump
         else if ((Input.GetKeyDown("space") && m_grounded) || (Input.GetKeyDown("up") && m_grounded))
         {

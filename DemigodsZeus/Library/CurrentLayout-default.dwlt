@@ -15,16 +15,42 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 43
-    width: 1920
-    height: 997
+    y: 0
+    width: 1440
+    height: 900
   m_ShowMode: 4
   m_Title: Game
-  m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_RootView: {fileID: 3}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: AnimationWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1029
+    y: 0
+    width: 102
+    height: 306.5
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 25}
+  m_Panes:
+  - {fileID: 25}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,22 +63,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
-  - {fileID: 5}
   - {fileID: 4}
+  - {fileID: 6}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 997
+    width: 1440
+    height: 900
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &3
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,15 +95,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1440
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 23}
-  m_MainToolbar: {fileID: 23}
+  - {fileID: 27}
+  m_MainToolbar: {fileID: 27}
   m_LastLoadedLayoutName: 
---- !u!114 &4
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,36 +119,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 977
-    width: 1920
+    y: 880
+    width: 1440
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 6}
-  - {fileID: 14}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 1920
-    height: 947
-  m_MinSize: {x: 881, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
-  vertical: 0
-  controlID: 128
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,17 +138,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 7}
-  - {fileID: 11}
+  - {fileID: 15}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1370
-    height: 947
-  m_MinSize: {x: 605, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
-  vertical: 1
-  controlID: 129
+    y: 30
+    width: 1440
+    height: 850
+  m_MinSize: {x: 881, y: 492}
+  m_MaxSize: {x: 22006, y: 14042}
+  vertical: 0
+  controlID: 94
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,19 +163,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 8}
-  - {fileID: 9}
-  - {fileID: 10}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1370
-    height: 604
+    width: 1131
+    height: 850
+  m_MinSize: {x: 605, y: 492}
+  m_MaxSize: {x: 18005, y: 14042}
+  vertical: 1
+  controlID: 95
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 10}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1131
+    height: 543.5
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 130
---- !u!114 &8
+  controlID: 96
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,16 +217,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 398
-    height: 604
+    width: 201
+    height: 543.5
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,18 +241,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 398
+    x: 201
     y: 0
-    width: 404
-    height: 604
+    width: 581
+    height: 543.5
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 21}
+  - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &10
+  m_LastSelected: 1
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,19 +268,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 802
+    x: 782
     y: 0
-    width: 568
-    height: 604
+    width: 349
+    height: 543.5
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 22}
   m_Panes:
+  - {fileID: 22}
   - {fileID: 19}
-  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &11
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,19 +293,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
   - {fileID: 13}
+  - {fileID: 14}
+  - {fileID: 2}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 604
-    width: 1370
-    height: 343
-  m_MinSize: {x: 333, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+    y: 543.5
+    width: 1131
+    height: 306.5
+  m_MinSize: {x: 435, y: 271}
+  m_MaxSize: {x: 18005, y: 10021}
   vertical: 0
-  controlID: 75
---- !u!114 &12
+  controlID: 44
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,16 +323,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 681
-    height: 343
+    width: 224
+    height: 306.5
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,19 +347,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 681
+    x: 224
     y: 0
-    width: 689
-    height: 343
+    width: 805
+    height: 306.5
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 21}
-  - {fileID: 15}
+  - {fileID: 24}
+  - {fileID: 18}
+  - {fileID: 16}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &14
+  m_LastSelected: 1
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,18 +375,597 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1370
+    x: 1131
     y: 0
-    width: 550
-    height: 947
+    width: 309
+    height: 850
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 26}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 26}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &15
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f683d99f24875748a6656966ca9cea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 240, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Tile Palette
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 120
+    y: 573.5
+    width: 875
+    height: 285.5
+  m_ViewDataDictionary: {fileID: 0}
+  m_PreviewResizer:
+    m_CachedPref: 50
+    m_ControlHash: 1964396721
+    m_PrefName: Preview_TilemapBrushInspector
+  m_Palette: {fileID: 3285807407063296679, guid: b19ffe6b8fdd94c919fa8b38cf0e552c, type: 3}
+  m_DrawGizmos: 0
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 201
+    y: 30
+    width: 294
+    height: 522.5
+  m_ViewDataDictionary: {fileID: 0}
+  m_Spl:
+    ID: 238
+    splitterInitialOffset: 347
+    currentActiveSplitter: -1
+    realSizes:
+    - 257.5
+    - 194.5
+    relativeSizes:
+    - 0.5696721
+    - 0.4303279
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 452
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 17}
+    newResultList:
+    - id: 1000
+      uniqueId: '[DemigodsZeus][suite]'
+      name: DemigodsZeus
+      fullName: DemigodsZeus
+      resultStatus: 1
+      duration: 2.804627
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1017
+      uniqueId: '[Tests(PM)][/Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
+      name: Tests(PM).dll
+      fullName: /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll
+      resultStatus: 1
+      duration: 2.7502697
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[DemigodsZeus][suite]'
+    - id: 1001
+      uniqueId: Tests(PM).dll/[Tests(PM)][MainMenuTest][suite]
+      name: MainMenuTest
+      fullName: MainMenuTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1017
+      parentUniqueId: '[Tests(PM)][/Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
+    - id: 1002
+      uniqueId: Tests(PM).dll/MainMenuTest/[Tests(PM)][MainMenuTest.InstructionsMenuLoadsFromButton]
+      name: InstructionsMenuLoadsFromButton
+      fullName: MainMenuTest.InstructionsMenuLoadsFromButton
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][MainMenuTest][suite]
+    - id: 1005
+      uniqueId: Tests(PM).dll/MainMenuTest/[Tests(PM)][MainMenuTest.NewGameButtonLoadsLevel]
+      name: NewGameButtonLoadsLevel
+      fullName: MainMenuTest.NewGameButtonLoadsLevel
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][MainMenuTest][suite]
+    - id: 1004
+      uniqueId: Tests(PM).dll/MainMenuTest/[Tests(PM)][MainMenuTest.OptionsFullscreenMode]
+      name: OptionsFullscreenMode
+      fullName: MainMenuTest.OptionsFullscreenMode
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][MainMenuTest][suite]
+    - id: 1003
+      uniqueId: Tests(PM).dll/MainMenuTest/[Tests(PM)][MainMenuTest.OptionsWindowedMode]
+      name: OptionsWindowedMode
+      fullName: MainMenuTest.OptionsWindowedMode
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][MainMenuTest][suite]
+    - id: 1006
+      uniqueId: Tests(PM).dll/[Tests(PM)][PauseTest][suite]
+      name: PauseTest
+      fullName: PauseTest
+      resultStatus: 1
+      duration: 2.7313325
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1017
+      parentUniqueId: '[Tests(PM)][/Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
+    - id: 1008
+      uniqueId: Tests(PM).dll/PauseTest/[Tests(PM)][PauseTest.gameplayFreezes]
+      name: gameplayFreezes
+      fullName: PauseTest.gameplayFreezes
+      resultStatus: 1
+      duration: 0.819016
+      messages: 
+      output: 'The referenced script (Bandit) on this Behaviour is missing!
+
+        The
+        referenced script (Sensor_Bandit) on this Behaviour is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''LightBandit'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''GroundSensor'') is missing!
+
+        The
+        referenced script (Bandit) on this Behaviour is missing!
+
+        The referenced
+        script (Sensor_Bandit) on this Behaviour is missing!
+
+        The referenced
+        script on this Behaviour (Game Object ''LightBandit'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''GroundSensor'') is missing!
+
+        Button
+        pressed: PauseButton (UnityEngine.GameObject)
+
+        Pause button pressed
+        :D
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][PauseTest][suite]
+    - id: 1007
+      uniqueId: Tests(PM).dll/PauseTest/[Tests(PM)][PauseTest.pauseMenuDisplays]
+      name: pauseMenuDisplays
+      fullName: PauseTest.pauseMenuDisplays
+      resultStatus: 1
+      duration: 2.7062373
+      messages: 
+      output: 'The referenced script (Bandit) on this Behaviour is missing!
+
+        The
+        referenced script (Sensor_Bandit) on this Behaviour is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''LightBandit'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''GroundSensor'') is missing!
+
+        The
+        referenced script (Bandit) on this Behaviour is missing!
+
+        The referenced
+        script (Sensor_Bandit) on this Behaviour is missing!
+
+        The referenced
+        script on this Behaviour (Game Object ''LightBandit'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''GroundSensor'') is missing!
+
+        Button
+        pressed: PauseButton (UnityEngine.GameObject)
+
+        Pause button pressed
+        :D
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][PauseTest][suite]
+    - id: 1009
+      uniqueId: Tests(PM).dll/PauseTest/[Tests(PM)][PauseTest.sceneRestarts]
+      name: sceneRestarts
+      fullName: PauseTest.sceneRestarts
+      resultStatus: 2
+      duration: 0.0253153
+      messages: 
+      output: 
+      stacktrace: 'at PauseTest+<pauseMenuDisplays>d__0.MoveNext () [0x00031] in
+        /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Assets/Tests/PauseTest.cs:13
+
+        at
+        UnityEngine.TestTools.EnumerableTestMethodCommand+<ExecuteEnumerableAndRecordExceptions>d__3.MoveNext
+        () [0x00023] in /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Library/PackageCache/com.unity.test-framework@1.1.16/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:68
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][PauseTest][suite]
+    - id: 1019
+      uniqueId: Tests(PM).dll/[Tests(PM)][Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1017
+      parentUniqueId: '[Tests(PM)][/Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
+    - id: 1014
+      uniqueId: Tests(PM).dll/Tests/[Tests(PM)][Tests.MovementTest][suite]
+      name: MovementTest
+      fullName: Tests.MovementTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][Tests][suite]
+    - id: 1015
+      uniqueId: Tests(PM).dll/Tests/MovementTest/[Tests(PM)][Tests.MovementTest.Character_Moves_Horizontal]
+      name: Character_Moves_Horizontal
+      fullName: Tests.MovementTest.Character_Moves_Horizontal
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Tests(PM).dll/Tests/[Tests(PM)][Tests.MovementTest][suite]
+    - id: 1016
+      uniqueId: Tests(PM).dll/Tests/MovementTest/[Tests(PM)][Tests.MovementTest.MovementTestWithEnumeratorPasses]
+      name: MovementTestWithEnumeratorPasses
+      fullName: Tests.MovementTest.MovementTestWithEnumeratorPasses
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Tests(PM).dll/Tests/[Tests(PM)][Tests.MovementTest][suite]
+    - id: 1006
+      uniqueId: Tests(PM).dll/[Tests(PM)][UITestExample][suite]
+      name: UITestExample
+      fullName: UITestExample
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1017
+      parentUniqueId: '[Tests(PM)][/Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus/Library/ScriptAssemblies/Tests(PM).dll][suite]'
+    - id: 1009
+      uniqueId: Tests(PM).dll/UITestExample/[Tests(PM)][UITestExample.FailingBoolCondition]
+      name: FailingBoolCondition
+      fullName: UITestExample.FailingBoolCondition
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][UITestExample][suite]
+    - id: 1007
+      uniqueId: Tests(PM).dll/UITestExample/[Tests(PM)][UITestExample.SecondScreenCanBeOpenedFromTheFirstOne]
+      name: SecondScreenCanBeOpenedFromTheFirstOne
+      fullName: UITestExample.SecondScreenCanBeOpenedFromTheFirstOne
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][UITestExample][suite]
+    - id: 1008
+      uniqueId: Tests(PM).dll/UITestExample/[Tests(PM)][UITestExample.SuccessfulNetworkResponseIsDisplayedOnTheFirstScreen]
+      name: SuccessfulNetworkResponseIsDisplayedOnTheFirstScreen
+      fullName: UITestExample.SuccessfulNetworkResponseIsDisplayedOnTheFirstScreen
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests(PM).dll/[Tests(PM)][UITestExample][suite]
+    m_ResultText: 'pauseMenuDisplays (2.706s)
+
+      ---
+
+      The referenced script
+      (Bandit) on this Behaviour is missing!
+
+      The referenced script (Sensor_Bandit)
+      on this Behaviour is missing!
+
+      The referenced script on this Behaviour
+      (Game Object ''LightBandit'') is missing!
+
+      The referenced script on this
+      Behaviour (Game Object ''GroundSensor'') is missing!
+
+      The referenced
+      script (Bandit) on this Behaviour is missing!
+
+      The referenced script
+      (Sensor_Bandit) on this Behaviour is missing!
+
+      The referenced script
+      on this Behaviour (Game Object ''LightBandit'') is missing!
+
+      The referenced
+      script on this Behaviour (Game Object ''GroundSensor'') is missing!
+
+      Button
+      pressed: PauseButton (UnityEngine.GameObject)
+
+      Pause button pressed :D'
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 2253a7fd
+      m_LastClickedID: -39365854
+      m_ExpandedIDs: 5f4c7e8e01d246a3fe3600a749d614c8addb311ae9cf7f3a364af447d0ac5b5095820f71ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 1
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 17}
+    newResultList:
+    - id: 1016
+      uniqueId: '[DemigodsZeus][suite]'
+      name: DemigodsZeus
+      fullName: DemigodsZeus
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ffe194bc49d614c8e557abf78359db41ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,19 +981,19 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Audio Mixer
-    m_Image: {fileID: 5436946869657106676, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3283902137440876849, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 165
-    y: 528
-    width: 964
-    height: 331
+    x: 180
+    y: 573.5
+    width: 847
+    height: 285.5
   m_ViewDataDictionary: {fileID: 0}
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: -7828
+    m_SelectedIDs: 0a3f0000
+    m_LastClickedID: 16138
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -402,7 +1010,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 14}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -501,12 +1109,12 @@ MonoBehaviour:
       oldMaxSizes: 
       oldSplitSize: 0
     m_HorizontalSplitter:
-      ID: 8419
+      ID: 1310
       splitterInitialOffset: 0
       currentActiveSplitter: -1
       realSizes:
-      - 289
-      - 675
+      - 254
+      - 593
       relativeSizes:
       - 0.3
       - 0.7
@@ -516,7 +1124,7 @@ MonoBehaviour:
       maxSizes:
       - 0
       - 0
-      lastTotalSize: 964
+      lastTotalSize: 847
       splitSize: 6
       xOffset: 0
       m_Version: 1
@@ -530,7 +1138,7 @@ MonoBehaviour:
   m_ShowReferencedBuses: 1
   m_ShowBusConnections: 0
   m_ShowBusConnectionsOfSelection: 0
---- !u!114 &16
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,14 +1154,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animator
-    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 413
-    y: 81
-    width: 1169
-    height: 583
+    x: 403
+    y: 30
+    width: 726
+    height: 477
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -565,8 +1173,6 @@ MonoBehaviour:
     - {fileID: 110716596, guid: 3c2a5b7097b0fe44394328c0bdb9252e, type: 2}
     - {fileID: -2752659543820211945, guid: b27df5a60ba0e4113a1eb028dd50c9ba, type: 2}
     - {fileID: -5070176236592925773, guid: 298dc696ea2eb4e52b64512eed08e6fa, type: 2}
-    - {fileID: 1107132423390939498, guid: 10404af511fc2ec42a4f9a8af2e53bb7, type: 2}
-    - {fileID: -5362460134427812944, guid: 562668619d47d0949b76b61cd4cd5af5, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.6324561
       e01: 0
@@ -632,14 +1238,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.52056736
+    - e00: 0.22907801
       e01: 0
       e02: 0
-      e03: 139.93617
+      e03: 69.97873
       e10: 0
-      e11: 0.52056736
+      e11: 0.22907801
       e12: 0
-      e13: 253.25958
+      e13: 203.65178
       e20: 0
       e21: 0
       e22: 1
@@ -648,14 +1254,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.55271083
+    - e00: 0.63618493
       e01: 0
       e02: 0
-      e03: 74.69278
+      e03: -64.89082
       e10: 0
-      e11: 0.55271083
+      e11: 0.63618493
       e12: 0
-      e13: 175.2756
+      e13: 193.44739
       e20: 0
       e21: 0
       e22: 1
@@ -696,42 +1302,10 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.7726316
-      e01: 0
-      e02: 0
-      e03: -23.631592
-      e10: 0
-      e11: 0.7726316
-      e12: 0
-      e13: 206.32632
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.7726316
-      e01: 0
-      e02: 0
-      e03: -23.631592
-      e10: 0
-      e11: 0.7726316
-      e12: 0
-      e13: 206.32632
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 36f292fe916e9fe4792402a04182d93a, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: b95265f99b6d90e438df1308a89c8bab, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -3754705951841031115, guid: 36f292fe916e9fe4792402a04182d93a, type: 2}
+  - m_Target: {fileID: 110716596, guid: b95265f99b6d90e438df1308a89c8bab, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -744,7 +1318,7 @@ MonoBehaviour:
   m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &17
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -760,21 +1334,21 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 73
-    width: 397
-    height: 583
+    y: 30
+    width: 200
+    height: 522.5
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 26390000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 70effffff0f0ffffdaf2ffff
+      m_SelectedIDs: 8a82ffff
+      m_LastClickedID: -32118
+      m_ExpandedIDs: f683fffffc83ffff5c8afffffc8cffff028dffff4290ffff9890fffffe97ffff2298ffff2898ffff8699ffff58a0ffff7ca0fffffea1ffff48a6ffff7aa7ffffe6a9ffffa8abffffd8acffff4ab3ffffdcb4ffffa2b6ffff12b8ffffd2baffffde6f00005e700000b6710000c0710000d27a0000c47d0000d87d0000c283000042840000c885000024a00000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -790,7 +1364,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -798,7 +1372,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &18
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -814,14 +1388,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 398
-    y: 73
-    width: 402
-    height: 583
+    x: 201
+    y: 30
+    width: 579
+    height: 522.5
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -834,9 +1408,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5224.5093, y: -329.98007, z: -2448.7222}
+    m_Target: {x: -5064.841, y: 80.79517, z: -504.3191}
     speed: 2
-    m_Value: {x: -5224.5093, y: -329.98007, z: -2448.7222}
+    m_Value: {x: -5064.841, y: 80.79517, z: -504.3191}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -887,9 +1461,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1471.8013
+    m_Target: 900.91693
     speed: 2
-    m_Value: 1471.8013
+    m_Value: 900.91693
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -914,7 +1488,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -930,14 +1504,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 802
-    y: 73
-    width: 566
-    height: 583
+    x: 782
+    y: 30
+    width: 347
+    height: 522.5
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -960,10 +1534,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -960
-    m_HBaseRangeMax: 960
-    m_VBaseRangeMin: -540
-    m_VBaseRangeMax: 540
+    m_HBaseRangeMin: -480
+    m_HBaseRangeMax: 480
+    m_VBaseRangeMin: -270
+    m_VBaseRangeMax: 270
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -981,29 +1555,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 566
-      height: 562
-    m_Scale: {x: 0.29479167, y: 0.29479167}
-    m_Translation: {x: 283, y: 281}
+      width: 347
+      height: 501.5
+    m_Scale: {x: 0.36145833, y: 0.36145833}
+    m_Translation: {x: 173.5, y: 250.75}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -960
-      y: -953.2155
-      width: 1920
-      height: 1906.431
+      x: -480
+      y: -693.7176
+      width: 960
+      height: 1387.4352
     m_MinimalGUI: 1
-  m_defaultScale: 0.29479167
-  m_LastWindowPixelSize: {x: 566, y: 583}
+  m_defaultScale: 0.36145833
+  m_LastWindowPixelSize: {x: 694, y: 1045}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &20
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1019,16 +1593,16 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 677
-    width: 680
-    height: 322
+    y: 573.5
+    width: 223
+    height: 285.5
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &21
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1044,14 +1618,14 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 681
-    y: 677
-    width: 687
-    height: 322
+    x: 224
+    y: 573.5
+    width: 803
+    height: 285.5
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1066,21 +1640,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/CharacterMovement
+    - Assets/Prefabs
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/CharacterMovement
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\brenk\Documents\GitHub\Demigods\DemigodsZeus
+  m_LastProjectPath: /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 158}
-    m_SelectedIDs: b6540000
-    m_LastClickedID: 21686
-    m_ExpandedIDs: 000000000442000006420000084200000a4200000c4200000e42000010420000124200001442000016420000284200002a42000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: c8560000
+    m_LastClickedID: 22216
+    m_ExpandedIDs: 00000000ac560000ae560000b0560000b2560000b4560000b6560000b8560000ba560000bc560000cc560000ce56000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1096,7 +1670,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1108,7 +1682,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000442000006420000084200000a4200000c4200000e42000010420000124200001442000016420000
+    m_ExpandedIDs: 00000000ac560000ae560000b0560000b2560000b4560000b6560000b8560000ba560000bc560000be560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1136,7 +1710,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300001a6f0000d8550000dc5500006c5200006e52000000000000426900008c460000c465000048460000
+    m_ExpandedInstanceIDs: c62300001a6f0000d8550000dc5500006c5200006e52000000000000426900008c460000c4650000484600000a3f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1152,7 +1726,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1163,8 +1737,36 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 199
---- !u!114 &22
+  m_DirectoriesAreaWidth: 218
+--- !u!114 &25
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1029
+    y: 573.5
+    width: 100
+    height: 285.5
+  m_ViewDataDictionary: {fileID: 0}
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: -32118
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1180,14 +1782,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1370
-    y: 73
-    width: 549
-    height: 926
+    x: 1131
+    y: 30
+    width: 308
+    height: 829
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -1196,13 +1798,13 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 725
+  m_LastVerticalScrollValue: 1165
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &23
+--- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -12,6 +12,9 @@ public class HeroKnight : MonoBehaviour {
     public GameObject           pauseMenu;
     public GameObject           pauseButton;
 
+    AudioSource                 movementSrc;
+    public bool                 isMoving = false;
+
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
     private Sensor_HeroKnight   m_groundSensor;
@@ -31,6 +34,7 @@ public class HeroKnight : MonoBehaviour {
     {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
+        movementSrc = GetComponent<AudioSource>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
         m_wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
@@ -62,6 +66,7 @@ public class HeroKnight : MonoBehaviour {
         {
             m_grounded = true;
             m_animator.SetBool("Grounded", m_grounded);
+            ManagingAudio.PlaySound("Landing");
         }
 
         //Check if character just started falling
@@ -90,6 +95,27 @@ public class HeroKnight : MonoBehaviour {
         if (!m_rolling)
         {
             m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+
+            if (m_body2d.velocity.x != 0)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+
+            if (isMoving && m_grounded)
+            {
+                if (!movementSrc.isPlaying)
+                {
+                    movementSrc.PlayScheduled(2.0f);
+                }
+            }
+            else
+            {
+                movementSrc.Stop();
+            }
         }
 
         //Set AirSpeed in animator
@@ -97,7 +123,7 @@ public class HeroKnight : MonoBehaviour {
 
         // -- Handle Animations --
         //Wall Slide
-        m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
+        //m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
 
         //Death
         //if (Input.GetKeyDown("s"))
@@ -113,6 +139,7 @@ public class HeroKnight : MonoBehaviour {
         //Attack *****used to be else if
         if(Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
         {
+            ManagingAudio.PlaySound("Melee");
             m_currentAttack++;
 
             // Loop back to one after third attack
@@ -134,21 +161,23 @@ public class HeroKnight : MonoBehaviour {
         {
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
+            ManagingAudio.PlaySound("ESkill");
         }
         else if(Input.GetKeyUp("e"))
         {
             m_animator.SetBool("IdleBlock", false);
         }
         // Roll
-        else if (Input.GetKeyDown("left shift") && !m_rolling)
-        {
-            m_rolling = true;
-            m_animator.SetTrigger("Roll");
-            m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
-        }
+        //else if (Input.GetKeyDown("left shift") && !m_rolling)
+        //{
+        //    m_rolling = true;
+        //    m_animator.SetTrigger("Roll");
+        //    m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
+        //}
         //Jump
         else if ((Input.GetKeyDown("space") && m_grounded) || (Input.GetKeyDown("up") && m_grounded))
         {
+            ManagingAudio.PlaySound("Jump");
             m_animator.SetTrigger("Jump");
             m_grounded = false;
             m_animator.SetBool("Grounded", m_grounded);
