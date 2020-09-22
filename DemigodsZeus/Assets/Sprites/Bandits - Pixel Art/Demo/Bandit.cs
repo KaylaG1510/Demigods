@@ -35,7 +35,7 @@ public class Bandit : MonoBehaviour {
         }
 
         // -- Handle input and movement --
-        float inputX = Input.GetAxis("Horizontal");
+        //float inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
         //if (inputX > 0)
@@ -44,7 +44,12 @@ public class Bandit : MonoBehaviour {
         //    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         // Move
-        m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+        m_body2d.velocity = new Vector2(m_speed, m_body2d.velocity.y);
+
+        if (m_body2d.velocity != new Vector2(0, 0))
+        {
+            m_animator.SetInteger("AnimState", 2);
+        }
 
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
@@ -84,15 +89,21 @@ public class Bandit : MonoBehaviour {
         //}
 
         //Run ****used to be else if
-        if (Mathf.Abs(inputX) > Mathf.Epsilon)
-            m_animator.SetInteger("AnimState", 2);
+        //if (Mathf.Abs(inputX) > Mathf.Epsilon)
+        //    m_animator.SetInteger("AnimState", 2);
 
         //Combat Idle
-        else if (m_combatIdle)
+        /*else*/ if (m_combatIdle)
             m_animator.SetInteger("AnimState", 1);
 
         //Idle
         else
             m_animator.SetInteger("AnimState", 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            Debug.Log("Player collision detected - bandit script");
     }
 }

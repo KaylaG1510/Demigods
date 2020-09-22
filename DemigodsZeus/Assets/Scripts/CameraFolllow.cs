@@ -18,7 +18,7 @@ public class CameraFolllow : MonoBehaviour
     void Start()
     {
         //give reference to the correct GameObject in inspector
-        playerReference = GameObject.FindGameObjectWithTag("Player");
+        //playerReference = GameObject.FindGameObjectWithTag("Player");
     }
 
     void FixedUpdate()

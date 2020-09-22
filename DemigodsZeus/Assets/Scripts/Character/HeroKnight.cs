@@ -137,7 +137,7 @@ public class HeroKnight : MonoBehaviour {
         //    m_animator.SetTrigger("Hurt");
 
         //Attack *****used to be else if
-        if (Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
+        if (Input.GetKeyDown("w") && m_timeSinceAttack > 1f)
         {
             ManagingAudio.PlaySound("Melee");
             m_currentAttack++;
@@ -223,6 +223,14 @@ public class HeroKnight : MonoBehaviour {
                 GameObject dust = Instantiate(m_slideDust, spawnPosition, gameObject.transform.localRotation) as GameObject;
                 // Turn arrow in correct direction
                 dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
+            }
+        }
+
+        void OnCollisionEnter2D(Collision2D enemy)
+        {
+            if (enemy.gameObject.tag == "Enemy")
+            {
+                Debug.Log("Enemy Hit!! - Hero Script");
             }
         }
     }
