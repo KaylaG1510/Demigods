@@ -137,7 +137,8 @@ public class HeroKnight : MonoBehaviour {
         //    m_animator.SetTrigger("Hurt");
 
         //Attack *****used to be else if
-        if (Input.GetKeyDown("w") && m_timeSinceAttack > 1f)
+        //*****was 1f to slow attacks
+        if (Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
         {
             ManagingAudio.PlaySound("Melee");
             m_currentAttack++;
