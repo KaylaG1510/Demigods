@@ -12,6 +12,7 @@ public class Bandit : MonoBehaviour {
     private bool                m_grounded = false;
     private bool                m_combatIdle = false;
     private bool                m_isDead = false;
+    private int                  health;
 
     // Use this for initialization
     void Start () {
@@ -21,15 +22,18 @@ public class Bandit : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         //Check if character just landed on the ground
-        if (!m_grounded && m_groundSensor.State()) {
+        if (!m_grounded && m_groundSensor.State())
+        {
             m_grounded = true;
             m_animator.SetBool("Grounded", m_grounded);
         }
 
         //Check if character just started falling
-        if (m_grounded && !m_groundSensor.State()) {
+        if (m_grounded && !m_groundSensor.State())
+        {
             m_grounded = false;
             m_animator.SetBool("Grounded", m_grounded);
         }
@@ -65,7 +69,7 @@ public class Bandit : MonoBehaviour {
 
         //    m_isDead = !m_isDead;
         //}
-            
+
         //Hurt
         //else if (Input.GetKeyDown("q"))
         //    m_animator.SetTrigger("Hurt");
@@ -93,12 +97,14 @@ public class Bandit : MonoBehaviour {
         //    m_animator.SetInteger("AnimState", 2);
 
         //Combat Idle
-        /*else*/ if (m_combatIdle)
+        /*else*/
+        if (m_combatIdle)
             m_animator.SetInteger("AnimState", 1);
 
         //Idle
         else
             m_animator.SetInteger("AnimState", 0);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
