@@ -29,9 +29,12 @@ public class HeroKnight : MonoBehaviour {
     private float               m_timeSinceAttack = 0.0f;
     private float               m_delayToIdle = 0.0f;
 
+    public float health;
+
     // Use this for initialization
     void Start ()
     {
+        health = 100;
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         movementSrc = GetComponent<AudioSource>();
@@ -228,11 +231,16 @@ public class HeroKnight : MonoBehaviour {
             }
         }
 
-        void OnCollisionEnter2D(Collision2D enemy)
+        //negate damage from health, check if player is dead
+        void TakeDamage(int damage)
         {
-            if (enemy.gameObject.tag == "Enemy")
+            health -= damage;
+            if(health <= 0)
             {
-                Debug.Log("Enemy Hit!! - Hero Script");
+                Debug.Log("Dead");
+                //Send message to other GameObject that game is over?
+                //Declare gameobject set to LevelCanvas
+                //canvas.SendMessage("GameOver", true);?? << like this?? then set up game over msg w bool input on level canvas/pause script
             }
         }
     }

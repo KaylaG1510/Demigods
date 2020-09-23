@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BanditMovement : MonoBehaviour
+public class BanditAI : MonoBehaviour
 {
     public float speed;
     private bool movingRight = false;
@@ -16,8 +16,20 @@ public class BanditMovement : MonoBehaviour
     private bool m_isDead = false;
     private int health;
 
+    //Attack vars
+    public float attackRange;
+    public int damage;
+    private float lastAttackTime;
+    public float attackDelay;
+    //Player target
+    public Transform playerTarget;
+
     private void Start()
     {
+        playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
+        attackDelay = 2f;
+        damage = 30;
+        attackRange = 80;
         //set animator, rigidbody and ground sensor components
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
@@ -62,16 +74,43 @@ public class BanditMovement : MonoBehaviour
         //TEST enemy attack
         if (Input.GetKeyDown("b"))
             m_animator.SetTrigger("Attack");
+
+        //Attack AI
+
+        //check distance between self and player, is player close enough to trigger melee attack?
+        float distToPlayer = Vector3.Distance(transform.position, playerTarget.position);
+        //cant attack player below platforms?
+        //close enough to attack player and cause damage
+        if(distToPlayer < attackRange)
+        {
+            Debug.Log("in distance");
+            //Check enough time passed since last attack
+            if (Time.time > lastAttackTime + attackDelay)
+            {
+                Debug.Log("Read to attack");
+                //play attack animation
+                m_animator.SetTrigger("Attack");
+
+                //send message to player to take damage
+                playerTarget.SendMessage("TakeDamage", damage);
+
+                //record time attacked ***Time.time;
+                lastAttackTime = Time.time;
+            }
+        }
     }
 
+    //Enemy collides with patrol bounds
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //make sure collision is with bounds
         if (collision.gameObject.CompareTag("EnemyBound"))
         {
             changeDirection();
         }
     }
 
+    //reached left or right bounds, change direction
     private void changeDirection()
     {
         //moving left, flip to right
