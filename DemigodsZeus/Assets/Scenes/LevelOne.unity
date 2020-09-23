@@ -27914,7 +27914,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6323719954954770060}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42d45cd18c85229478bce00e129b0ec0, type: 3}
   m_Name: 
@@ -28104,11 +28104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3467351031242721019, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00012207031
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3467351031242721019, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00018310547
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3467351031242721019, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_SizeDelta.x
@@ -28120,7 +28120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6164119978598185064, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00018310547
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164119978598185064, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606526425385467283, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
