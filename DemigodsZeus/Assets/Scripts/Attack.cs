@@ -40,7 +40,7 @@ public class Attack : MonoBehaviour
     void FightWithW()
     {
         // Play attack animation
-        animator.SetTrigger("Attack1");
+        animator.SetTrigger("Attack");
         
         // Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
