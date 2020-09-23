@@ -27828,6 +27828,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 62899472825180942, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 62899472825180942, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
+      propertyPath: MovementSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 62899472825180942, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
+      propertyPath: Jump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 62899472825180942, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
+      propertyPath: RG2D
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 83798295118913460, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
       propertyPath: m_Name
       value: Hero
@@ -27892,6 +27908,10 @@ PrefabInstance:
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 1479297337}
+    - target: {fileID: 6263358993538958419, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6323719954954770061, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
       propertyPath: pauseMenu
       value: 
@@ -27916,7 +27936,8 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 62899472825180942, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a58d691f5d14d45968cf3cc82b498632, type: 3}
 --- !u!1 &6323719954954770060 stripped
 GameObject:
@@ -27939,7 +27960,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1139854779}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 512
   attackRange: 63.51
   attackDamage: 40
   attackRate: 2
