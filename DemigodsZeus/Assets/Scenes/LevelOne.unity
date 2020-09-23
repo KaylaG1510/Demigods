@@ -18756,7 +18756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothTimeX: 0.05
   smoothTimeY: 0.05
-  playerReference: {fileID: 1699312684}
+  playerReference: {fileID: 1493049322}
   bounds: 1
   minCameraPos: {x: -450, y: -10, z: 0}
   maxCameraPos: {x: 4600, y: 10, z: 0}
@@ -25672,6 +25672,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488286354}
   m_CullTransparentMesh: 0
+--- !u!1 &1493049322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4333574182198614846, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+  m_PrefabInstance: {fileID: 1304778417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641869314
 GameObject:
   m_ObjectHideFlags: 0
@@ -25719,11 +25724,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1699312684 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4333574182198614846, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
-  m_PrefabInstance: {fileID: 1304778417}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1699312691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2243764365118117737, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
@@ -27920,14 +27920,6 @@ PrefabInstance:
     - target: {fileID: 6410679976381339467, guid: bf1bd75592a450b4990ff4494bf03ae0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6410679976381339469, guid: bf1bd75592a450b4990ff4494bf03ae0, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.16674621
-      objectReference: {fileID: 0}
-    - target: {fileID: 6410679976381339469, guid: bf1bd75592a450b4990ff4494bf03ae0, type: 3}
-      propertyPath: m_Size.y
-      value: 1.0400938
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf1bd75592a450b4990ff4494bf03ae0, type: 3}
