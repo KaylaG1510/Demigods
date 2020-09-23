@@ -106,10 +106,4 @@ public class Bandit : MonoBehaviour {
             m_animator.SetInteger("AnimState", 0);
 
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-            Debug.Log("Player collision detected - bandit script");
-    }
 }

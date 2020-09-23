@@ -58,6 +58,10 @@ public class BanditMovement : MonoBehaviour
         ////Idle
         //else
         //    m_animator.SetInteger("AnimState", 0);
+
+        //TEST enemy attack
+        if (Input.GetKeyDown("b"))
+            m_animator.SetTrigger("Attack");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
