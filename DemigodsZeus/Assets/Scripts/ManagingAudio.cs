@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ManagingAudio : MonoBehaviour
 {
-    public static AudioClip PlayerMeelee, PlayerJump, PlayerLanding, PlayerBlock, PlayerDeath;
+    public static AudioClip PlayerMeelee, PlayerJump, PlayerLanding, PlayerBlock, PlayerDeath, PlayerHurt;
     static AudioSource AudioSrc;
 
     void Start()
@@ -16,6 +16,7 @@ public class ManagingAudio : MonoBehaviour
         PlayerLanding = Resources.Load<AudioClip>("Landing");
         PlayerBlock = Resources.Load<AudioClip>("ESkill");
         PlayerDeath = Resources.Load<AudioClip>("Death");
+        PlayerHurt = Resources.Load<AudioClip>("Hurt");
 
         AudioSrc = GetComponent<AudioSource>();
     }
@@ -44,6 +45,9 @@ public class ManagingAudio : MonoBehaviour
             case "ESkill":
                 AudioSrc.volume = 0.4f;
                 AudioSrc.PlayOneShot(PlayerBlock);
+                break;
+            case "Hurt":
+                AudioSrc.PlayOneShot(PlayerHurt);
                 break;
             case "Death":
                 AudioSrc.PlayOneShot(PlayerDeath);

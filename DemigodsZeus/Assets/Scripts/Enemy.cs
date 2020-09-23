@@ -30,9 +30,11 @@ public class Enemy : MonoBehaviour
 
         // Play hurt animation
         animator.SetTrigger("Hurt");
+        ManagingAudio.PlaySound("Hurt");
 
         if(currentHealth <= 0)
         {
+            ManagingAudio.PlaySound("Death");
             Die();
         }
     }
