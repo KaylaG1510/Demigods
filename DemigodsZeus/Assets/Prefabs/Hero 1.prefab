@@ -254,8 +254,6 @@ GameObject:
   - component: {fileID: 4836570571007713409}
   - component: {fileID: 1727702559709651467}
   - component: {fileID: 1542241961380042280}
-  - component: {fileID: 4455522813223495556}
-  - component: {fileID: 7773686885850497241}
   - component: {fileID: 4333574182198614847}
   m_Layer: 9
   m_Name: Hero 1
@@ -420,40 +418,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23788378, y: 0.3504808}
   m_EdgeRadius: 0
---- !u!114 &4455522813223495556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4333574182198614846}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18eb5e1d3e874874da0bbeb0e2ff5a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementSpeed: 150
-  Stationary: 0
-  Jump: 10
-  Jumping: 0
-  RG2D: {fileID: 1727702559709651467}
-  PlatformLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  Collider2D: {fileID: 0}
-  isMoving: 0
---- !u!114 &7773686885850497241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4333574182198614846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2a8bdc7f41b704693ad497097f30dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &4333574182198614847
 AudioSource:
   m_ObjectHideFlags: 0
