@@ -12,7 +12,7 @@ public class Bandit : MonoBehaviour {
     private bool                m_grounded = false;
     private bool                m_combatIdle = false;
     private bool                m_isDead = false;
-    private int                  health;
+    private int                 health;
 
     // Use this for initialization
     void Start () {
