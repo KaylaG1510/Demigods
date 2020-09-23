@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class TestBandit : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int maxHealth = 100;
+    int currentHealth;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damage)
     {
-        
+        currentHealth -= damage;
+
+        // Play hurt animation
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
+    void Die()
+    {
+        Debug.Log("Enemy died!");
+    }
 }
