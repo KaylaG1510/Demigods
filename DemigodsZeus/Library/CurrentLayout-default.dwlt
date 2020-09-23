@@ -19,9 +19,15 @@ MonoBehaviour:
     width: 1440
     height: 900
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Project
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 542}
+=======
+  m_Title: Game
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -148,8 +154,13 @@ MonoBehaviour:
   m_MinSize: {x: 880, y: 492}
   m_MaxSize: {x: 22002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 131
 --- !u!114 &7
+=======
+  controlID: 79
+--- !u!114 &6
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,8 +184,13 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 18002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 132
 --- !u!114 &8
+=======
+  controlID: 57
+--- !u!114 &7
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,8 +215,13 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 133
 --- !u!114 &9
+=======
+  controlID: 58
+--- !u!114 &8
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,8 +326,13 @@ MonoBehaviour:
   m_MinSize: {x: 432, y: 271}
   m_MaxSize: {x: 18002, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 210
 --- !u!114 &13
+=======
+  controlID: 159
+--- !u!114 &12
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1346,7 +1372,11 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: d0360000
+=======
+      m_SelectedIDs: 
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
       m_LastClickedID: 0
       m_ExpandedIDs: 96a4ffff
       m_RenameOverlay:
@@ -1364,7 +1394,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 9}
+=======
+        m_ClientGUIView: {fileID: 0}
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1640,21 +1674,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scripts
+=======
+    - Assets/Scenes
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Scripts
+=======
+  - Assets/Scenes
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/mikayla/Desktop/Programming/Demigods/repo/Demigods/DemigodsZeus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 73.5}
     m_SelectedIDs: 1a610000
     m_LastClickedID: 24858
     m_ExpandedIDs: 00000000f0600000f2600000f4600000f6600000f8600000fa600000fc600000fe600000006100000261000006610000086100006c62000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 175}
+    m_SelectedIDs: 504a0000
+    m_LastClickedID: 19024
+    m_ExpandedIDs: 000000001a4a00001c4a00001e4a0000204a0000224a0000244a0000264a0000284a00002a4a00002c4a000000ca9a3b
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1709,8 +1758,13 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300001a6f0000d8550000dc5500006c5200006e520000426900008c460000c4650000484600000a3f0000823d000034530000ae0100000000000070620000
+=======
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300001a6f0000d8550000dc5500006c5200006e52000000000000426900008c460000c4650000484600000a3f0000
+>>>>>>> parent of b235ba24... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
