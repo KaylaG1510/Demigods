@@ -143,6 +143,7 @@ public class HeroKnight : MonoBehaviour {
             ManagingAudio.PlaySound("Melee");
             m_currentAttack++;
 
+
             // Loop back to one after third attack
             if (m_currentAttack > 3)
                 m_currentAttack = 1;
