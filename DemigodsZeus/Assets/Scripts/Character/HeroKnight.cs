@@ -143,7 +143,6 @@ public class HeroKnight : MonoBehaviour
             ManagingAudio.PlaySound("Melee");
             m_currentAttack++;
 
-
             // Loop back to one after third attack
             if (m_currentAttack > 3)
                 m_currentAttack = 1;
@@ -233,8 +232,10 @@ public class HeroKnight : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Debug.Log("Damage received :o");
+        m_animator.SetTrigger("Hurt");
 
         health -= damage;
+        //check if player is dead
         if (health <= 0)
         {
             Debug.Log("Dead");
@@ -244,4 +245,17 @@ public class HeroKnight : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+
+    //    public void OnTriggerEnter2D(Collider2D collision)
+    //    {
+    //        if(Input.GetKeyDown("w"))
+    //        {
+    //            if (collision.gameObject.CompareTag("Enemy"))
+    //            {
+    //                //send message to enemy to take damage
+    //                collision.gameObject.SendMessage("TakeDamage", 30, SendMessageOptions.RequireReceiver);
+    //            }
+
+    //        }
+    //    }
 }
