@@ -31,7 +31,7 @@ public class BanditAI : MonoBehaviour
         //playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         attackDelay = 2f;
         damage = 30;
-        attackRange = 200;
+        attackRange = 180;
         //set animator, rigidbody and ground sensor components
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
@@ -131,4 +131,21 @@ public class BanditAI : MonoBehaviour
             movingRight = false;
         }
     }
+
+    //public void TakeDamage(int damage)
+    //{
+    //    Debug.Log("enemy taking damage");
+    //    m_animator.SetTrigger("Hurt");
+
+    //    health -= damage;
+
+    //    //check enemy
+    //    if (health <= 0)
+    //    {
+    //        Debug.Log("Enemy Dead");
+    //        m_animator.SetTrigger("Death");
+    //        Destroy(this);
+    //    }
+
+    //}
 }

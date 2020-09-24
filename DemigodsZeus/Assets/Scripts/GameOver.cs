@@ -26,7 +26,7 @@ public class GameOver : MonoBehaviour
         Debug.Log("FROM GAME OVER: " + timeElapsed);
         if (timeElapsed > delayInterval)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             loseMenu.SetActive(true);
         }
     }
