@@ -82,9 +82,10 @@ public class BanditAI : MonoBehaviour
         //check distance between self and player, is player close enough to trigger melee attack?
         //float distToPlayer = Vector3.Distance(transform.position, playerTarget.position);
         float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
+        RaycastHit2D close = Physics2D.CircleCast(transform.position, 100, Vector2.up);
 
         //Debug.Log(attackRange);
-        if(distToPlayer < attackRange)
+        if (distToPlayer < attackRange)
         {
             Debug.Log("in distance");
             //Check enough time passed since last attack
