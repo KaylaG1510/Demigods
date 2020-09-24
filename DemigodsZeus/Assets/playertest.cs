@@ -8,16 +8,16 @@ public class playertest : MonoBehaviour
 {
     public int maxHealth = 150;
     public int currentHealth;
-
     public int Damage = 30;
-
     public HealthBar healthBar;
-
     private Animator m_animator;
-
     public Transform AttackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+
+
+
+
 
     void Update()
     {

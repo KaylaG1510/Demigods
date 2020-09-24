@@ -27,5 +27,6 @@ public class boxHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy Deded");
+        GetComponent<Collider2D>().enabled = false;
     }
 }

@@ -16,6 +16,10 @@ public class BanditAI : MonoBehaviour
     private bool m_isDead = false;
     private int health;
 
+    //Test
+    public int maxHealth = 120;
+    int currentHealth;
+
     //Attack vars
     public float attackRange;
     public int damage;
@@ -27,6 +31,7 @@ public class BanditAI : MonoBehaviour
 
     private void Start()
     {
+        currentHealth = maxHealth;
         playerTarget = GameObject.FindGameObjectWithTag("Player");
         //playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         attackDelay = 2f;
@@ -130,6 +135,24 @@ public class BanditAI : MonoBehaviour
             transform.eulerAngles = new Vector3(0, -180, 0);
             movingRight = false;
         }
+    }
+
+    public void takeDamage(int damage)
+    {
+        currentHealth -= damage;
+        m_animator.SetTrigger("Hurt");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Enemy Deded");
+        m_animator.SetTrigger("Death");
+        Destroy(this);
     }
 
     //public void TakeDamage(int damage)

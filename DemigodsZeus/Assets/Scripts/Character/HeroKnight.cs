@@ -10,6 +10,15 @@ public class HeroKnight : MonoBehaviour
     [SerializeField] bool       m_noBlood = false;
     [SerializeField] GameObject m_slideDust;
 
+    //Testing
+    public int maxHealth = 150;
+    public int currentHealth;
+    public int Damage = 30;
+    public HealthBar healthBar;
+    public Transform AttackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+
     public GameObject           pauseMenu;
     public GameObject           pauseButton;
     public GameObject           levelCanvas;
@@ -36,7 +45,10 @@ public class HeroKnight : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        health = 100;
+        //Test
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         movementSrc = GetComponent<AudioSource>();
@@ -156,6 +168,9 @@ public class HeroKnight : MonoBehaviour
 
             // Reset timer
             m_timeSinceAttack = 0.0f;
+
+            Attack();
+
         }
         // Block
         else if (Input.GetKeyDown("e"))
@@ -234,7 +249,8 @@ public class HeroKnight : MonoBehaviour
         Debug.Log("Damage received :o");
         m_animator.SetTrigger("Hurt");
 
-        health -= damage;
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
         //check if player is dead
         if (health <= 0)
         {
@@ -246,6 +262,28 @@ public class HeroKnight : MonoBehaviour
         }
     }
 
+    void Attack()
+    {
+        //GetComponent<Animation>()["attack 1"].speed = 1;
+        m_animator.SetTrigger("Attack1");
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<BanditAI>().takeDamage(Damage);
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (AttackPoint == null)
+        {
+            return;
+        }
+
+        Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
+    }
     //    public void OnTriggerEnter2D(Collider2D collision)
     //    {
     //        if(Input.GetKeyDown("w"))

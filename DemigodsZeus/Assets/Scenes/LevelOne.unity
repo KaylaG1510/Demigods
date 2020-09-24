@@ -354,7 +354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 26.999939, y: 9}
+  m_AnchoredPosition: {x: 27, y: 9}
   m_SizeDelta: {x: 398.53293, y: 26.238037}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &267507283
@@ -18472,7 +18472,7 @@ GameObject:
   - component: {fileID: 755514808}
   - component: {fileID: 755514810}
   - component: {fileID: 755514809}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18662,6 +18662,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809519762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809519763}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809519763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809519762}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.268, y: -0.023, z: 0}
+  m_LocalScale: {x: 0.0025, y: 0.0025, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1493049329}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811688365
 GameObject:
@@ -25623,7 +25653,7 @@ GameObject:
   - component: {fileID: 1277798680}
   - component: {fileID: 1277798682}
   - component: {fileID: 1277798681}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: 'Border '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25776,6 +25806,22 @@ PrefabInstance:
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 1479297337}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 267507283}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: AttackPoint
+      value: 
+      objectReference: {fileID: 809519763}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: attackRange
+      value: 72.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: enemyLayers.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
     - target: {fileID: 2243764365118117737, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
       propertyPath: m_LocalPosition.x
       value: -739
@@ -25902,7 +25948,7 @@ GameObject:
   - component: {fileID: 1353206027}
   - component: {fileID: 1353206029}
   - component: {fileID: 1353206028}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25979,7 +26025,7 @@ GameObject:
   - component: {fileID: 1380201670}
   - component: {fileID: 1380201669}
   - component: {fileID: 1380201672}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28628,7 +28674,7 @@ GameObject:
   - component: {fileID: 1977045263}
   - component: {fileID: 1977045265}
   - component: {fileID: 1977045264}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Health bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28796,6 +28842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightBandit
       objectReference: {fileID: 0}
+    - target: {fileID: 1999981148954883268, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: playerTarget
       value: 
@@ -28815,6 +28865,14 @@ PrefabInstance:
     - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001670464049916234, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2001670464112563047, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_Enabled
