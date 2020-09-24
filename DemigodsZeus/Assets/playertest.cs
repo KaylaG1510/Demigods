@@ -9,6 +9,8 @@ public class playertest : MonoBehaviour
     public int maxHealth = 150;
     public int currentHealth;
 
+    public int Damage = 30;
+
     public HealthBar healthBar;
 
     private Animator m_animator;
@@ -38,7 +40,7 @@ public class playertest : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log("we hit " + enemy.name);
+            enemy.GetComponent<boxHealth>().takeDamage(Damage);
         }
     }
 
@@ -61,7 +63,7 @@ public class playertest : MonoBehaviour
         if(AttackPoint == null)
         {
             return;
-        }
+        } 
 
         Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
     }
