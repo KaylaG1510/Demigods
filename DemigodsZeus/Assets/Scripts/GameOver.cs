@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     public GameObject loseMenu;
+    [SerializeField] private float delayInterval = 2.5f; //default value
+    private float timeElapsed;
 
     // Start is called before the first frame update
     void Start()
@@ -12,9 +14,20 @@ public class GameOver : MonoBehaviour
         loseMenu.SetActive(false);
     }
 
+    private void Update()
+    {
+        timeElapsed += Time.deltaTime;
+    }
+
     public void GameIsOver()
     {
-        Time.timeScale = 0;
-        loseMenu.SetActive(true);
+        //reset time elapsed to when player actually dies
+        timeElapsed = 0;
+        Debug.Log("FROM GAME OVER: " + timeElapsed);
+        if (timeElapsed > delayInterval)
+        {
+            Time.timeScale = 0;
+            loseMenu.SetActive(true);
+        }
     }
 }

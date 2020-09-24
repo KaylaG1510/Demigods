@@ -239,9 +239,9 @@ public class HeroKnight : MonoBehaviour
         {
             Debug.Log("Dead");
             m_animator.SetTrigger("Death");
-            new WaitForSeconds(3f);
             //tell LevelCanvas to pull up GameOver screen
             levelCanvas.SendMessage("GameIsOver");
+            Time.timeScale = 0;
         }
     }
 }
