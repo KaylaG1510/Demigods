@@ -31,6 +31,12 @@ public class playertest : MonoBehaviour
         }
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+            collision.gameObject.SendMessage("takeDamage", 30, SendMessageOptions.RequireReceiver);
+    }
+
     void Attack()
     {
         //GetComponent<Animation>()["attack 1"].speed = 1;
@@ -38,10 +44,10 @@ public class playertest : MonoBehaviour
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        /*foreach(Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<boxHealth>().takeDamage(Damage);
-        }
+        }*/
     }
 
     void Start()
