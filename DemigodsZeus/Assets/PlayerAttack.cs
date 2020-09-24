@@ -1,18 +1,28 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float timebtwAttack;
+    public float StartTimeAttack;
 
-    // Update is called once per frame
-    void Update()
+    void Upate()
     {
-        
+        if (timebtwAttack <= 0)
+        {
+            if (Input.GetKey("w"))
+            {
+                Collider2D[] enemeiesToDamage = Physics2D;
+
+                timebtwAttack = StartTimeAttack;
+            }
+
+            
+        }
+        else
+        {
+            timebtwAttack -= Time.deltatime;
+        }
     }
-}
+}*/
