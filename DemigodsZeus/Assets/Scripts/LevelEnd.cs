@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour
 {
-    public GameObject winPanel;
-    public GameObject losePanel;
+    public GameObject winMenu;
 
     private void Start()
     {
-        winPanel.SetActive(false);
-        losePanel.SetActive(false);
+        winMenu.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -19,7 +17,7 @@ public class LevelEnd : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Time.timeScale = 0;
-            winPanel.SetActive(true);
+            winMenu.SetActive(true);
         }
     }
 

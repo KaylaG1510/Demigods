@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HeroKnight : MonoBehaviour {
+public class HeroKnight : MonoBehaviour
+{
 
     [SerializeField] float      m_speed = 4.0f;
     [SerializeField] float      m_jumpForce = 7.5f;
@@ -11,6 +12,7 @@ public class HeroKnight : MonoBehaviour {
 
     public GameObject           pauseMenu;
     public GameObject           pauseButton;
+    public GameObject           levelCanvas;
 
     AudioSource                 movementSrc;
     public bool                 isMoving = false;
@@ -48,11 +50,6 @@ public class HeroKnight : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        //Time.timeScale = 1;
-        //Game is over
-        if (GameManager.IsGameOver())
-            return;
-
         if (Input.GetKeyDown("escape"))
         {
             //pause/freeze any animated things
@@ -230,18 +227,21 @@ public class HeroKnight : MonoBehaviour {
                 dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
             }
         }
+    }
 
-        //negate damage from health, check if player is dead
-        void TakeDamage(int damage)
+    //negate damage from health, check if player is dead
+    public void TakeDamage(int damage)
+    {
+        Debug.Log("Damage received :o");
+
+        health -= damage;
+        if (health <= 0)
         {
-            health -= damage;
-            if(health <= 0)
-            {
-                Debug.Log("Dead");
-                //Send message to other GameObject that game is over?
-                //Declare gameobject set to LevelCanvas
-                //canvas.SendMessage("GameOver", true);?? << like this?? then set up game over msg w bool input on level canvas/pause script
-            }
+            Debug.Log("Dead");
+            m_animator.SetTrigger("Death");
+            new WaitForSeconds(3f);
+            //tell LevelCanvas to pull up GameOver screen
+            levelCanvas.SendMessage("GameIsOver");
         }
     }
 }

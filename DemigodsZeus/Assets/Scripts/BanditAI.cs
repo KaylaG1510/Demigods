@@ -22,14 +22,16 @@ public class BanditAI : MonoBehaviour
     private float lastAttackTime;
     public float attackDelay;
     //Player target
-    public Transform playerTarget;
+    //public Transform playerTarget;
+    public GameObject playerTarget;
 
     private void Start()
     {
-        playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTarget = GameObject.FindGameObjectWithTag("Player");
+        //playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         attackDelay = 2f;
         damage = 30;
-        attackRange = 80;
+        attackRange = 200;
         //set animator, rigidbody and ground sensor components
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
@@ -78,9 +80,10 @@ public class BanditAI : MonoBehaviour
         //Attack AI
 
         //check distance between self and player, is player close enough to trigger melee attack?
-        float distToPlayer = Vector3.Distance(transform.position, playerTarget.position);
-        //cant attack player below platforms?
-        //close enough to attack player and cause damage
+        //float distToPlayer = Vector3.Distance(transform.position, playerTarget.position);
+        float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
+
+        //Debug.Log(attackRange);
         if(distToPlayer < attackRange)
         {
             Debug.Log("in distance");
@@ -90,9 +93,11 @@ public class BanditAI : MonoBehaviour
                 Debug.Log("Read to attack");
                 //play attack animation
                 m_animator.SetTrigger("Attack");
+                //stop moving while attacking ***might have to do for when Attack Trigger is active??
+                m_body2d.velocity = new Vector2(0, 0);
 
                 //send message to player to take damage
-                playerTarget.SendMessage("TakeDamage", damage);
+                playerTarget.SendMessage("TakeDamage", damage, SendMessageOptions.RequireReceiver);
 
                 //record time attacked ***Time.time;
                 lastAttackTime = Time.time;
