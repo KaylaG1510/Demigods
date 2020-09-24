@@ -16,18 +16,19 @@ public class GameOver : MonoBehaviour
 
     private void Update()
     {
-        timeElapsed += Time.deltaTime;
+        //timeElapsed += Time.deltaTime;
     }
 
     public void GameIsOver()
     {
-        //reset time elapsed to when player actually dies
-        timeElapsed = 0;
-        Debug.Log("FROM GAME OVER: " + timeElapsed);
-        if (timeElapsed > delayInterval)
-        {
-            //Time.timeScale = 0;
-            loseMenu.SetActive(true);
-        }
+        Debug.Log("Invoke called correctly");
+        Time.timeScale = 0;
+        loseMenu.SetActive(true);
+    }
+
+    public void InvokeMenuAfterDeath()
+    {
+        Debug.Log("Invoke called");
+        Invoke("GameIsOver", 2.0f);
     }
 }

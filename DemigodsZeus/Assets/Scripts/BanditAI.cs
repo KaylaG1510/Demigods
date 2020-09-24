@@ -94,15 +94,11 @@ public class BanditAI : MonoBehaviour
         //Debug.Log(attackRange);
         if (distToPlayer < attackRange)
         {
-            Debug.Log("in distance");
             //Check enough time passed since last attack
             if (Time.time > lastAttackTime + attackDelay)
             {
-                Debug.Log("Read to attack");
                 //play attack animation
                 m_animator.SetTrigger("Attack");
-                //stop moving while attacking ***might have to do for when Attack Trigger is active??
-                m_body2d.velocity = new Vector2(0, 0);
 
                 //send message to player to take damage
                 playerTarget.SendMessage("TakeDamage", damage, SendMessageOptions.RequireReceiver);
