@@ -21,7 +21,7 @@ public class HeroKnight : MonoBehaviour
 
     public GameObject           pauseMenu;
     public GameObject           pauseButton;
-    public GameObject           levelCanvas;
+    public GameObject           levelCanvas;    //contains pause menu and win/lose panels
 
     AudioSource                 movementSrc;
     public bool                 isMoving = false;
@@ -60,11 +60,14 @@ public class HeroKnight : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        //user hits esc key to bring up pause menu
         if (Input.GetKeyDown("escape"))
         {
             //pause/freeze any animated things
             Time.timeScale = 0f;
+            //activate pause menu
             pauseMenu.SetActive(true);
+            //hide pause button as already paused
             pauseButton.SetActive(false);
         }
 
@@ -90,12 +93,12 @@ public class HeroKnight : MonoBehaviour
         float inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
-        if (inputX > 0)
+        if (inputX > 0) //moving right
         {
             GetComponent<SpriteRenderer>().flipX = false;
             m_facingDirection = 1;
         }
-        else if (inputX < 0)
+        else if (inputX < 0)    //moving left
         {
             GetComponent<SpriteRenderer>().flipX = true;
             m_facingDirection = -1;
@@ -104,25 +107,30 @@ public class HeroKnight : MonoBehaviour
         // Move
         if (!m_rolling)
         {
+            //translate rigidbody
             m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
 
+            //rigidbody is moving
             if (m_body2d.velocity.x != 0)
             {
                 isMoving = true;
             }
+            //not moving
             else
             {
                 isMoving = false;
             }
 
+            //only play moving sound when on ground, moving and game isnt paused
             if (isMoving && m_grounded && Time.timeScale == 1)
             {
+                //check sound already playing
                 if (!movementSrc.isPlaying)
                 {
                     movementSrc.PlayScheduled(2.0f);
                 }
             }
-            else
+            else //stop sound
             {
                 movementSrc.Stop();
             }
@@ -131,22 +139,7 @@ public class HeroKnight : MonoBehaviour
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
-        // -- Handle Animations --
-        //Wall Slide
-        //m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
-
-        //Death
-        //if (Input.GetKeyDown("s"))
-        //{
-        //    m_animator.SetBool("noBlood", m_noBlood);
-        //    m_animator.SetTrigger("Death");
-        //}
-
-        //Hurt
-        //else if (Input.GetKeyDown("q"))
-        //    m_animator.SetTrigger("Hurt");
-
-        //Attack *****used to be else if
+        //Attack
         //*****was 1f to slow attacks
         if (Input.GetKeyDown("w") && m_timeSinceAttack > 0.25f)
         {
@@ -167,6 +160,7 @@ public class HeroKnight : MonoBehaviour
             // Reset timer
             m_timeSinceAttack = 0.0f;
 
+            //attack enemy
             Attack();
 
         }
@@ -177,17 +171,19 @@ public class HeroKnight : MonoBehaviour
             m_animator.SetBool("IdleBlock", true);
             ManagingAudio.PlaySound("ESkill");
         }
+        //stop blocking
         else if (Input.GetKeyUp("e"))
         {
             m_animator.SetBool("IdleBlock", false);
         }
-        // Roll
+        // Roll *Sprint 2 potentially
         //else if (Input.GetKeyDown("left shift") && !m_rolling)
         //{
         //    m_rolling = true;
         //    m_animator.SetTrigger("Roll");
         //    m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
         //}
+
         //Jump
         else if ((Input.GetKeyDown("space") && m_grounded) || (Input.GetKeyDown("up") && m_grounded))
         {
@@ -215,10 +211,11 @@ public class HeroKnight : MonoBehaviour
                 if (m_delayToIdle < 0)
                     m_animator.SetInteger("AnimState", 0);
             }
+            //character dies
             Death();
 
         }
-
+        Death();
         // Animation Events
         // Called in end of roll animation.
         //void AE_ResetRoll()
@@ -260,20 +257,22 @@ public class HeroKnight : MonoBehaviour
         
     }
 
+    //Character loses all health
     public void Death()
     {
         if (currentHealth <= 0)
-                {
-                    Debug.Log("Dead");
-                    m_animator.SetTrigger("Death");
-                    //tell LevelCanvas to pull up GameOver screen
-                    levelCanvas.SendMessage("InvokeMenuAfterDeath");
+        {
+            Debug.Log("Dead");
+            m_animator.SetTrigger("Death");
+            //tell LevelCanvas to pull up GameOver screen
+            levelCanvas.SendMessage("InvokeMenuAfterDeath");
 
-                    //deactivate enemies so health bars dont take up menu space
-                    //??
-                }
+            //deactivate enemies so health bars dont take up menu space
+            //??
+        }
     }
 
+    //attack enemies
     void Attack()
     {
         //GetComponent<Animation>()["attack 1"].speed = 1;
@@ -281,12 +280,14 @@ public class HeroKnight : MonoBehaviour
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
 
+        //check each enemy
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<BanditAI>().takeDamage(Damage);
         }
     }
 
+    //for circle collider on sword
     void OnDrawGizmosSelected()
     {
         if (AttackPoint == null)

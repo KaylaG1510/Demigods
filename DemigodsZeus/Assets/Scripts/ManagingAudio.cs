@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ManagingAudio : MonoBehaviour
 {
+    //used audio clips
     public static AudioClip PlayerMeelee, PlayerJump, PlayerLanding, PlayerBlock, PlayerDeath, PlayerHurt;
     static AudioSource AudioSrc;
 
@@ -21,34 +22,35 @@ public class ManagingAudio : MonoBehaviour
         AudioSrc = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Play correct player sound at right time
     public static void PlaySound(string clip)
     {
         switch(clip)
         {
+            //user is melee attacking
             case "Melee":
                 AudioSrc.volume = 0.8f;
                 AudioSrc.PlayOneShot(PlayerMeelee);
                 break;
+            //user is jumping
             case "Jump":
                 AudioSrc.volume = 1.0f;
                 AudioSrc.PlayOneShot(PlayerJump);
                 break;
+            //user lands on ground
             case "Landing":
                 AudioSrc.PlayOneShot(PlayerLanding);
                 break;
+            //User blocks
             case "ESkill":
                 AudioSrc.volume = 0.4f;
                 AudioSrc.PlayOneShot(PlayerBlock);
                 break;
+            //user gets hit
             case "Hurt":
                 AudioSrc.PlayOneShot(PlayerHurt);
                 break;
+            //user dies
             case "Death":
                 AudioSrc.PlayOneShot(PlayerDeath);
                 break;

@@ -11,8 +11,8 @@ public class CameraFolllow : MonoBehaviour
     public GameObject playerReference;  //GameObject camera follows
 
     public bool bounds;
-    public Vector3 minCameraPos;    //minimum camera bounds
-    public Vector3 maxCameraPos;    //maximum camera bounds
+    public Vector3 minCameraPos;    //minimum camera bounds position    
+    public Vector3 maxCameraPos;    //maximum camera bounds position
 
     // Start is called before the first frame update
     void Start()

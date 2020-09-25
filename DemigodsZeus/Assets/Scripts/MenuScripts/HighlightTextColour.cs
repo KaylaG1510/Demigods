@@ -11,9 +11,9 @@ public class HighlightTextColour : MonoBehaviour, IPointerEnterHandler, IPointer
     //?Burnt Orange
     private Color32 highlightColour = new Color32(207, 78, 8, 255);
 
-    public GameObject t;
-    public float posX;
-    public float posY;
+    public GameObject t;    //arrow
+    public float posX;      //xpos of arrow
+    public float posY;      //ypos of arrow
 
     void Start()
     {

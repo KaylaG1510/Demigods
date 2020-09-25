@@ -9,36 +9,37 @@ public class BanditAI : MonoBehaviour
     public Transform groundDetection;
 
     private Animator m_animator;
-    private Rigidbody2D m_body2d;
-    private Sensor_Bandit m_groundSensor;
-    private bool m_grounded = false;
-    private bool m_combatIdle = false;
+    private Rigidbody2D m_body2d;   
+    private Sensor_Bandit m_groundSensor;   //collider w ground
+    private bool m_grounded = false;        //is enemy on ground
+    private bool m_combatIdle = false;  
     private bool m_isDead = false;
-    private int health;
-    public HealthBar healthBar;
+    public HealthBar healthBar;         //enemy health bar
 
     //Test
     public int maxHealth = 120;
     int currentHealth;
 
     //Attack vars
-    public float attackRange;
-    public int damage;
+    public float attackRange;   //how far away the enemy can reach the player when attacking
+    public int damage;  //damage dealt to player in a single hit
+    //enemy can only attack every couple of seconds
     private float lastAttackTime;
     public float attackDelay;
-    //Player target
-    //public Transform playerTarget;
+    //Player target to attack
     public GameObject playerTarget;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        //display health bar at full health
         healthBar.SetMaxHealth(maxHealth);
+
+        //find the player enemies are targeting if not assigned in inspector
         playerTarget = GameObject.FindGameObjectWithTag("Player");
-        //playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         attackDelay = 2f;
         damage = 30;
-        attackRange = 180;
+        attackRange = 150;
         //set animator, rigidbody and ground sensor components
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
@@ -47,6 +48,7 @@ public class BanditAI : MonoBehaviour
 
     private void Update()
     {
+        //constantly running
         m_animator.SetInteger("AnimState", 2);
 
         //check if character just landed on ground
@@ -65,7 +67,7 @@ public class BanditAI : MonoBehaviour
 
         //move enemy
         transform.Translate(Vector2.left * speed * Time.deltaTime);
-        //get information on whether ground is detected at character edge
+        //get information on whether ground is detected at character edge of platform
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 100f);
 
         //no ground found/platform end or bounds reached
@@ -81,17 +83,16 @@ public class BanditAI : MonoBehaviour
         //    m_animator.SetInteger("AnimState", 0);
 
         //TEST enemy attack
-        if (Input.GetKeyDown("b"))
-            m_animator.SetTrigger("Attack");
+        //if (Input.GetKeyDown("b"))
+        //    m_animator.SetTrigger("Attack");
 
         //Attack AI
 
         //check distance between self and player, is player close enough to trigger melee attack?
-        //float distToPlayer = Vector3.Distance(transform.position, playerTarget.position);
         float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
-        RaycastHit2D close = Physics2D.CircleCast(transform.position, 100, Vector2.up);
+        //RaycastHit2D close = Physics2D.CircleCast(transform.position, 100, Vector2.up);
 
-        //Debug.Log(attackRange);
+        //if player is within attack range
         if (distToPlayer < attackRange)
         {
             //Check enough time passed since last attack
@@ -115,6 +116,7 @@ public class BanditAI : MonoBehaviour
         //make sure collision is with bounds
         if (collision.gameObject.CompareTag("EnemyBound"))
         {
+            //turn around
             changeDirection();
         }
     }
@@ -136,39 +138,30 @@ public class BanditAI : MonoBehaviour
         }
     }
 
+    //receives message from hero to take damage
     public void takeDamage(int damage)
     {
+        //negate damage dealth
         currentHealth -= damage;
+        //display hurt animation
         m_animator.SetTrigger("Hurt");
+        //update health bar to new current health
         healthBar.SetHealth(currentHealth);
 
+        //is enemy dead
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+    //kill enemy
     void Die()
     {
         Debug.Log("Enemy Deded");
+        //play death animation
         m_animator.SetTrigger("Death");
+        //remove enemy gameobject after death animation plays
         Destroy(gameObject, 0.8f);
     }
-
-    //public void TakeDamage(int damage)
-    //{
-    //    Debug.Log("enemy taking damage");
-    //    m_animator.SetTrigger("Hurt");
-
-    //    health -= damage;
-
-    //    //check enemy
-    //    if (health <= 0)
-    //    {
-    //        Debug.Log("Enemy Dead");
-    //        m_animator.SetTrigger("Death");
-    //        Destroy(this);
-    //    }
-
-    //}
 }

@@ -18917,6 +18917,10 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 1493049322}
+    - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: attackRange
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -25808,6 +25812,14 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 1493049322}
+    - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: maxHealth
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: attackRange
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -28469,6 +28481,10 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 1493049322}
+    - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: attackRange
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -28641,7 +28657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: attackRange
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: attackDelay
