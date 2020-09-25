@@ -209,9 +209,14 @@ public class HeroKnight : MonoBehaviour
         else
         {
             // Prevents flickering transitions to idle
-            m_delayToIdle -= Time.deltaTime;
-            if (m_delayToIdle < 0)
-                m_animator.SetInteger("AnimState", 0);
+            if (currentHealth > 0)
+            {
+                m_delayToIdle -= Time.deltaTime;
+                if (m_delayToIdle < 0)
+                    m_animator.SetInteger("AnimState", 0);
+            }
+            Death();
+
         }
 
         // Animation Events
@@ -245,21 +250,28 @@ public class HeroKnight : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Debug.Log("Damage received :o");
-        m_animator.SetTrigger("Hurt");
-
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        //check if player is dead
-        if (currentHealth <= 0)
+        if (currentHealth > 0)
         {
-            Debug.Log("Dead");
-            m_animator.SetTrigger("Death");
-            //tell LevelCanvas to pull up GameOver screen
-            levelCanvas.SendMessage("InvokeMenuAfterDeath");
-
-            //deactivate enemies so health bars dont take up menu space
-            //??
+            m_animator.SetTrigger("Hurt");
         }
+        //check if player is dead
+        
+    }
+
+    public void Death()
+    {
+        if (currentHealth <= 0)
+                {
+                    Debug.Log("Dead");
+                    m_animator.SetTrigger("Death");
+                    //tell LevelCanvas to pull up GameOver screen
+                    levelCanvas.SendMessage("InvokeMenuAfterDeath");
+
+                    //deactivate enemies so health bars dont take up menu space
+                    //??
+                }
     }
 
     void Attack()
