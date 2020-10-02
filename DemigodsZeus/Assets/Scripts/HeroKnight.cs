@@ -25,6 +25,7 @@ public class HeroKnight : MonoBehaviour
 
     AudioSource                 movementSrc;
     public bool                 isMoving = false;
+    private bool                isBlocking = false;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -167,13 +168,15 @@ public class HeroKnight : MonoBehaviour
         // Block
         else if (Input.GetKeyDown("e"))
         {
+            isBlocking = true;
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
-            ManagingAudio.PlaySound("ESkill");
+            //ManagingAudio.PlaySound("ESkill");
         }
         //stop blocking
         else if (Input.GetKeyUp("e"))
         {
+            isBlocking = false;
             m_animator.SetBool("IdleBlock", false);
         }
         // Roll *Sprint 2 potentially
@@ -212,10 +215,10 @@ public class HeroKnight : MonoBehaviour
                     m_animator.SetInteger("AnimState", 0);
             }
             //character dies
-            Death();
+            //Death();
 
         }
-        Death();
+        //Death();
         // Animation Events
         // Called in end of roll animation.
         //void AE_ResetRoll()
@@ -247,29 +250,32 @@ public class HeroKnight : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Debug.Log("Damage received :o");
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-        if (currentHealth > 0)
-        {
-            m_animator.SetTrigger("Hurt");
-        }
-        //check if player is dead
-        
-    }
 
-    //Character loses all health
-    public void Death()
-    {
-        if (currentHealth <= 0)
+        //check player is not blocking
+        if (!isBlocking)
         {
-            Debug.Log("Dead");
-            m_animator.SetTrigger("Death");
-            //tell LevelCanvas to pull up GameOver screen
-            levelCanvas.SendMessage("InvokeMenuAfterDeath");
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            if (currentHealth > 0)
+            {
+                m_animator.SetTrigger("Hurt");
+            }
+            //player has no health left; DEAD
+            else
+            {
+                Debug.Log("Dead");
+                m_animator.SetTrigger("Death");
+                //tell levelCanvas to pull up GameOver screen
+                levelCanvas.SendMessage("InvokeMenuAfterDeath");
 
-            //deactivate enemies so health bars dont take up menu space
-            //??
+                //deactiveate enemy health bars so dont take up menu space??
+            }
         }
+        else //player blocked attack
+        {
+            ManagingAudio.PlaySound("ESkill");
+        }
+
     }
 
     //attack enemies
