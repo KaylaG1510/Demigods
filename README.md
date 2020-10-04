@@ -17,7 +17,7 @@ my assets*
 
 ---
 
-##Included assets  
+## Included assets  
 **Sprites and Templates**  
 [Hero](www.google.com)  
 [Bandit Enemies](www.google.com)  
@@ -30,7 +30,7 @@ my assets*
 
 ---
 
-##Contributors  
+## Contributors  
 Mikayla Piercy  
 Bailey Harriss  
 Brendan Khaw  
