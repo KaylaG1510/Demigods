@@ -34,7 +34,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    - Packages.Rider.Editor.UnitTesting.SyncTestRunEventsHandler
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
@@ -51,13 +50,9 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
-    - TestRunner.Callbacks.WindowResultUpdaterDataHolder
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
-    - UnityEditor.TestTools.TestRunner.RerunCallbackData
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-    - UnityEditor.TestTools.TestRunner.TestRunnerWindow
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -106,63 +101,63 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 642}
+      Script: {instanceID: 636}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 12344}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 12468}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 12524}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 13018}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 13276}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 13304}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 13944}
+      Script: {instanceID: 12890}
     - Class: 114
-      Script: {instanceID: 14052}
+      Script: {instanceID: 12954}
     - Class: 114
-      Script: {instanceID: 14114}
+      Script: {instanceID: 13494}
     - Class: 114
-      Script: {instanceID: 14144}
+      Script: {instanceID: 13596}
     - Class: 114
-      Script: {instanceID: 14374}
+      Script: {instanceID: 13682}
     - Class: 114
-      Script: {instanceID: 14520}
+      Script: {instanceID: 13900}
     - Class: 114
-      Script: {instanceID: 14548}
+      Script: {instanceID: 14030}
     - Class: 114
-      Script: {instanceID: 14588}
+      Script: {instanceID: 14054}
     - Class: 114
-      Script: {instanceID: 14742}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 14908}
+      Script: {instanceID: 14238}
     - Class: 114
-      Script: {instanceID: 15034}
+      Script: {instanceID: 14378}
     - Class: 114
-      Script: {instanceID: 15118}
+      Script: {instanceID: 14486}
+    - Class: 114
+      Script: {instanceID: 14562}
+    - Class: 114
+      Script: {instanceID: 14594}
+    - Class: 114
+      Script: {instanceID: 15052}
+    - Class: 114
+      Script: {instanceID: 15068}
+    - Class: 114
+      Script: {instanceID: 15132}
     - Class: 114
       Script: {instanceID: 15154}
     - Class: 114
-      Script: {instanceID: 15656}
+      Script: {instanceID: 15196}
     - Class: 114
-      Script: {instanceID: 15674}
-    - Class: 114
-      Script: {instanceID: 15746}
-    - Class: 114
-      Script: {instanceID: 15768}
-    - Class: 114
-      Script: {instanceID: 15792}
-    - Class: 114
-      Script: {instanceID: 15812}
-    - Class: 114
-      Script: {instanceID: 15846}
+      Script: {instanceID: 15226}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,43 +220,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 12468}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 12524}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 13276}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 13304}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 13342}
+      Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 14114}
+      Script: {instanceID: 12890}
     - Class: 114
-      Script: {instanceID: 14520}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 14544}
+      Script: {instanceID: 14030}
     - Class: 114
-      Script: {instanceID: 14588}
+      Script: {instanceID: 14050}
     - Class: 114
-      Script: {instanceID: 14908}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 14938}
+      Script: {instanceID: 14378}
     - Class: 114
-      Script: {instanceID: 15034}
+      Script: {instanceID: 14400}
     - Class: 114
-      Script: {instanceID: 15370}
+      Script: {instanceID: 14486}
     - Class: 114
-      Script: {instanceID: 15556}
+      Script: {instanceID: 14782}
     - Class: 114
-      Script: {instanceID: 15656}
+      Script: {instanceID: 14956}
     - Class: 114
-      Script: {instanceID: 15746}
+      Script: {instanceID: 15052}
     - Class: 114
-      Script: {instanceID: 15768}
+      Script: {instanceID: 15132}
     - Class: 114
-      Script: {instanceID: 15792}
+      Script: {instanceID: 15154}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -287,6 +282,18 @@ ScriptsOnlyBuild:
     - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 0c05f2bfb402def3f0a85a62a2323c7f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: f087c23fbfa15475a0d110af46fb0496
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -319,7 +326,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 372b037643e3a0f3972f6b2a7b370088
+      Hash: 87ce75320d528e3c612d6b53500a26de
     assemblyName: NewAssembly.dll
     namespaceName: 
     className: LevelEnd
@@ -631,12 +638,6 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: f087c23fbfa15475a0d110af46fb0496
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 0058a638ea4ce7e3544d1d2508a21568
     assemblyName: NewAssembly.dll
     namespaceName: 
@@ -893,12 +894,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: 0c05f2bfb402def3f0a85a62a2323c7f
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Slider
   - hash:
       serializedVersion: 2
       Hash: 48c156021bdc7fa0a4546fa27035660e
