@@ -7,7 +7,7 @@
 [Block](www.google.com)  
 [Landing](www.google.com)  
 [Melee Attack](www.google.com)  
-[Damage Taken](www.google.com)  
+[Damage Taken](https://www.youtube.com/watch?v=lRp7QUL9z7s&ab_channel=MxzzaFX)  
 
 **UI Noises and Background Music**  
 *link to unity assets from store, find through
