@@ -1,5 +1,8 @@
 # Demigods: Zeus' Wrath
 ---  
+*Introduction to game*  
+
+
 ## Audio Sources  
 **Character Movements**  
 [Footsteps](https://www.youtube.com/watch?v=Rd6zA9IxtXE&t=2s&ab_channel=HourUNITY)  
@@ -10,9 +13,7 @@
 [Damage Taken](https://www.youtube.com/watch?v=lRp7QUL9z7s&ab_channel=MxzzaFX)
 [Death](https://www.youtube.com/watch?v=la2tCfiXZYw&ab_channel=GamingSoundFX)
 
-**UI Noises and Background Music**  
-*link to unity assets from store, find through
-my assets*  
+**UI Noises and Background Music**    
 [UI SFX](https://assetstore.unity.com/packages/audio/sound-fx/fc-user-interface-sfx-lite-167083)  
 [Background Music](https://assetstore.unity.com/packages/audio/music/orchestral/free-fantasy-adventure-music-pack-118684)  
 
@@ -29,7 +30,7 @@ my assets*
 [Forest Background](https://assetstore.unity.com/packages/2d/textures-materials/nature/free-pixel-art-forest-133112)  
 [Platforms and Details](https://assetstore.unity.com/packages/2d/environments/pixel-art-platformer-village-props-166114)  
 
-**Other**
+**Other**  
 [UITesting](https://assetstore.unity.com/packages/tools/unity-ui-test-automation-72693)
 
 
