@@ -2,31 +2,37 @@
 ---  
 ## Audio Sources  
 **Character Movements**  
-[Footsteps](www.google.com)  
-[Jump](www.google.com)  
-[Block](www.google.com)  
-[Landing](www.google.com)  
-[Melee Attack](www.google.com)  
-[Damage Taken](https://www.youtube.com/watch?v=lRp7QUL9z7s&ab_channel=MxzzaFX)  
+[Footsteps](https://www.youtube.com/watch?v=Rd6zA9IxtXE&t=2s&ab_channel=HourUNITY)  
+[Jump](https://www.youtube.com/watch?v=1u3awSacnIY&ab_channel=GamingSoundFX)  
+[Block](https://www.youtube.com/watch?v=vQ8tnHdfFIE&ab_channel=SoundLibrary)  
+[Landing](https://www.youtube.com/watch?v=vwjL3R5oOtQ&ab_channel=AudioLibrary-FreeSoundEffects)  
+[Melee Attack](https://www.youtube.com/watch?v=0_OIkmarZek&ab_channel=Soundchips)  
+[Damage Taken](https://www.youtube.com/watch?v=lRp7QUL9z7s&ab_channel=MxzzaFX)
+[Death](https://www.youtube.com/watch?v=la2tCfiXZYw&ab_channel=GamingSoundFX)
 
 **UI Noises and Background Music**  
 *link to unity assets from store, find through
 my assets*  
-[UI Button Noises](www.google.com)  
-[Background Music](www.google.com)  
+[UI SFX](https://assetstore.unity.com/packages/audio/sound-fx/fc-user-interface-sfx-lite-167083)  
+[Background Music](https://assetstore.unity.com/packages/audio/music/orchestral/free-fantasy-adventure-music-pack-118684)  
 
 ---
 
 ## Included assets  
 **Sprites and Templates**  
-[Hero](www.google.com)  
-[Bandit Enemies](www.google.com)  
+[Hero](https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188)  
+[Bandit Enemies](https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130)  
 [Minotaur](www.google.com)  
 
 **Level Design/Tilemaps**  
-[Sunnyland Asset](www.google.com)  
-[Forest Background](www.google.com)  
-[Platforms and Details](www.google.com)  
+[Sunnyland Asset](https://assetstore.unity.com/packages/2d/characters/sunny-land-103349)  
+[Forest Background](https://assetstore.unity.com/packages/2d/textures-materials/nature/free-pixel-art-forest-133112)  
+[Platforms and Details](https://assetstore.unity.com/packages/2d/environments/pixel-art-platformer-village-props-166114)  
+
+**Other**
+[UITesting](https://assetstore.unity.com/packages/tools/unity-ui-test-automation-72693)
+
+
 
 ---
 
