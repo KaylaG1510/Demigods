@@ -113,8 +113,10 @@ public class MenuScript : MonoBehaviour
             case MenuStates.Options:
                 newState = optionsMenu;
                 break;
+            //start initial cutscene
             case MenuStates.Cutscene:
                 newState = cutscene;
+                break;
             //Default Menu is main menu
             default:
                 newState = mainMenu;

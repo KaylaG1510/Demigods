@@ -11,13 +11,13 @@ public class HighlightTextColour : MonoBehaviour, IPointerEnterHandler, IPointer
     //?Burnt Orange
     private Color32 highlightColour = new Color32(207, 78, 8, 255);
 
-    public GameObject t;    //arrow
+    //public GameObject t;    //arrow
     public float posX;      //xpos of arrow
     public float posY;      //ypos of arrow
 
     void Start()
     {
-        t.GetComponent<Renderer>().enabled = false;
+        //t.GetComponent<Renderer>().enabled = false;
     }
 
     //When mouse hovers over button
@@ -25,21 +25,21 @@ public class HighlightTextColour : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         theText.color = highlightColour;
 
-        t.transform.position = new Vector3(posX, posY, 0);
-        t.GetComponent<Renderer>().enabled = true;
+        //t.transform.position = new Vector3(posX, posY, 0);
+        //t.GetComponent<Renderer>().enabled = true;
     }
 
     //When mouse stops hovering over button
     public void OnPointerExit(PointerEventData eventData)
     {
         theText.color = Color.white;
-        t.GetComponent<Renderer>().enabled = false;
+        //t.GetComponent<Renderer>().enabled = false;
     }
 
     //Button disabled
     public void OnDisable()
     {
         theText.color = Color.white;
-        t.GetComponent<Renderer>().enabled = false;
+        //t.GetComponent<Renderer>().enabled = false;
     }
 }
