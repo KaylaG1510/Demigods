@@ -121,7 +121,7 @@ public class BanditAI : MonoBehaviour
         }
     }
 
-    //reached left or right bounds, change direction
+    //reached left or right bounds
     private void changeDirection()
     {
         //moving left, flip to right

@@ -8,13 +8,14 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     //Menu States
-    public enum MenuStates { Main, Instructions, CharacterSelection, Options };
+    public enum MenuStates { Main, Instructions, CharacterSelection, Options, Cutscene };
 
     //each menu option from main menu, set from Inspector
     public GameObject mainMenu;
     public GameObject instructionsMenu;
     public GameObject characterMenu;
     public GameObject optionsMenu;
+    public GameObject cutscene;
 
     //current menu state
     public GameObject currentState;
@@ -112,6 +113,8 @@ public class MenuScript : MonoBehaviour
             case MenuStates.Options:
                 newState = optionsMenu;
                 break;
+            case MenuStates.Cutscene:
+                newState = cutscene;
             //Default Menu is main menu
             default:
                 newState = mainMenu;
