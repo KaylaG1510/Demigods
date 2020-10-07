@@ -303,4 +303,14 @@ public class HeroKnight : MonoBehaviour
 
         Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
     }
+
+    //collides with GameObject set as a Trigger
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //falls off map
+        if (collision.CompareTag("OffMap"))
+        {
+            TakeDamage(150);
+        }
+    }
 }
