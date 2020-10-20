@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":3254.58935546875,"y":1559.8780517578125,"z":-618.0227661132813},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":4480.60546875,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":302.92108154296877,"y":340.2856750488281,"z":-23644.978515625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":1354.77587890625,"orthographic":true}
+>>>>>>> parent of aa7a5eb1... lvl2 enemies need fixing w layer collisions
