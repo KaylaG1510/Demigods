@@ -1,4 +1,7 @@
 Base path: '/Applications/Unity/Hub/Editor/2020.1.3f1/Unity.app/Contents', plugins path '/Applications/Unity/Hub/Editor/2020.1.3f1/PlaybackEngines'
 Cmd: initializeCompiler
+<<<<<<< HEAD
 
 Quitting shader compiler process
+=======
+>>>>>>> parent of 3d0bd2cb... Merge branch 'master' of https://github.com/KaylaG1510/Demigods
