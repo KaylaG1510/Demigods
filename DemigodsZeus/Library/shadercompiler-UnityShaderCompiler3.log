@@ -2,6 +2,7 @@ Base path: '/Applications/Unity/Hub/Editor/2020.1.3f1/Unity.app/Contents', plugi
 Cmd: initializeCompiler
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 Quitting shader compiler process
 =======
@@ -11,3 +12,5 @@ Unhandled exception: Protocol error - unexpected end of data (did the Editor cra
 
 Quitting shader compiler process
 >>>>>>> parent of 54ac967b... nothing
+=======
+>>>>>>> parent of aa7a5eb1... lvl2 enemies need fixing w layer collisions
