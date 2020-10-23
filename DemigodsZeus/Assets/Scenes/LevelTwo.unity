@@ -525,6 +525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightBandit (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1999981148954883268, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: healthBar
       value: 
@@ -533,6 +537,14 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 36360133}
+    - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001670464049916234, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2005877439888287814, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1678.352
@@ -988,6 +1000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightBandit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1999981148954883268, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: healthBar
       value: 
@@ -996,6 +1012,14 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 36360133}
+    - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001670464049916234, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2005877439888287814, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 131.91266
@@ -2615,6 +2639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightBandit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1999981148954883268, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: healthBar
       value: 
@@ -2623,6 +2651,14 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 36360133}
+    - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001670464049916234, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2005877439888287814, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2522
@@ -7367,6 +7403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightBandit
       objectReference: {fileID: 0}
+    - target: {fileID: 1999981148954883268, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: healthBar
       value: 
@@ -7375,6 +7415,14 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 36360133}
+    - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001670464049916234, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2005877439888287814, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5747.3975
