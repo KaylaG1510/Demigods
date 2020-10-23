@@ -75,16 +75,6 @@ public class BanditAI : MonoBehaviour
         {
             changeDirection();
         }
-        ////Combat Idle
-        //if (m_combatIdle)
-        //    m_animator.SetInteger("AnimState", 1);
-        ////Idle
-        //else
-        //    m_animator.SetInteger("AnimState", 0);
-
-        //TEST enemy attack
-        //if (Input.GetKeyDown("b"))
-        //    m_animator.SetTrigger("Attack");
 
         //Attack AI
 
@@ -92,7 +82,7 @@ public class BanditAI : MonoBehaviour
         float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
         //RaycastHit2D close = Physics2D.CircleCast(transform.position, 100, Vector2.up);
 
-        //if player is within attack range
+        //player is within attack range
         if (distToPlayer < attackRange)
         {
             //Check enough time passed since last attack
@@ -104,7 +94,7 @@ public class BanditAI : MonoBehaviour
                 //send message to player to take damage
                 playerTarget.SendMessage("TakeDamage", damage, SendMessageOptions.RequireReceiver);
 
-                //record time attacked ***Time.time;
+                //record time attacked
                 lastAttackTime = Time.time;
             }
         }
@@ -116,7 +106,6 @@ public class BanditAI : MonoBehaviour
         //make sure collision is with bounds
         if (collision.gameObject.CompareTag("EnemyBound"))
         {
-            //turn around
             changeDirection();
         }
     }
@@ -141,11 +130,10 @@ public class BanditAI : MonoBehaviour
     //receives message from hero to take damage
     public void takeDamage(int damage)
     {
-        //negate damage dealth
         currentHealth -= damage;
         //display hurt animation
         m_animator.SetTrigger("Hurt");
-        //update health bar to new current health
+
         healthBar.SetHealth(currentHealth);
 
         //is enemy dead
@@ -155,10 +143,10 @@ public class BanditAI : MonoBehaviour
         }
     }
 
-    //kill enemy
+    //kills enemy
     void Die()
     {
-        Debug.Log("Enemy Deded");
+        Debug.Log("Test: Enemy Deded");
         //play death animation
         m_animator.SetTrigger("Death");
         //remove enemy gameobject after death animation plays
