@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LevelEnd
+  - Enemy
+  - EnemyBound
+  - test
+  - OffMap
   layers:
   - Default
   - TransparentFX
@@ -13,10 +18,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - BackgroundDetails
+  - Platforms
+  - Foreground
+  - Enemies
   - 
   - 
   - 
@@ -40,4 +45,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4143926419
+    locked: 0
+  - name: BackgroundDetailsB
+    uniqueID: 2443305515
+    locked: 0
+  - name: BackgroundDetailsM
+    uniqueID: 2549619225
+    locked: 0
+  - name: BackgroundDetailsF
+    uniqueID: 95482609
+    locked: 0
+  - name: Platforms
+    uniqueID: 3053070237
+    locked: 0
+  - name: Foreground
+    uniqueID: 4092641295
+    locked: 0
+  - name: UI
+    uniqueID: 2075488211
     locked: 0
