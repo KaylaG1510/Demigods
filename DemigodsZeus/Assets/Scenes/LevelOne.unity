@@ -25507,6 +25507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4333574182198614847, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f3ddc7205882d4de58fcb0eb4c3d126b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
 --- !u!1001 &1340552168
