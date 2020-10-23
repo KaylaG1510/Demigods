@@ -9499,25 +9499,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &880973827 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 510029215357849971, guid: 5ca6329e7d36246eeb6549670a869c12, type: 3}
-  m_PrefabInstance: {fileID: 510029214052937968}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &880973828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880973827}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea1ddc6e325094d5b858b5ad9244b7c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChargeSpeed: 5
-  ChargeDuration: 1
 --- !u!1 &881874443
 GameObject:
   m_ObjectHideFlags: 0
@@ -23963,10 +23944,6 @@ PrefabInstance:
     - target: {fileID: 510029215357849971, guid: 5ca6329e7d36246eeb6549670a869c12, type: 3}
       propertyPath: m_Name
       value: Minotaur
-      objectReference: {fileID: 0}
-    - target: {fileID: 510029215357849972, guid: 5ca6329e7d36246eeb6549670a869c12, type: 3}
-      propertyPath: ChargeSpeed
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 510029215357849975, guid: 5ca6329e7d36246eeb6549670a869c12, type: 3}
       propertyPath: m_LocalPosition.x
