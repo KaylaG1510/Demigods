@@ -31,6 +31,8 @@ public class LevelEnd : MonoBehaviour
     public void OnEnd()
     {
         SceneManager.LoadScene("LevelTwo");
+        Time.timeScale = 1f;
+
     }
 
     //Restart Level, restart button pressed
