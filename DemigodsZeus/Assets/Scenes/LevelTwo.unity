@@ -468,8 +468,8 @@ MonoBehaviour:
   smoothTimeY: 0.02
   playerReference: {fileID: 36360133}
   bounds: 1
-  minCameraPos: {x: -5450, y: 0, z: 0}
-  maxCameraPos: {x: 6400, y: 0, z: 0}
+  minCameraPos: {x: -5450, y: 133, z: 0}
+  maxCameraPos: {x: 6400, y: 133, z: 0}
 --- !u!1001 &243922411
 PrefabInstance:
   m_ObjectHideFlags: 0
