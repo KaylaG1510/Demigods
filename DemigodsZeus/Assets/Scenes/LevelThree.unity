@@ -130,9 +130,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1954210515273738482, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6409861
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954210515273738482, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0882318
+      objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883268, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_Name
       value: LightBandit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999981148954883268, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: playerTarget
@@ -145,6 +157,14 @@ PrefabInstance:
     - target: {fileID: 1999981148954883269, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: attackRange
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000085521317152402, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001670464049916234, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2005877439888287814, guid: 3f747f2c6a3a94b38b2b58ad9292af71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13789,7 +13809,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02000001, y: 0.63893056}
+  m_Offset: {x: 0.02115035, y: 0.6528917}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -13800,7 +13820,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.70772296, y: 1.0923429}
+  m_Size: {x: 0.880118, y: 1.1882645}
   m_EdgeRadius: 0
 --- !u!1 &1798796766 stripped
 GameObject:
