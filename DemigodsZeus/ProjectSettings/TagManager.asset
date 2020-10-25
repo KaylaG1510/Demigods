@@ -9,6 +9,7 @@ TagManager:
   - EnemyBound
   - test
   - OffMap
+  - Grimreaper
   layers:
   - Default
   - TransparentFX
