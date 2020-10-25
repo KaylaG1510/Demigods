@@ -336,7 +336,10 @@ public class HeroKnight : MonoBehaviour
 
             if (Input.GetKey(KeyCode.F))
             {
-               Reaper.ActivateDialogue();
+                if(inDialogue())
+                {
+                    Reaper.ActivateDialogue();
+                }
             }
         }
     }
