@@ -95,6 +95,7 @@ public class BanditAI : MonoBehaviour
         //if player is within attack range
         if (distToPlayer < attackRange)
         {
+            //Debug.Log("in distance");
             //Check enough time passed since last attack
             if (Time.time > lastAttackTime + attackDelay)
             {

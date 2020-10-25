@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/CharacterMovement.unity
     guid: ff41d63770e0a41bb962cd194aefcd46
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo.unity
+    guid: 9cc4b200f40eb4f0b85979777d568cff
   m_configObjects: {}

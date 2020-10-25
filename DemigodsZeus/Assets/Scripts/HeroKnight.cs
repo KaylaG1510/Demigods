@@ -27,6 +27,7 @@ public class HeroKnight : MonoBehaviour
     public bool                 isMoving = false;
     private bool                isBlocking = false;
 
+    private ReaperDialogue      Reaper;
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
     private Sensor_HeroKnight   m_groundSensor;
@@ -40,6 +41,7 @@ public class HeroKnight : MonoBehaviour
     private int                 m_currentAttack = 0;
     private float               m_timeSinceAttack = 0.0f;
     private float               m_delayToIdle = 0.0f;
+
 
     // Use this for initialization
     void Start ()
@@ -90,8 +92,8 @@ public class HeroKnight : MonoBehaviour
             m_animator.SetBool("Grounded", m_grounded);
         }
 
-        // -- Handle input and movement --
-        float inputX = Input.GetAxis("Horizontal");
+            // -- Handle input and movement --
+            float inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
         if (inputX > 0) //moving right
@@ -312,5 +314,35 @@ public class HeroKnight : MonoBehaviour
         {
             TakeDamage(150);
         }
+    }
+
+    // Character in conversation with reaper
+    private bool inDialogue()
+    {
+        if(Reaper != null)
+        {
+            return Reaper.DialogueActive();
+        }
+        else
+        {
+            return false;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Grimreaper")
+        {
+            Reaper = collision.gameObject.GetComponent<ReaperDialogue>();
+
+            if (Input.GetKey(KeyCode.F))
+            {
+               Reaper.ActivateDialogue();
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Reaper = null;
     }
 }

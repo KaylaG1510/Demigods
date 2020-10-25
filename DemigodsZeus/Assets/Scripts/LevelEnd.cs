@@ -30,7 +30,9 @@ public class LevelEnd : MonoBehaviour
     //Return to main menu (return to menu button pressed)
     public void OnEnd()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("LevelTwo");
+        Time.timeScale = 1f;
+
     }
 
     //Restart Level, restart button pressed
