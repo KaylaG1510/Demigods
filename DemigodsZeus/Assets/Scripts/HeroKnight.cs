@@ -307,7 +307,15 @@ public class HeroKnight : MonoBehaviour
         //check each enemy
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<BanditAI>().takeDamage(Damage);
+            //enemy.GetComponent<BanditAI>().takeDamage(Damage);
+            if (enemy.CompareTag("Enemy"))
+            {
+                enemy.GetComponent<BanditAI>().takeDamage(Damage);
+            }
+            else if (enemy.CompareTag("Boss"))
+            {
+                enemy.GetComponent<Minotaur>().TakeDamage(Damage);
+            }
         }
 
         //***add another collider check for minotaur??

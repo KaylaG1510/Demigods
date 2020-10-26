@@ -58,6 +58,11 @@ namespace PSO
             {
                 ToggleDeath();
             }
+
+            if(Input.GetKeyDown(KeyCode.Alpha7) && !Attacking && !Stunned)
+            {
+                ToggleStun();
+            }
         }
 
         private void HandleChargeMovement()

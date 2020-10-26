@@ -19,4 +19,18 @@ public class HealthBar : MonoBehaviour
     {
         slider.value = health;
     }
+
+    public void Update()
+    {
+        if (Time.timeScale == 0)
+        {
+            //gameObject.SetActive(false);
+            transform.position = new Vector2(transform.position.x - 20000, transform.position.y + 10000);
+        }
+
+        //if (Time.timeScale == 1)
+        //{
+        //    transform.position = new Vector2(transform.position.x + 20000, transform.position.y - 10000);
+        //}
+    }
 }

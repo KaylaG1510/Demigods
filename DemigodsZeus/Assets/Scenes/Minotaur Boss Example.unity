@@ -18698,7 +18698,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642278860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed4a489fd16274f7895ca67c8e6d2ce3, type: 3}
   m_Name: 
@@ -18711,7 +18711,9 @@ MonoBehaviour:
   IsAlive: 1
   Stunned: 0
   Dying: 0
+  m_body2d: {fileID: 0}
   m_animator: {fileID: 205556450}
+  chaseDistance: 0
   attackRange: 0
   damage: 0
   attackDelay: 0
@@ -24572,7 +24574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 510029215357849972, guid: 5ca6329e7d36246eeb6549670a869c12, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 510029215357849975, guid: 5ca6329e7d36246eeb6549670a869c12, type: 3}
       propertyPath: m_LocalPosition.x
