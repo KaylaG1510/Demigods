@@ -15,9 +15,13 @@ public class HeroKnight : MonoBehaviour
     public int currentHealth;
     public int Damage = 30;
     public HealthBar healthBar;
-    public Transform AttackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+
+    public GameObject AttackPtL;
+    public GameObject AttackPtR;
+    public Transform AttackPointLeft;
+    public Transform AttackPointRight;
 
     public GameObject           pauseMenu;
     public GameObject           pauseButton;
@@ -58,6 +62,8 @@ public class HeroKnight : MonoBehaviour
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
+        AttackPtL = GameObject.FindGameObjectWithTag("AttackPtL").gameObject;
+        AttackPtR = GameObject.FindGameObjectWithTag("AttackPtR").gameObject;
     }
 
     // Update is called once per frame
@@ -139,6 +145,18 @@ public class HeroKnight : MonoBehaviour
             }
         }
 
+        //facing right
+        if (m_facingDirection == 1)
+        {
+            AttackPtL.SetActive(false);
+            AttackPtR.SetActive(true);
+        }
+        else //moving left
+        {
+            AttackPtL.SetActive(true);
+            AttackPtR.SetActive(false);
+        }
+
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
@@ -181,13 +199,6 @@ public class HeroKnight : MonoBehaviour
             isBlocking = false;
             m_animator.SetBool("IdleBlock", false);
         }
-        // Roll *Sprint 2 potentially
-        //else if (Input.GetKeyDown("left shift") && !m_rolling)
-        //{
-        //    m_rolling = true;
-        //    m_animator.SetTrigger("Roll");
-        //    m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
-        //}
 
         //Jump
         else if ((Input.GetKeyDown("space") && m_grounded) || (Input.GetKeyDown("up") && m_grounded))
@@ -220,13 +231,6 @@ public class HeroKnight : MonoBehaviour
             //Death();
 
         }
-        //Death();
-        // Animation Events
-        // Called in end of roll animation.
-        //void AE_ResetRoll()
-        //{
-        //    m_rolling = false;
-        //}
 
         // Called in slide animation.
         void AE_SlideDust()
@@ -283,27 +287,43 @@ public class HeroKnight : MonoBehaviour
     //attack enemies
     void Attack()
     {
+        Collider2D[] hitEnemies;
         //GetComponent<Animation>()["attack 1"].speed = 1;
         m_animator.SetTrigger("Attack1");
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
+        //facing right
+        if (m_facingDirection == 1)
+        {
+            //AttackPtL.SetActive(false);
+            //AttackPtR.SetActive(true);
+            hitEnemies = Physics2D.OverlapCircleAll(AttackPtR.transform.position, attackRange, enemyLayers);
+        }
+        else //moving left
+        {
+            hitEnemies = Physics2D.OverlapCircleAll(AttackPtL.transform.position, attackRange, enemyLayers);
+        }
+
+        //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPointR.position, attackRange, enemyLayers);
 
         //check each enemy
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<BanditAI>().takeDamage(Damage);
         }
+
+        //***add another collider check for minotaur??
     }
 
     //for circle collider on sword
     void OnDrawGizmosSelected()
     {
-        if (AttackPoint == null)
+        if (AttackPtL.transform == null || AttackPtR.transform == null)
         {
             return;
         }
 
-        Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(AttackPtL.transform.position, attackRange);
+        Gizmos.DrawWireSphere(AttackPtR.transform.position, attackRange);
     }
 
     //collides with GameObject set as a Trigger

@@ -7,10 +7,7 @@ public class Minotaur : MonoBehaviour
 {
     public float speed;
     public bool movingRight;
-    //public bool isFlipped;
     public bool Attacking;
-    //public Transform groundDetection;
-    //private Sensor_Bandit m_groundSensor;
     public HealthBar healthBar;
     public double maxHealth;
     double currentHealth;
