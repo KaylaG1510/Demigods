@@ -7,7 +7,7 @@ public class Minotaur : MonoBehaviour
     public float speed;
     public bool movingRight;
     public bool Attacking;
-    public Transform groundDetection;
+    //public Transform groundDetection;
     //private Sensor_Bandit m_groundSensor;
     public HealthBar healthBar;
     public double maxHealth;
@@ -65,10 +65,46 @@ public class Minotaur : MonoBehaviour
 
     }
 
+    private AttackType chooseAttack()
+    {
+        AttackType attack;
+        int rand_num = Random.Range(0, 4);
+
+        switch(rand_num)
+        {
+            case 0:
+                attack = AttackType.Stomp;
+                break;
+            case 1:
+                attack = AttackType.Bash;
+                break;
+            case 2:
+                attack = AttackType.Charge;
+                break;
+            case 3:
+            default:
+                attack = AttackType.Swing;
+                break;
+        }
+
+        return attack;
+    }
+
+    public enum AttackType
+    {
+        Swing,
+        Bash,
+        Stomp,
+        Charge
+    }
+
+
     public double attackMultiplier()
     {
         //changes damage multiplier depending on attack
         //also deals additional multiplier if on level 3
+
+
 
         //stub
         return 2.0f;

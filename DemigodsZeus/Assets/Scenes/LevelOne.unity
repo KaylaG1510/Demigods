@@ -18922,6 +18922,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661eecc7c2aee47b0920925b1bd29788, type: 3}
+--- !u!1 &1049100761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1049100762}
+  m_Layer: 0
+  m_Name: AttackPointL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1049100762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049100761}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.339, y: -0.037, z: 0}
+  m_LocalScale: {x: 0.0025, y: 0.0025, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1304778418}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100820903
 GameObject:
   m_ObjectHideFlags: 0
@@ -26002,6 +26032,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f3ddc7205882d4de58fcb0eb4c3d126b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+--- !u!4 &1304778418 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2243764365118117737, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+  m_PrefabInstance: {fileID: 1304778417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1340552168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29216,6 +29251,10 @@ PrefabInstance:
     - target: {fileID: 3742620892844178880, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_Name
       value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930977713274314337, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4022828548412464006, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
       propertyPath: m_Text
