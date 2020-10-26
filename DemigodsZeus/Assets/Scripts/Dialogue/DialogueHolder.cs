@@ -15,6 +15,7 @@ namespace DialogueSystem
 
         private void Update()
         {
+            // Close dialogue
             if (Input.GetKey(KeyCode.C))
             {
                 Deactivate();
@@ -23,6 +24,7 @@ namespace DialogueSystem
             }
         }
 
+        // Method to let the dialogue go in order as intended 
         private IEnumerator DialogueSequence()
         {
             for(int i = 0; i < transform.childCount; i++)
@@ -34,6 +36,7 @@ namespace DialogueSystem
             gameObject.SetActive(false);
         }
 
+        // Method to deactivate previous dialogue so new one can appear without any conflicts
         private void Deactivate()
         {
             for(int i = 0; i < transform.childCount; i++)

@@ -580,7 +580,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -617,6 +617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: I am Zeus; god of the sky. You are my son... (Left Mouse Click To Continue
     | C to Close Dialogue)
+  textFont: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
   delay: 0.1
   delayBetweenLines: 2
   characterSprite: {fileID: 21300000, guid: ac1984bde447fdb4aae092e50cbe5280, type: 3}
@@ -18740,7 +18741,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
@@ -18933,7 +18934,7 @@ GameObject:
   - component: {fileID: 1049100762}
   m_Layer: 0
   m_Name: AttackPointL
-  m_TagString: Untagged
+  m_TagString: AttackPtL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18946,7 +18947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049100761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.339, y: -0.037, z: 0}
+  m_LocalPosition: {x: -0.268, y: -0.023, z: 0}
   m_LocalScale: {x: 0.0025, y: 0.0025, z: 1}
   m_Children: []
   m_Father: {fileID: 1304778418}
@@ -25974,6 +25975,22 @@ PrefabInstance:
       propertyPath: enemyLayers.m_Bits
       value: 2048
       objectReference: {fileID: 0}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: AttackPointLeft
+      value: 
+      objectReference: {fileID: 1049100762}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: AttackPointRight
+      value: 
+      objectReference: {fileID: 809519763}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: AttackPtL
+      value: 
+      objectReference: {fileID: 1049100761}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: AttackPtR
+      value: 
+      objectReference: {fileID: 1304778419}
     - target: {fileID: 1727702559709651467, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
       propertyPath: m_Material
       value: 
@@ -26030,11 +26047,24 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: f3ddc7205882d4de58fcb0eb4c3d126b, type: 3}
+    - target: {fileID: 5477905327759371663, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: m_Name
+      value: AttackPointR
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477905327759371663, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: m_TagString
+      value: AttackPtR
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
 --- !u!4 &1304778418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2243764365118117737, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+  m_PrefabInstance: {fileID: 1304778417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1304778419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5477905327759371663, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
   m_PrefabInstance: {fileID: 1304778417}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1340552168
@@ -28455,6 +28485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: Find and retrieve my stolen lightning bolt! And you shall be welcome into
     Olympus. (Left Mouse Click To Continue | C to Close Dialogue)
+  textFont: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
   delay: 0.1
   delayBetweenLines: 2
   characterSprite: {fileID: 21300000, guid: ac1984bde447fdb4aae092e50cbe5280, type: 3}
@@ -28480,7 +28511,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0

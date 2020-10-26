@@ -303,16 +303,18 @@ MonoBehaviour:
   currentHealth: 0
   Damage: 30
   healthBar: {fileID: 0}
-  AttackPoint: {fileID: 0}
   attackRange: 0.5
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
+  AttackPtL: {fileID: 0}
+  AttackPtR: {fileID: 0}
+  AttackPointLeft: {fileID: 0}
+  AttackPointRight: {fileID: 0}
   pauseMenu: {fileID: 0}
   pauseButton: {fileID: 0}
   levelCanvas: {fileID: 0}
   isMoving: 0
-  health: 0
 --- !u!95 &5709316112679370649
 Animator:
   serializedVersion: 3
@@ -399,7 +401,7 @@ Rigidbody2D:
   m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 100
-  m_Material: {fileID: 6200000, guid: 879b07350a039204e8757faf6d92a8b4, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -413,7 +415,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4333574182198614846}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 879b07350a039204e8757faf6d92a8b4, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
