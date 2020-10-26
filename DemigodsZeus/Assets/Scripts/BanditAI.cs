@@ -35,7 +35,7 @@ public class BanditAI : MonoBehaviour
         //display health bar at full health
         healthBar.SetMaxHealth(maxHealth);
 
-        //find the player enemies are targeting if not assigned in inspector
+        //if enemy keeps attacking, the enemies gruond sensor might have been tagged as player for some reason
         playerTarget = GameObject.FindGameObjectWithTag("Player");
         attackDelay = 2f;
         damage = 30;
@@ -87,6 +87,8 @@ public class BanditAI : MonoBehaviour
         //    m_animator.SetTrigger("Attack");
 
         //Attack AI
+        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+        Debug.DrawRay(transform.position, forward, Color.green);
 
         //check distance between self and player, is player close enough to trigger melee attack?
         float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
@@ -95,7 +97,7 @@ public class BanditAI : MonoBehaviour
         //if player is within attack range
         if (distToPlayer < attackRange)
         {
-            Debug.Log("in distance");
+            //Debug.Log("in distance");
             //Check enough time passed since last attack
             if (Time.time > lastAttackTime + attackDelay)
             {
