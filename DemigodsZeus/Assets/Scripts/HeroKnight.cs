@@ -315,37 +315,4 @@ public class HeroKnight : MonoBehaviour
             TakeDamage(150);
         }
     }
-
-    // Character in conversation with reaper
-    private bool inDialogue()
-    {
-        if(Reaper != null)
-        {
-            return Reaper.DialogueActive();
-        }
-        else
-        {
-            return false;
-        }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Grimreaper")
-        {
-            Reaper = collision.gameObject.GetComponent<ReaperDialogue>();
-
-            if (Input.GetKey(KeyCode.F))
-            {
-                if(inDialogue())
-                {
-                    Reaper.ActivateDialogue();
-                }
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Reaper = null;
-    }
 }
