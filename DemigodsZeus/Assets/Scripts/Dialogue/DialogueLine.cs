@@ -11,6 +11,7 @@ namespace DialogueSystem
         private Text textHolder;
         [Header ("Text Options")]
         [SerializeField] private string input;
+        [SerializeField] private Font textFont;
 
         [Header("Time Parameters")]
         [SerializeField] private float delay;
@@ -33,7 +34,7 @@ namespace DialogueSystem
             ResetLine();
             textHolder = GetComponent<Text>();
             textHolder.text = "";
-            lineAppear = WriteText(input, textHolder, delay, delayBetweenLines);
+            lineAppear = WriteText(input, textHolder, delay, delayBetweenLines, textFont);
             StartCoroutine(lineAppear);
         }
 

@@ -580,7 +580,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -617,6 +617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: I am Zeus; god of the sky. You are my son... (Left Mouse Click To Continue
     | C to Close Dialogue)
+  textFont: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
   delay: 0.1
   delayBetweenLines: 2
   characterSprite: {fileID: 21300000, guid: ac1984bde447fdb4aae092e50cbe5280, type: 3}
@@ -18740,7 +18741,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
@@ -28455,6 +28456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: Find and retrieve my stolen lightning bolt! And you shall be welcome into
     Olympus. (Left Mouse Click To Continue | C to Close Dialogue)
+  textFont: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
   delay: 0.1
   delayBetweenLines: 2
   characterSprite: {fileID: 21300000, guid: ac1984bde447fdb4aae092e50cbe5280, type: 3}
@@ -28480,7 +28482,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
