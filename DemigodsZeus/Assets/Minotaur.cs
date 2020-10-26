@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Minotaur : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class Minotaur : MonoBehaviour
 
         if (Input.GetKeyDown("1"))
         {
-
+            //test attacks
         }
 
 
@@ -260,5 +261,10 @@ public class Minotaur : MonoBehaviour
             Debug.Log("Hit Bounds");
             ChangeDirection();
         }
+    }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("EndCredit");
     }
 }
