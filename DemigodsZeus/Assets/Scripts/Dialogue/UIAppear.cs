@@ -18,6 +18,7 @@ public class UIAppear : MonoBehaviour
         imageHolder.preserveAspect = true;
     }
 
+    // When player collides with Grimreaper
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -27,6 +28,8 @@ public class UIAppear : MonoBehaviour
             imageHolder.enabled = true;
         }
     }
+
+    // When player does not collide with Grimreaper
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
