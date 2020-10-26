@@ -37,15 +37,15 @@ public class Minotaur : MonoBehaviour
     {
         //initialise all variables from raycast player, controller and
         //bandit ai code
-        speed = 120;
-        movingRight = false;
+        speed = -1;
+        movingRight = true;
         Attacking = false;
         maxHealth = 500;
         playerTarget = GameObject.FindGameObjectWithTag("Player");
         attackDelay = 2.5f;
         damage = 30;
         attackRange = 150;
-        m_animator = GetComponent<Animator>();
+        m_animator = GetComponentInChildren<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         IsAlive = true;
         Stunned = false;
@@ -198,7 +198,7 @@ public class Minotaur : MonoBehaviour
 
     }
 
-    private void ChangeDirection()
+    public void ChangeDirection()
     {
         if(!movingRight)
         {
@@ -209,6 +209,15 @@ public class Minotaur : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
             movingRight = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyBound"))
+        {
+            Debug.Log("Hit Bounds");
+            ChangeDirection();
         }
     }
 }
