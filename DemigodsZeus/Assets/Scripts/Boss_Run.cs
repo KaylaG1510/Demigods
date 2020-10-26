@@ -17,20 +17,25 @@ public class Boss_Run : StateMachineBehaviour
         playerTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); ;
         m_body2d = animator.GetComponentInParent<Rigidbody2D>();
         m_Scene = SceneManager.GetActiveScene().name;
+        boss = animator.GetComponent<Boss>();
 
-        if(m_Scene.CompareTo("LevelThree") == 0)
+        if (m_Scene.CompareTo("LevelThree") == 0)
         {
-            speed = 140f;
+            speed = 100f;
         }
         else
         {
-            speed = 140f;
+            speed = 100f;
         }
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponentInParent<Minotaur>().LookAtPlayer();
+
+        //??only move towards player if y value is bottom level and/or within distance??
+        //do we want to add platforms to bottom layer??
+        //otherwise idle??
+        boss.LookAtPlayer();
 
         //Debug.Log("StateUpdate taking place");
         Vector2 targetPosition = new Vector2(playerTarget.position.x, m_body2d.position.y);
@@ -43,6 +48,6 @@ public class Boss_Run : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+
     }
 }
