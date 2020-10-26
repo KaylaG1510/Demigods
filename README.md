@@ -23,12 +23,13 @@
 **Sprites and Templates**  
 [Hero](https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188)  
 [Bandit Enemies](https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130)  
-[Minotaur](www.google.com)  
+[Minotaur](https://assetstore.unity.com/packages/2d/characters/pixel-heroes-minotaur-boss-143852)  
 
 **Level Design/Tilemaps**  
 [Sunnyland Asset](https://assetstore.unity.com/packages/2d/characters/sunny-land-103349)  
 [Forest Background](https://assetstore.unity.com/packages/2d/textures-materials/nature/free-pixel-art-forest-133112)  
 [Platforms and Details](https://assetstore.unity.com/packages/2d/environments/pixel-art-platformer-village-props-166114)  
+[Cave Background](https://assetstore.unity.com/packages/2d/environments/pixel-caves-136235)
 
 **Other**  
 [UITesting](https://assetstore.unity.com/packages/tools/unity-ui-test-automation-72693)

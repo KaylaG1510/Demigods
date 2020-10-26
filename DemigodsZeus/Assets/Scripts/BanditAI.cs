@@ -104,7 +104,7 @@ public class BanditAI : MonoBehaviour
                 //play attack animation
                 m_animator.SetTrigger("Attack");
 
-                //send message to player to take damage
+                //send message to player to take damagea
                 playerTarget.SendMessage("TakeDamage", damage, SendMessageOptions.RequireReceiver);
 
                 //record time attacked ***Time.time;
