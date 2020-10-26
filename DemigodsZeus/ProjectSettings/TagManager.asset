@@ -12,6 +12,7 @@ TagManager:
   - Grimreaper
   - AttackPtL
   - AttackPtR
+  - Boss
   layers:
   - Default
   - TransparentFX

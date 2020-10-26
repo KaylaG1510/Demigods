@@ -52,7 +52,6 @@ public class Minotaur : MonoBehaviour
         m_body2d = GetComponent<Rigidbody2D>();
         IsAlive = true;
         Stunned = false;
-        currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
         playerTransform = playerTarget.GetComponent<Transform>();
         chaseDistance = 1500;
@@ -68,6 +67,7 @@ public class Minotaur : MonoBehaviour
         {
             maxHealth = 900;
         }
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -276,10 +276,12 @@ public class Minotaur : MonoBehaviour
 
     public void TakeDamage(double damage)
     {
+        Debug.Log(currentHealth);
         currentHealth -= damage;
+        Debug.Log(currentHealth);
         //m_animator.SetTrigger
         //set up Dazed trigger and animation methods or use:
-        m_animator.Play("Flinch");
+        //m_animator.Play("Flinch");
         healthBar.SetHealth((int)currentHealth);
 
         if (currentHealth <= 0)

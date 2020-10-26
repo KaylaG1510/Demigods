@@ -5,7 +5,7 @@ using UnityEngine;
 public class billboard : MonoBehaviour
 {
     public Transform cam;
-    public GameObject healthBar;
+    private GameObject healthBar;
 
     void LateUpdate()
     {
