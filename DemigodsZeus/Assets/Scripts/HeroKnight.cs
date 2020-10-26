@@ -191,7 +191,6 @@ public class HeroKnight : MonoBehaviour
             isBlocking = true;
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
-            //ManagingAudio.PlaySound("ESkill");
         }
         //stop blocking
         else if (Input.GetKeyUp("e"))
@@ -333,6 +332,11 @@ public class HeroKnight : MonoBehaviour
         if (collision.CompareTag("OffMap"))
         {
             TakeDamage(150);
+            //fall off map (doesnt work naturally on lvl 2 lol
+            //change y pos
+            Vector2 targetPosition = new Vector2(transform.position.x, transform.position.y - 200);
+            Vector3 newPos = Vector3.MoveTowards(m_body2d.position, targetPosition, m_speed * Time.fixedDeltaTime);
+            m_body2d.MovePosition(newPos);
         }
     }
 }

@@ -204,7 +204,7 @@ public class Minotaur : MonoBehaviour
         m_animator.SetBool("Stunned", Stunned);
     }
 
-    public void Dazed()
+    public void Dazed() //??instead of stunned??
     {
         //raycast player
     }
@@ -247,7 +247,7 @@ public class Minotaur : MonoBehaviour
 
     private void PerformSwing()
     {
-
+        //mino controller
     }
 
     //FixedTick and update animator base methods??
