@@ -62,6 +62,11 @@ public class Minotaur : MonoBehaviour
         //move minotaur
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
+        if (Input.GetKeyDown("1"))
+        {
+
+        }
+
 
     }
 
@@ -99,7 +104,7 @@ public class Minotaur : MonoBehaviour
     }
 
 
-    public double attackMultiplier()
+    public double attackMultiplier(AttackType attackType)
     {
         //changes damage multiplier depending on attack
         //also deals additional multiplier if on level 3
