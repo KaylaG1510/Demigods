@@ -80,31 +80,25 @@ public class Minotaur : MonoBehaviour
     void Update()
     {
         m_animator.SetBool("Alive", IsAlive);
-        //m_animator.SetBool("Walking", true);
+        //m_animator.SetBool("Walking", false);
+        //m_animator.SetBool("Idle", true);
 
-        if (Input.GetKeyDown("1"))
-        {
-            //test attacks
-        }
-
-        //everytime player is in range and attack delay is up,
-        //call:
-        //attackMultiplier(chooseAttack());
+        HandleChargeMovement();
 
         float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
-
-        //when player is within distance, or bottom cave level,
-        //then set trigger to walk, otherwise just idle
-        if (distToPlayer <= chaseDistance)
+        //Debug.Log(distToPlayer);
+        if (distToPlayer <= chaseDistance && !Attacking)
         {
             //Debug.Log("Start chasing");
             m_animator.SetTrigger("Chase");
+            //m_animator.SetBool("Walking", true);
+            //m_animator.SetBool("Idle", false);
         }
-        else if (distToPlayer > chaseDistance)
+        if (distToPlayer > chaseDistance)
         {
             //m_animator.SetBool("Walking", false);
+            //m_animator.SetBool("Idle", false);
             //m_animator.SetBool("Idle", true);
-            //reset trigger??
             m_animator.SetTrigger("StopChase");
         }
 
@@ -136,45 +130,55 @@ public class Minotaur : MonoBehaviour
 
         if (distToPlayer < attackRange)
         {
-            if (Time.time > lastAttackTime + attackdelay)
+            if (Time.time > lastAttackTime + attackDelay)
             {
                 //show attack anims perform...
                 //send damage message from somewhere
 
-                playerTarget.SendMessage("TakeDamage", attackMultiplier(chooseAttack));
+                int damageDealt = (int)attackMultiplier(chooseAttack());
+                //attackDelegate = (int)attackMultiplier(chooseAttack);
 
+                playerTarget.SendMessage("TakeDamage", damageDealt);
+
+                ResetDamage();
                 lastAttackTime = Time.time;
             }
         }
     }
 
+    //public delegate AttackDelegate(AttackType a);
+    //AttackDelegate attackDelegate;
+
     private AttackType chooseAttack()
     {
         AttackType attack;
         int rand_num = Random.Range(0, 4);
+        m_animator.SetTrigger("StopChase");
 
         switch (rand_num)
         {
             case 0:
                 attack = AttackType.Stomp;
                 Debug.Log("num: " + rand_num + "Attack Type: Stomp");
-
+                PerformStomp();
                 break;
             case 1:
                 attack = AttackType.Bash;
                 Debug.Log("num: " + rand_num + "Attack Type: Bash");
+                PerformBash();
                 break;
             case 2:
                 attack = AttackType.Charge;
                 Debug.Log("num: " + rand_num + "Attack Type: Charge");
+                PerformCharge();
                 break;
             case 3:
             default:
                 attack = AttackType.Swing;
                 Debug.Log("num: " + rand_num + "Attack Type: Swing/Default");
+                PerformSwing();
                 break;
         }
-
         return attack;
     }
 
@@ -271,6 +275,7 @@ public class Minotaur : MonoBehaviour
         Attacking = true;
         ChargeStarted = true;
         SetAttackVelocityX(ChargeSpeed);
+        Debug.Log("Perform Charge called");
     }
 
     private void PerformStomp()
@@ -278,6 +283,7 @@ public class Minotaur : MonoBehaviour
         //mino controller
         Attacking = true;
         m_animator.SetBool("StompAttackStart", true);
+        Debug.Log("perform stomp called");
     }
 
     private void PerformBash()
@@ -285,6 +291,7 @@ public class Minotaur : MonoBehaviour
         //mino controller
         Attacking = true;
         m_animator.SetBool("BashAttackStart", true);
+        Debug.Log("perform bash called");
     }
 
     private void PerformSwing()
@@ -292,6 +299,7 @@ public class Minotaur : MonoBehaviour
         //mino controller
         Attacking = true;
         m_animator.SetBool("SwingAttackStart", true);
+        Debug.Log("perform swing called");
     }
 
     //FixedTick and update animator base methods??
@@ -360,12 +368,17 @@ public class Minotaur : MonoBehaviour
 
     public void MovingRight()
     {
-        Debug.Log("Moving Right!");
+        //Debug.Log("Moving Right!");
         movingRight = true;
     }
 
     public void MovingLeft()
     {
         movingRight = false;
+    }
+
+    private void ResetDamage()
+    {
+        damage = 30;
     }
 }

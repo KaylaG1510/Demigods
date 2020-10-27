@@ -254,7 +254,7 @@ public class HeroKnight : MonoBehaviour
     //negate damage from health, check if player is dead
     public void TakeDamage(int damage)
     {
-        Debug.Log("Damage received :o");
+        Debug.Log("Damage received: " + damage);
 
         //check player is not blocking
         if (!isBlocking)
