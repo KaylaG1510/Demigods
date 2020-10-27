@@ -221,8 +221,19 @@ public class Minotaur : MonoBehaviour
         Debug.Log("Minotaur down");
         m_animator.SetBool("Alive", IsAlive);
         m_animator.SetBool("Dying", Dying);
+        //**FIX SO BOTH DEATH ANIMATIONS PLAY
         //level 2 over, trigger level 3
         //level 3 over, trigger credits
+        string s_name = SceneManager.GetActiveScene.name;
+        if(s_name.CompareTo("LevelThree") == 0)
+        {
+            //**ADD DELAY???
+            SceneManager.LoadScene("EndCredit");
+        }
+        else if (s_name.CompareTo("LevelTwo") == 0)
+        {
+            SceneManager.LoadScene("LevelThree");
+        }
     }
 
     public void Stun()
