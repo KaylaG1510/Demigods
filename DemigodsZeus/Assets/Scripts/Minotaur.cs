@@ -107,7 +107,7 @@ public class Minotaur : MonoBehaviour
             Debug.Log(currentHealth);
             currentHealth -= damage;
             Debug.Log(currentHealth);
-
+            
             ToggleStun();
             healthBar.SetHealth((int)currentHealth);
 

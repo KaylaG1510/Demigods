@@ -7,10 +7,12 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject thisButton;
+    private string scene_name;
 
     void Awake()
     {
         pauseMenu.SetActive(false);
+        scene_name = SceneManager.GetActiveScene().name;
     }
 
     //User clicks pause button, pause game and display menu
@@ -39,7 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void OnRestart()
     {
         Debug.Log("Restart button clicked");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(scene_name);
         //to fix freezing bug
         OnResume();
     }

@@ -15,6 +15,7 @@ TagManager:
   - Boss
   - MinoAttackL
   - MinoAttackR
+  - Dialogue
   layers:
   - Default
   - TransparentFX
