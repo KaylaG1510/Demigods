@@ -13,6 +13,9 @@ TagManager:
   - AttackPtL
   - AttackPtR
   - Boss
+  - Stomp
+  - Club
+  - Charge
   layers:
   - Default
   - TransparentFX

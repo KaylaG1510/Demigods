@@ -34,6 +34,9 @@ public class Minotaur : MonoBehaviour
     private bool ChargeStarted;
     private float ChargeTimer;
 
+    public GameObject AttackPtL;
+    public GameObject AttackPtR;
+
     string m_scene;
 
     // Start is called before the first frame update
@@ -55,6 +58,9 @@ public class Minotaur : MonoBehaviour
         healthBar.SetMaxHealth((int)maxHealth);
         playerTransform = playerTarget.GetComponent<Transform>();
         chaseDistance = 1500;
+
+        AttackPtL = GameObject.FindGameObjectWithTag("AttackPtL").gameObject;
+        AttackPtR = GameObject.FindGameObjectWithTag("AttackPtR").gameObject;
 
         //level 2 slower speed and less health
         //level 3 faster, less attack delay and more damage(double health)
@@ -117,6 +123,11 @@ public class Minotaur : MonoBehaviour
             {
                 Die();
             }
+        }
+
+        if (movingRight)
+        {
+
         }
     }
 
@@ -322,5 +333,23 @@ public class Minotaur : MonoBehaviour
     public void LoadCredits()
     {
         SceneManager.LoadScene("EndCredit");
+    }
+
+    //draw the three attack ranges
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(AttackPtL.transform.position, attackRange);
+        Gizmos.DrawWireSphere(AttackPtR.transform.position, attackRange);
+    }
+
+    public void MovingRight()
+    {
+        Debug.Log("Moving Right!");
+        movingRight = true;
+    }
+
+    public void MovingLeft()
+    {
+        movingRight = false;
     }
 }

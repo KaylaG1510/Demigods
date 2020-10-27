@@ -8525,6 +8525,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563499655}
   m_CullTransparentMesh: 0
+--- !u!1 &1605458078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1605458079}
+  m_Layer: 12
+  m_Name: AttackPtL
+  m_TagString: AttackPtL
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1605458079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605458078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2102757888}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709160094
 GameObject:
   m_ObjectHideFlags: 0
@@ -8661,6 +8691,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4815889960430170716, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
   m_PrefabInstance: {fileID: 1478987885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1846766886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846766887}
+  m_Layer: 12
+  m_Name: AttackPtR
+  m_TagString: AttackPtR
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846766887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846766886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2102757888}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862757620
 GameObject:
   m_ObjectHideFlags: 0
@@ -9485,16 +9545,23 @@ MonoBehaviour:
   IsAlive: 0
   Stunned: 0
   Dying: 0
+  isHit: 0
   m_body2d: {fileID: 2102757890}
   m_animator: {fileID: 1481217372}
   chaseDistance: 0
-  attackRange: 0
+  attackRange: 120
   damage: 0
   attackDelay: 0
   playerTarget: {fileID: 1348937218}
   AttackVelocityX: 0
   ChargeSpeed: 0
   ChargeDuration: 0
+  stompAttackRange: 0
+  clubAttackRange: 0
+  chargeAttackRange: 0
+  StompRange: {fileID: 0}
+  ClubRange: {fileID: 0}
+  ChargeRange: {fileID: 0}
 --- !u!4 &2102757888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 510029215357849975, guid: 5ca6329e7d36246eeb6549670a869c12, type: 3}
