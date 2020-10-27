@@ -1248,7 +1248,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Project Manager \n\nScrum Master\n\nSprite Designer\n\nProgrammers \n\n\n\nTrello
+  m_Text: "Product Owner\n\nScrum Master\n\nSprite Designer\n\nDevelopment Team \n\n\n\nTrello
     Planners \n\n"
 --- !u!222 &1652460617
 CanvasRenderer:
