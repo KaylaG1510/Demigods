@@ -20,6 +20,7 @@
 ---
 
 ## Included assets  
+*Some code from sprites were used, particularly in regards to animations, however other parts were changed reasonably, but not always completely to suit our needs*  
 **Sprites and Templates**  
 [Hero](https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188)  
 [Bandit Enemies](https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130)  

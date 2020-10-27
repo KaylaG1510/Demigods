@@ -34,6 +34,9 @@ public class Minotaur : MonoBehaviour
     private bool ChargeStarted;
     private float ChargeTimer;
 
+    public GameObject AttackPtL;
+    public GameObject AttackPtR;
+
     string m_scene;
 
     // Start is called before the first frame update
@@ -44,7 +47,7 @@ public class Minotaur : MonoBehaviour
         Attacking = false;
         //maxHealth = 500;
         playerTarget = GameObject.FindGameObjectWithTag("Player");
-        attackDelay = 2.5f;
+        attackDelay = 3f;
         damage = 30;
         attackRange = 150;
         m_animator = GetComponentInChildren<Animator>();
@@ -55,6 +58,9 @@ public class Minotaur : MonoBehaviour
         healthBar.SetMaxHealth((int)maxHealth);
         playerTransform = playerTarget.GetComponent<Transform>();
         chaseDistance = 1500;
+
+        AttackPtL = GameObject.FindGameObjectWithTag("MinoAttackL").gameObject;
+        AttackPtR = GameObject.FindGameObjectWithTag("MinoAttackR").gameObject;
 
         //level 2 slower speed and less health
         //level 3 faster, less attack delay and more damage(double health)
@@ -74,31 +80,25 @@ public class Minotaur : MonoBehaviour
     void Update()
     {
         m_animator.SetBool("Alive", IsAlive);
-        //m_animator.SetBool("Walking", true);
+        //m_animator.SetBool("Walking", false);
+        //m_animator.SetBool("Idle", true);
 
-        if (Input.GetKeyDown("1"))
-        {
-            //test attacks
-        }
-
-        //everytime player is in range and attack delay is up,
-        //call:
-        //attackMultiplier(chooseAttack());
+        HandleChargeMovement();
 
         float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
-
-        //when player is within distance, or bottom cave level,
-        //then set trigger to walk, otherwise just idle
-        if (distToPlayer <= chaseDistance)
+        //Debug.Log(distToPlayer);
+        if (distToPlayer <= chaseDistance && !Attacking)
         {
             //Debug.Log("Start chasing");
             m_animator.SetTrigger("Chase");
+            //m_animator.SetBool("Walking", true);
+            //m_animator.SetBool("Idle", false);
         }
-        else if (distToPlayer > chaseDistance)
+        if (distToPlayer > chaseDistance)
         {
             //m_animator.SetBool("Walking", false);
+            //m_animator.SetBool("Idle", false);
             //m_animator.SetBool("Idle", true);
-            //reset trigger??
             m_animator.SetTrigger("StopChase");
         }
 
@@ -107,9 +107,7 @@ public class Minotaur : MonoBehaviour
             Debug.Log(currentHealth);
             currentHealth -= damage;
             Debug.Log(currentHealth);
-            //m_animator.SetTrigger
-            //set up Dazed trigger and animation methods or use:
-            //m_animator.Play("Flinch");
+
             ToggleStun();
             healthBar.SetHealth((int)currentHealth);
 
@@ -118,34 +116,69 @@ public class Minotaur : MonoBehaviour
                 Die();
             }
         }
+
+        if (movingRight)
+        {
+            AttackPtL.SetActive(false);
+            AttackPtR.SetActive(true);
+        }
+        else
+        {
+            AttackPtL.SetActive(true);
+            AttackPtR.SetActive(false);
+        }
+
+        if (distToPlayer < attackRange)
+        {
+            if (Time.time > lastAttackTime + attackDelay)
+            {
+                //show attack anims perform...
+                //send damage message from somewhere
+
+                int damageDealt = (int)attackMultiplier(chooseAttack());
+                //attackDelegate = (int)attackMultiplier(chooseAttack);
+
+                playerTarget.SendMessage("TakeDamage", damageDealt);
+
+                ResetDamage();
+                lastAttackTime = Time.time;
+            }
+        }
     }
+
+    //public delegate AttackDelegate(AttackType a);
+    //AttackDelegate attackDelegate;
 
     private AttackType chooseAttack()
     {
         AttackType attack;
         int rand_num = Random.Range(0, 4);
+        m_animator.SetTrigger("StopChase");
 
         switch (rand_num)
         {
             case 0:
                 attack = AttackType.Stomp;
                 Debug.Log("num: " + rand_num + "Attack Type: Stomp");
+                PerformStomp();
                 break;
             case 1:
                 attack = AttackType.Bash;
                 Debug.Log("num: " + rand_num + "Attack Type: Bash");
+                PerformBash();
                 break;
             case 2:
                 attack = AttackType.Charge;
                 Debug.Log("num: " + rand_num + "Attack Type: Charge");
+                PerformCharge();
                 break;
             case 3:
             default:
                 attack = AttackType.Swing;
                 Debug.Log("num: " + rand_num + "Attack Type: Swing/Default");
+                PerformSwing();
                 break;
         }
-
         return attack;
     }
 
@@ -178,25 +211,22 @@ public class Minotaur : MonoBehaviour
         }
 
         //stub
-        return 2.0f;
+        return damage;
     }
 
     public void Die()
     {
-        //raycast player
         IsAlive = false;
         Debug.Log("Minotaur down");
         m_animator.SetBool("Alive", IsAlive);
         m_animator.SetBool("Dying", Dying);
-        //level 2 over
-        //level 3 over
+        //level 2 over, trigger level 3
+        //level 3 over, trigger credits
     }
 
     public void Stun()
     {
-        //raycast player
         Stunned = true;
-        //m_animator.Play("Flinch");
         m_animator.SetBool("Stunned", Stunned);
         m_animator.SetBool("Idle", false);
         m_animator.SetBool("Walking", false);
@@ -219,11 +249,6 @@ public class Minotaur : MonoBehaviour
         Stunned = false;
         isHit = false;
         m_animator.SetBool("Stunned", Stunned);
-    }
-
-    public void Dazed() //??instead of stunned??
-    {
-        //raycast player
     }
 
     private void HandleChargeMovement()
@@ -250,21 +275,31 @@ public class Minotaur : MonoBehaviour
         Attacking = true;
         ChargeStarted = true;
         SetAttackVelocityX(ChargeSpeed);
+        Debug.Log("Perform Charge called");
     }
 
     private void PerformStomp()
     {
         //mino controller
+        Attacking = true;
+        m_animator.SetBool("StompAttackStart", true);
+        Debug.Log("perform stomp called");
     }
 
     private void PerformBash()
     {
         //mino controller
+        Attacking = true;
+        m_animator.SetBool("BashAttackStart", true);
+        Debug.Log("perform bash called");
     }
 
     private void PerformSwing()
     {
         //mino controller
+        Attacking = true;
+        m_animator.SetBool("SwingAttackStart", true);
+        Debug.Log("perform swing called");
     }
 
     //FixedTick and update animator base methods??
@@ -276,7 +311,7 @@ public class Minotaur : MonoBehaviour
         m_animator.SetBool("BashAttackStart", false);
         m_animator.SetBool("ChargeAttackStart", false);
         m_animator.SetBool("StompAttackStart", false);
-        //SetAttackVelocityX(0);
+        SetAttackVelocityX(0);
     }
 
     public void SetAttackVelocityX(float vel)
@@ -298,7 +333,7 @@ public class Minotaur : MonoBehaviour
 
     //public void ChangeDirection()
     //{
-    //    if(!movingRight)
+    //    if (!movingRight)
     //    {
     //        transform.eulerAngles = new Vector3(0, 0, 0);
     //        movingRight = true;
@@ -322,5 +357,28 @@ public class Minotaur : MonoBehaviour
     public void LoadCredits()
     {
         SceneManager.LoadScene("EndCredit");
+    }
+
+    //draw the three attack ranges
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(AttackPtL.transform.position, attackRange);
+        Gizmos.DrawWireSphere(AttackPtR.transform.position, attackRange);
+    }
+
+    public void MovingRight()
+    {
+        //Debug.Log("Moving Right!");
+        movingRight = true;
+    }
+
+    public void MovingLeft()
+    {
+        movingRight = false;
+    }
+
+    private void ResetDamage()
+    {
+        damage = 30;
     }
 }

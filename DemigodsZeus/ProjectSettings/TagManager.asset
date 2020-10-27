@@ -13,6 +13,8 @@ TagManager:
   - AttackPtL
   - AttackPtR
   - Boss
+  - MinoAttackL
+  - MinoAttackR
   layers:
   - Default
   - TransparentFX

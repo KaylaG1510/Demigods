@@ -44,6 +44,14 @@ public class Boss_Run : StateMachineBehaviour
         m_body2d.MovePosition(newPos);
 
         //if (Vector2.Distance(playerTarget.position, m_body2d.position) <= )
+        if (newPos.x > m_body2d.position.x)
+        {
+            m_body2d.SendMessageUpwards("MovingRight");
+        }
+        else if (newPos.x < m_body2d.position.x)
+        {
+            m_body2d.SendMessageUpwards("MovingLeft");
+        }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
