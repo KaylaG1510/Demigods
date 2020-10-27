@@ -14,6 +14,7 @@ public class Minotaur : MonoBehaviour
     public bool IsAlive;
     public bool Stunned;
     public bool Dying;
+    public bool isHit;
 
     public Rigidbody2D m_body2d;
     public Animator m_animator;
@@ -38,9 +39,7 @@ public class Minotaur : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //initialise all variables from raycast player, controller and
-        //bandit ai code
-        //speed = -100;
+        //speed = -100; XX **set inside walk animation code**
         movingRight = true;
         Attacking = false;
         //maxHealth = 500;
@@ -52,6 +51,7 @@ public class Minotaur : MonoBehaviour
         m_body2d = GetComponent<Rigidbody2D>();
         IsAlive = true;
         Stunned = false;
+        isHit = false;
         healthBar.SetMaxHealth((int)maxHealth);
         playerTransform = playerTarget.GetComponent<Transform>();
         chaseDistance = 1500;
@@ -102,6 +102,22 @@ public class Minotaur : MonoBehaviour
             m_animator.SetTrigger("StopChase");
         }
 
+        if (isHit)
+        {
+            Debug.Log(currentHealth);
+            currentHealth -= damage;
+            Debug.Log(currentHealth);
+            //m_animator.SetTrigger
+            //set up Dazed trigger and animation methods or use:
+            //m_animator.Play("Flinch");
+            ToggleStun();
+            healthBar.SetHealth((int)currentHealth);
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
     }
 
     private AttackType chooseAttack()
@@ -180,7 +196,7 @@ public class Minotaur : MonoBehaviour
     {
         //raycast player
         Stunned = true;
-        m_animator.Play("Flinch");
+        //m_animator.Play("Flinch");
         m_animator.SetBool("Stunned", Stunned);
         m_animator.SetBool("Idle", false);
         m_animator.SetBool("Walking", false);
@@ -201,6 +217,7 @@ public class Minotaur : MonoBehaviour
     public virtual void FinishedStun()
     {
         Stunned = false;
+        isHit = false;
         m_animator.SetBool("Stunned", Stunned);
     }
 
@@ -276,19 +293,7 @@ public class Minotaur : MonoBehaviour
 
     public void TakeDamage(double damage)
     {
-        Debug.Log(currentHealth);
-        currentHealth -= damage;
-        Debug.Log(currentHealth);
-        //m_animator.SetTrigger
-        //set up Dazed trigger and animation methods or use:
-        //m_animator.Play("Flinch");
-        healthBar.SetHealth((int)currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-
+        isHit = true;
     }
 
     //public void ChangeDirection()
