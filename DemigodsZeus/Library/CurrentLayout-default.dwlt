@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Game
   m_RootView: {fileID: 9}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 64
+  controlID: 155
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 881, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 187
+  controlID: 107
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,7 +229,7 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 981
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 188
+  controlID: 132
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 189
+  controlID: 133
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -601,21 +601,21 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/MenuScripts
+    - Assets/Scripts/Dialogue
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/MenuScripts
+  - Assets/Scripts/Dialogue
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\brenk\Documents\GitHub\Demigods\DemigodsZeus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 8}
-    m_SelectedIDs: d04e0000
-    m_LastClickedID: 20176
-    m_ExpandedIDs: 00000000de420000e0420000e2420000e4420000e6420000e8420000ea420000ec420000ee420000f0420000f2420000f4420000f6420000f8420000fa420000fc420000fe420000004300001243000000ca9a3b
+    m_SelectedIDs: 30420000
+    m_LastClickedID: 16944
+    m_ExpandedIDs: 00000000de410000e0410000e2410000e4410000e6410000e8410000ea410000ec410000ee410000f0410000f2410000f4410000f6410000f8410000fa410000fc410000fe410000004200001c42000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -643,7 +643,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de420000e0420000e2420000e4420000e6420000e8420000ea420000ec420000ee420000f0420000f2420000f4420000f6420000f8420000fa420000fc420000fe42000000430000
+    m_ExpandedIDs: 00000000de410000e0410000e2410000e4410000e6410000e8410000ea410000ec410000ee410000f0410000f2410000f4410000f6410000f8410000fa410000fc410000fe41000000420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -767,21 +767,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8488fffff88bffff6692ffff7a95ffff9c98ffff24a1fffffea2ffff16a6ffff88a9ffff56aaffff7eadffffa4aeffffe4b1ffffa4b4ffffe0b5fffff6b7ffffeabeffff48bfffff6cc2ffff0ac3ffff14c6ffff26caffffc2cbffffc0cdffffd6cfffff00d0ffff18d1ffffbed4ffff34d6ffff4ad8ffff22d9ffff2cdcffff30dfffff54e2ffffd0e4fffffce7ffff46e9ffffa2ecffff18f1ffffdef1ffffba3e00009444000098440000724e00008e500000cc50000010520000ac540000ec540000ae550000b255000092560000d2560000aa74000044750000487500002876000022770000267700009c770000a67700002c790000c6790000ca790000aa7a0000de7a0000e67a00001c7c0000207c0000007d0000ec7e0000ee7f0000f27f0000d2800000d8810000dc810000da830000128400001a840000fa86000014870000e68d0000ea8d0000ca8e0000e48e0000
+      m_ExpandedIDs: 5cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Button
-        m_OriginalName: Button
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -24284
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
