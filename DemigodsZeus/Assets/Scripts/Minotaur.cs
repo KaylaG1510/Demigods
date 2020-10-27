@@ -100,6 +100,7 @@ public class Minotaur : MonoBehaviour
             //m_animator.SetBool("Idle", false);
             //m_animator.SetBool("Idle", true);
             m_animator.SetTrigger("StopChase");
+            m_animator.SetBool("Idle", true);
         }
 
         if (isHit)
@@ -153,6 +154,7 @@ public class Minotaur : MonoBehaviour
     {
         AttackType attack;
         int rand_num = Random.Range(0, 4);
+        m_animator.ResetTrigger("Chase");
         m_animator.SetTrigger("StopChase");
 
         switch (rand_num)
@@ -189,7 +191,6 @@ public class Minotaur : MonoBehaviour
         Stomp,
         Charge
     }
-
 
     public double attackMultiplier(AttackType attackType)
     {
