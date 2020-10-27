@@ -47,7 +47,7 @@ public class Minotaur : MonoBehaviour
         Attacking = false;
         //maxHealth = 500;
         playerTarget = GameObject.FindGameObjectWithTag("Player");
-        attackDelay = 2.5f;
+        attackDelay = 3f;
         damage = 30;
         attackRange = 150;
         m_animator = GetComponentInChildren<Animator>();
@@ -59,8 +59,8 @@ public class Minotaur : MonoBehaviour
         playerTransform = playerTarget.GetComponent<Transform>();
         chaseDistance = 1500;
 
-        AttackPtL = GameObject.FindGameObjectWithTag("AttackPtL").gameObject;
-        AttackPtR = GameObject.FindGameObjectWithTag("AttackPtR").gameObject;
+        AttackPtL = GameObject.FindGameObjectWithTag("MinoAttackL").gameObject;
+        AttackPtR = GameObject.FindGameObjectWithTag("MinoAttackR").gameObject;
 
         //level 2 slower speed and less health
         //level 3 faster, less attack delay and more damage(double health)
@@ -113,9 +113,7 @@ public class Minotaur : MonoBehaviour
             Debug.Log(currentHealth);
             currentHealth -= damage;
             Debug.Log(currentHealth);
-            //m_animator.SetTrigger
-            //set up Dazed trigger and animation methods or use:
-            //m_animator.Play("Flinch");
+
             ToggleStun();
             healthBar.SetHealth((int)currentHealth);
 
@@ -127,7 +125,26 @@ public class Minotaur : MonoBehaviour
 
         if (movingRight)
         {
+            AttackPtL.SetActive(false);
+            AttackPtR.SetActive(true);
+        }
+        else
+        {
+            AttackPtL.SetActive(true);
+            AttackPtR.SetActive(false);
+        }
 
+        if (distToPlayer < attackRange)
+        {
+            if (Time.time > lastAttackTime + attackdelay)
+            {
+                //show attack anims perform...
+                //send damage message from somewhere
+
+                playerTarget.SendMessage("TakeDamage", attackMultiplier(chooseAttack));
+
+                lastAttackTime = Time.time;
+            }
         }
     }
 
@@ -141,6 +158,7 @@ public class Minotaur : MonoBehaviour
             case 0:
                 attack = AttackType.Stomp;
                 Debug.Log("num: " + rand_num + "Attack Type: Stomp");
+
                 break;
             case 1:
                 attack = AttackType.Bash;
@@ -189,25 +207,22 @@ public class Minotaur : MonoBehaviour
         }
 
         //stub
-        return 2.0f;
+        return damage;
     }
 
     public void Die()
     {
-        //raycast player
         IsAlive = false;
         Debug.Log("Minotaur down");
         m_animator.SetBool("Alive", IsAlive);
         m_animator.SetBool("Dying", Dying);
-        //level 2 over
-        //level 3 over
+        //level 2 over, trigger level 3
+        //level 3 over, trigger credits
     }
 
     public void Stun()
     {
-        //raycast player
         Stunned = true;
-        //m_animator.Play("Flinch");
         m_animator.SetBool("Stunned", Stunned);
         m_animator.SetBool("Idle", false);
         m_animator.SetBool("Walking", false);
@@ -230,11 +245,6 @@ public class Minotaur : MonoBehaviour
         Stunned = false;
         isHit = false;
         m_animator.SetBool("Stunned", Stunned);
-    }
-
-    public void Dazed() //??instead of stunned??
-    {
-        //raycast player
     }
 
     private void HandleChargeMovement()
@@ -266,16 +276,22 @@ public class Minotaur : MonoBehaviour
     private void PerformStomp()
     {
         //mino controller
+        Attacking = true;
+        m_animator.SetBool("StompAttackStart", true);
     }
 
     private void PerformBash()
     {
         //mino controller
+        Attacking = true;
+        m_animator.SetBool("BashAttackStart", true);
     }
 
     private void PerformSwing()
     {
         //mino controller
+        Attacking = true;
+        m_animator.SetBool("SwingAttackStart", true);
     }
 
     //FixedTick and update animator base methods??
@@ -287,7 +303,7 @@ public class Minotaur : MonoBehaviour
         m_animator.SetBool("BashAttackStart", false);
         m_animator.SetBool("ChargeAttackStart", false);
         m_animator.SetBool("StompAttackStart", false);
-        //SetAttackVelocityX(0);
+        SetAttackVelocityX(0);
     }
 
     public void SetAttackVelocityX(float vel)
@@ -309,7 +325,7 @@ public class Minotaur : MonoBehaviour
 
     //public void ChangeDirection()
     //{
-    //    if(!movingRight)
+    //    if (!movingRight)
     //    {
     //        transform.eulerAngles = new Vector3(0, 0, 0);
     //        movingRight = true;

@@ -13,9 +13,8 @@ TagManager:
   - AttackPtL
   - AttackPtR
   - Boss
-  - Stomp
-  - Club
-  - Charge
+  - MinoAttackL
+  - MinoAttackR
   layers:
   - Default
   - TransparentFX
