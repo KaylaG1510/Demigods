@@ -27,11 +27,24 @@ public class LevelEnd : MonoBehaviour
         }
     }
 
-    //Return to main menu (return to menu button pressed)
     public void OnEnd()
     {
-        SceneManager.LoadScene("LevelTwo");
-        Time.timeScale = 1f;
+        string s_name = SceneManager.GetActiveScene().name;
+        if (s_name.CompareTo("LevelThree") == 0)
+        {
+            //**ADD DELAY???
+            SceneManager.LoadScene("EndCredit");
+        }
+        else if (s_name.CompareTo("LevelTwo") == 0)
+        {
+            SceneManager.LoadScene("LevelThree");
+            Time.timeScale = 1f;
+        }
+        else if (s_name.CompareTo("LevelOne") == 0)
+        {
+            SceneManager.LoadScene("LevelTwo");
+            Time.timeScale = 1f;
+        }
 
     }
 

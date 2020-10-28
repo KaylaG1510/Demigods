@@ -8844,7 +8844,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6368560714019504558, guid: b5e5571f3fc9d45d793591a10b35d2e1, type: 3}
   m_PrefabInstance: {fileID: 1478987885}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2009805562
+--- !u!114 &2009805568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9156,11 +9156,11 @@ PrefabInstance:
       objectReference: {fileID: 1348937218}
     - target: {fileID: 8997839626233238193, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: m_Offset.x
-      value: 0.20439799
+      value: 0.18215321
       objectReference: {fileID: 0}
     - target: {fileID: 8997839626233238193, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: m_Size.x
-      value: 1.3702341
+      value: 1.3257458
       objectReference: {fileID: 0}
     - target: {fileID: 8997839626233238195, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: m_LocalPosition.x

@@ -37,11 +37,14 @@ public class Minotaur : MonoBehaviour
     public GameObject AttackPtL;
     public GameObject AttackPtR;
 
+    public GameObject winMenu;
+
     string m_scene;
 
     // Start is called before the first frame update
     void Start()
     {
+        winMenu.SetActive(false);
         //speed = -100; XX **set inside walk animation code**
         movingRight = true;
         Attacking = false;
@@ -118,7 +121,8 @@ public class Minotaur : MonoBehaviour
 
                     ResetDamage();
                     lastAttackTime = Time.time;
-                    StopAttacks();
+                    //StopAttacks();
+                    Invoke("StopAttacks", 3.0f);
                 }
             }
         }
@@ -251,16 +255,6 @@ public class Minotaur : MonoBehaviour
         //**FIX SO BOTH DEATH ANIMATIONS PLAY
         //level 2 over, trigger level 3
         //level 3 over, trigger credits
-        string s_name = SceneManager.GetActiveScene().name;
-        if(s_name.CompareTo("LevelThree") == 0)
-        {
-            //**ADD DELAY???
-            SceneManager.LoadScene("EndCredit");
-        }
-        else if (s_name.CompareTo("LevelTwo") == 0)
-        {
-            SceneManager.LoadScene("LevelThree");
-        }
     }
 
     public void Stun()
@@ -429,5 +423,11 @@ public class Minotaur : MonoBehaviour
     {
         damage = 30;
         m_animator.SetTrigger("Chase");
+    }
+
+    public void EndGame()
+    {
+        winMenu.SetActive(true);
+        Time.timeScale = 0;
     }
 }
