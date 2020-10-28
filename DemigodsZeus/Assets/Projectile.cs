@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     private float nextAttackTime;
     private float attackDelay = 2f;
 
+
     void start()
     {
         //Animator an = gameObject.GetComponent<Animator>();

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1832699049565772819}
   - component: {fileID: 5192424595771558278}
   - component: {fileID: 3645886162818494861}
+  - component: {fileID: -405008804713212648}
   m_Layer: 0
   m_Name: Slash
   m_TagString: Untagged
@@ -136,3 +137,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 350
   rb: {fileID: 1832699049565772819}
+  Damage: 0
+--- !u!111 &-405008804713212648
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340790888728631023}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

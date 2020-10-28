@@ -7,9 +7,9 @@ using Debug = UnityEngine.Debug;
 
 public class Slash : MonoBehaviour
 {
-    public float speed = 30f;
+    private float speed = 250f;
     public Rigidbody2D rb;
-    public int Damage;
+    private int Damage;
 
 
     // Start is called before the first frame update

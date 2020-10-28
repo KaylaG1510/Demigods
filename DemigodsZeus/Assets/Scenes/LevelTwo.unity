@@ -841,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 782523751}
-  slashPrefab: {fileID: 3340790888728631023, guid: da90a38ed8946474d8f075e1c3df5e0d, type: 3}
+  slashPrefab: {fileID: 2617847326418794352, guid: 818322785b88734488e2e8f3740a322a, type: 3}
 --- !u!1 &438783436
 GameObject:
   m_ObjectHideFlags: 0
