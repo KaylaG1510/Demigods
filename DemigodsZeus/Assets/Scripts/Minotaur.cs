@@ -99,6 +99,11 @@ public class Minotaur : MonoBehaviour
         //    m_animator.SetBool("Attacking", false);
         //}
 
+        if(IsAlive)
+        {
+            m_animator.SetTrigger("Dad");
+        }
+
         float distToPlayer = Vector3.Distance(transform.position, playerTarget.transform.position);
         //Debug.Log(distToPlayer);
         if (distToPlayer <= chaseDistance && !Attacking)
@@ -147,6 +152,7 @@ public class Minotaur : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Die();
+                IsAlive = false;
             }
         }
 
@@ -250,8 +256,8 @@ public class Minotaur : MonoBehaviour
     {
         IsAlive = false;
         Debug.Log("Minotaur down");
-        m_animator.SetBool("Alive", IsAlive);
-        m_animator.SetBool("Dying", Dying);
+        //m_animator.SetBool("Alive", IsAlive);
+        //m_animator.SetBool("Dying", Dying);
         //**FIX SO BOTH DEATH ANIMATIONS PLAY
         //level 2 over, trigger level 3
         //level 3 over, trigger credits
@@ -429,5 +435,17 @@ public class Minotaur : MonoBehaviour
     {
         winMenu.SetActive(true);
         Time.timeScale = 0;
+
+        string s_name = SceneManager.GetActiveScene().name;
+        if (s_name.CompareTo("LevelThree") == 0)
+        {
+            //**ADD DELAY???
+            SceneManager.LoadScene("EndCredit");
+        }
+        else if (s_name.CompareTo("LevelTwo") == 0)
+        {
+            SceneManager.LoadScene("LevelThree");
+            Time.timeScale = 1f;
+        }
     }
 }
