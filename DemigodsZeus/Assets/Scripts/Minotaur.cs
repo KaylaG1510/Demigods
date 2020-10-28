@@ -100,6 +100,7 @@ public class Minotaur : MonoBehaviour
             //m_animator.SetBool("Idle", false);
             //m_animator.SetBool("Idle", true);
             m_animator.SetTrigger("StopChase");
+            m_animator.SetBool("Idle", true);
         }
 
         if (isHit)
@@ -153,6 +154,7 @@ public class Minotaur : MonoBehaviour
     {
         AttackType attack;
         int rand_num = Random.Range(0, 4);
+        m_animator.ResetTrigger("Chase");
         m_animator.SetTrigger("StopChase");
 
         switch (rand_num)
@@ -190,7 +192,6 @@ public class Minotaur : MonoBehaviour
         Charge
     }
 
-
     public double attackMultiplier(AttackType attackType)
     {
         //changes damage multiplier depending on attack
@@ -220,8 +221,19 @@ public class Minotaur : MonoBehaviour
         Debug.Log("Minotaur down");
         m_animator.SetBool("Alive", IsAlive);
         m_animator.SetBool("Dying", Dying);
+        //**FIX SO BOTH DEATH ANIMATIONS PLAY
         //level 2 over, trigger level 3
         //level 3 over, trigger credits
+        string s_name = SceneManager.GetActiveScene.name;
+        if(s_name.CompareTo("LevelThree") == 0)
+        {
+            //**ADD DELAY???
+            SceneManager.LoadScene("EndCredit");
+        }
+        else if (s_name.CompareTo("LevelTwo") == 0)
+        {
+            SceneManager.LoadScene("LevelThree");
+        }
     }
 
     public void Stun()

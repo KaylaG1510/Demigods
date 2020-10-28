@@ -340,8 +340,6 @@ public class HeroKnight : MonoBehaviour
                 enemy.GetComponent<Minotaur>().TakeDamage(Damage);
             }
         }
-
-        //***add another collider check for minotaur??
     }
 
     //for circle collider on sword
