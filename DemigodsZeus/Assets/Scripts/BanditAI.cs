@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class BanditAI : MonoBehaviour
 {
@@ -146,6 +148,7 @@ public class BanditAI : MonoBehaviour
     {
         //negate damage dealth
         currentHealth -= damage;
+        Debug.Log(currentHealth);
         //display hurt animation
         m_animator.SetTrigger("Hurt");
         //update health bar to new current health

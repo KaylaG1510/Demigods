@@ -7,14 +7,16 @@ using Debug = UnityEngine.Debug;
 
 public class Slash : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 30f;
     public Rigidbody2D rb;
+    public int Damage;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * speed;
+        Damage = 15;
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
@@ -29,6 +31,13 @@ public class Slash : MonoBehaviour
         {
             Destroy(gameObject);
         }*/
+
+        if (hitInfo.CompareTag("Enemy"))
+        {
+            hitInfo.SendMessage("takeDamage", Damage);
+            Destroy(gameObject);
+        }
+        
     }
 
   

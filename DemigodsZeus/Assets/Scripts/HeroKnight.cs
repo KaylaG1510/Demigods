@@ -18,9 +18,9 @@ public class HeroKnight : MonoBehaviour
     public HealthBar healthBar;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    public Transform FirePoint;
-    public GameObject slashPrefab;
-    public Boolean test = false;
+    //public Transform FirePoint;
+    //public GameObject slashPrefab;
+    //public Boolean test = false;
 
     public GameObject AttackPtL;
     public GameObject AttackPtR;
@@ -191,22 +191,21 @@ public class HeroKnight : MonoBehaviour
         }
 
         //Testing projectile
-        if (Input.GetKeyDown("q"))
+        /*if (Input.GetButtonDown("Fire1"))
         {
-            //test = true;
+            test = true;
             m_animator.SetTrigger("Charge");
             m_animator.SetBool("hold", true);
-            if (test == false)
+            if (test)
             {
-                test = true;
                 Shoot();
             }
         }
-        else if (Input.GetKeyUp("q"))
+        else if (Input.GetButtonUp("Fire1"))
         {
             m_animator.SetBool("hold", false);
             //test = false;
-        }
+        }*/
 
         // Block
         else if (Input.GetKeyDown("e"))
@@ -369,14 +368,13 @@ public class HeroKnight : MonoBehaviour
         }
     }
 
-    void Shoot()
+    /*void Shoot()
     {
-        if (Input.GetKeyDown("q"))
-        {
-           Instantiate(slashPrefab, FirePoint.position, FirePoint.rotation);
-        }
-        
-    }
+        Instantiate(slashPrefab, FirePoint.position, FirePoint.rotation);
+        test = false;
+
+
+    }*/
 
     /*void project()
     {

@@ -6,21 +6,33 @@ public class Projectile : MonoBehaviour
 {
     public Transform FirePoint;
     public GameObject slashPrefab;
-    //private Animator m_animator;
+    private float nextAttackTime;
+    private float attackDelay = 2f;
 
-    /*void start()
+    void start()
     {
-        m_animator = GetComponentInParent<Animator>();
-    }*/
+        //Animator an = gameObject.GetComponent<Animator>();
+        //an.SetTrigger("Charge");
+        //an.SetBool("hold", true);
+        nextAttackTime = 0f;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Shoot();
-        
+        if (Time.time >= nextAttackTime)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+                nextAttackTime = Time.time + attackDelay;
+            }  
+        }
     }
 
     void Shoot ()
     {
-        Instantiate(slashPrefab, FirePoint.position, FirePoint.rotation); 
+        GameObject test = Instantiate(slashPrefab, FirePoint.position, FirePoint.rotation);
+        Destroy(test, 2f);
     }
 }
