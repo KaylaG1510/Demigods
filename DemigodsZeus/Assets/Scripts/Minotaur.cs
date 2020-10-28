@@ -118,7 +118,7 @@ public class Minotaur : MonoBehaviour
 
                     ResetDamage();
                     lastAttackTime = Time.time;
-                    StopAttacks();
+                    //StopAttacks();
                 }
             }
         }
