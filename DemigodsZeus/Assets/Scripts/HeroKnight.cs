@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class HeroKnight : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class HeroKnight : MonoBehaviour
     public HealthBar healthBar;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public Transform FirePoint;
+    public GameObject slashPrefab;
+    public Boolean test = false;
 
     public GameObject AttackPtL;
     public GameObject AttackPtR;
@@ -185,6 +189,25 @@ public class HeroKnight : MonoBehaviour
             Attack();
 
         }
+
+        //Testing projectile
+        if (Input.GetKeyDown("q"))
+        {
+            //test = true;
+            m_animator.SetTrigger("Charge");
+            m_animator.SetBool("hold", true);
+            if (test == false)
+            {
+                test = true;
+                Shoot();
+            }
+        }
+        else if (Input.GetKeyUp("q"))
+        {
+            m_animator.SetBool("hold", false);
+            //test = false;
+        }
+
         // Block
         else if (Input.GetKeyDown("e"))
         {
@@ -347,4 +370,19 @@ public class HeroKnight : MonoBehaviour
             m_body2d.MovePosition(newPos);
         }
     }
+
+    void Shoot()
+    {
+        if (Input.GetKeyDown("q"))
+        {
+           Instantiate(slashPrefab, FirePoint.position, FirePoint.rotation);
+        }
+        
+    }
+
+    /*void project()
+    {
+        Projectile test = GetComponent<Projectile>();
+        test.Shoot();
+    }*/
 }

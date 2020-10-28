@@ -962,7 +962,7 @@ AnimatorStateMachine:
     m_Position: {x: 710, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5302019066471986684}
-    m_Position: {x: 690, y: 400, z: 0}
+    m_Position: {x: 690, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2734032535574507059}
     m_Position: {x: 10, y: 400, z: 0}
@@ -1023,6 +1023,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Time
     m_EventTreshold: 3
+  - m_ConditionMode: 2
+    m_ConditionEvent: hold
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2886744800836623218}
   m_Solo: 0
@@ -1950,14 +1953,20 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Pressed
-    m_Type: 4
+  - m_Name: Time
+    m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Time
-    m_Type: 1
+  - m_Name: Charge
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: hold
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -3061,7 +3070,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Pressed
+    m_ConditionEvent: Charge
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3760311523872053123}
@@ -3069,9 +3078,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.75000006
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -3088,6 +3097,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Time
     m_EventTreshold: 3
+  - m_ConditionMode: 2
+    m_ConditionEvent: hold
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2734032535574507059}
   m_Solo: 0
