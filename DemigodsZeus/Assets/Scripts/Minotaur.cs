@@ -71,10 +71,12 @@ public class Minotaur : MonoBehaviour
         if (m_scene.CompareTo("LevelTwo") == 0)
         {
             maxHealth = 500;
+            currentHealth = maxHealth;
         }
         else if (m_scene.CompareTo("LevelThree") == 0)
         {
-            maxHealth = 900;
+            maxHealth = 1800;
+            currentHealth = maxHealth;
         }
         currentHealth = maxHealth;
     }
@@ -261,6 +263,7 @@ public class Minotaur : MonoBehaviour
         //**FIX SO BOTH DEATH ANIMATIONS PLAY
         //level 2 over, trigger level 3
         //level 3 over, trigger credits
+        EndGame();
     }
 
     public void Stun()
@@ -440,12 +443,13 @@ public class Minotaur : MonoBehaviour
         if (s_name.CompareTo("LevelThree") == 0)
         {
             //**ADD DELAY???
+            Time.timeScale = 1f;
             SceneManager.LoadScene("EndCredit");
         }
         else if (s_name.CompareTo("LevelTwo") == 0)
         {
-            SceneManager.LoadScene("LevelThree");
             Time.timeScale = 1f;
+            SceneManager.LoadScene("LevelThree");
         }
     }
 }

@@ -9606,10 +9606,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 906205364, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 906205365, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 906205365, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.57
+      objectReference: {fileID: 0}
     - target: {fileID: 906205366, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 664518403}
+    - target: {fileID: 906205369, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 664518402}
     - target: {fileID: 1481217370, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: playerTarget
       value: 
@@ -9626,6 +9642,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1709160095, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709160095, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1846766887, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -9633,6 +9657,22 @@ PrefabInstance:
     - target: {fileID: 1846766887, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998833310, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998833310, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998833312, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_MaxValue
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998833312, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: m_Value
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2102757887, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: playerTarget
@@ -9642,6 +9682,14 @@ PrefabInstance:
       propertyPath: winMenu
       value: 
       objectReference: {fileID: 1518972136}
+    - target: {fileID: 2102757887, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: maxHealth
+      value: 1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102757887, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
+      propertyPath: Dying
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8997839626233238193, guid: 2266004aafd1f49d78a13c5c324966a5, type: 3}
       propertyPath: m_Offset.x
       value: 0.18215321
