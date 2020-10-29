@@ -1,6 +1,6 @@
 # Demigods: Zeus' Wrath
 ---  
-*Introduction to game*  
+*This game is a 2D platformer with a fictional narrative surrounding greek mythology. It features multiple levels and various attacks/enemies for the player to take on.*  
 
 
 ## Audio Sources  
