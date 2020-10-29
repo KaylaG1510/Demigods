@@ -51,17 +51,33 @@ public class Projectile : MonoBehaviour
         Debug.Log(facingRight);
         if(!facingRight)
         {
-            shootRight = false;
-            Debug.Log(shootRight + " left");
-            FirePointL.transform.eulerAngles = new Vector3(0, -180, 0);
-            Shoot();
+            if (Time.time >= nextAttackTime)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    //Shoot();
+                    shootRight = false;
+                    Debug.Log(shootRight + " left");
+                    FirePointL.transform.eulerAngles = new Vector3(0, -180, 0);
+                    Shoot();
+                    nextAttackTime = Time.time + attackDelay;
+                }
+            }
         }
         else
         {
-            Debug.Log(shootRight + " Right");
-            shootRight = true;
-            FirePointR.transform.eulerAngles = new Vector3(0, 0, 0);
-            Shoot();
+            if (Time.time >= nextAttackTime)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    //Shoot();
+                    Debug.Log(shootRight + " Right");
+                    shootRight = true;
+                    FirePointR.transform.eulerAngles = new Vector3(0, 0, 0);
+                    Shoot();
+                    nextAttackTime = Time.time + attackDelay;
+                }
+            }
         }
     }
 }
