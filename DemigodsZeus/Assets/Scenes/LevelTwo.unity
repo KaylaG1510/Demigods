@@ -921,7 +921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e57ee3a6b7c9284899e5bb47e31d7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: ' .... (Left Mouse Click To Continue | C to Close Dialogue)'
+  input: This creature seems to have immunity to that type of blade... *lucky you
+    have a projectile*  (Left Mouse Click To Continue | C to Close Dialogue)
   textFont: {fileID: 12800000, guid: 3ff8a2e7268e54e20a48c3d89f1d13f5, type: 3}
   delay: 0.1
   delayBetweenLines: 2

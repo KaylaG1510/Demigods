@@ -17,20 +17,6 @@ public class Projectile : MonoBehaviour
         nextAttackTime = 0f;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Time.time >= nextAttackTime)
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                //Shoot();
-                
-                nextAttackTime = Time.time + attackDelay;
-            }  
-        }
-    }
-
     void Shoot()
     {
         GameObject test;
@@ -53,6 +39,7 @@ public class Projectile : MonoBehaviour
         {
             if (Time.time >= nextAttackTime)
             {
+                Debug.Log("bailey smells");
                 if (Input.GetButtonDown("Fire1"))
                 {
                     //Shoot();
@@ -68,6 +55,7 @@ public class Projectile : MonoBehaviour
         {
             if (Time.time >= nextAttackTime)
             {
+                Debug.Log("brendan smells");
                 if (Input.GetButtonDown("Fire1"))
                 {
                     //Shoot();
