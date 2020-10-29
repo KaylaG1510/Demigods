@@ -144,7 +144,7 @@ public class BanditAI : MonoBehaviour
     }
 
     //receives message from hero to take damage
-    public void takeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         //negate damage dealth
         currentHealth -= damage;

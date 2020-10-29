@@ -18,9 +18,10 @@ public class HeroKnight : MonoBehaviour
     public HealthBar healthBar;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    //public Transform FirePoint;
-    //public GameObject slashPrefab;
-    //public Boolean test = false;
+
+    public GameObject FirePointL;
+    public GameObject FirePointR;
+    public Projectile projectile;
 
     public GameObject AttackPtL;
     public GameObject AttackPtR;
@@ -68,6 +69,9 @@ public class HeroKnight : MonoBehaviour
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
         AttackPtL = GameObject.FindGameObjectWithTag("AttackPtL").gameObject;
         AttackPtR = GameObject.FindGameObjectWithTag("AttackPtR").gameObject;
+        FirePointL = GameObject.FindGameObjectWithTag("FirePtL").gameObject;
+        FirePointR = GameObject.FindGameObjectWithTag("FirePtR").gameObject;
+        projectile = gameObject.GetComponent<Projectile>();
     }
 
     // Update is called once per frame
@@ -154,11 +158,18 @@ public class HeroKnight : MonoBehaviour
         {
             AttackPtL.SetActive(false);
             AttackPtR.SetActive(true);
+
+            FirePointL.SetActive(false);
+            FirePointR.SetActive(true);
+           
         }
         else //moving left
         {
             AttackPtL.SetActive(true);
             AttackPtR.SetActive(false);
+
+            FirePointL.SetActive(true);
+            FirePointR.SetActive(false);
         }
 
         //Set AirSpeed in animator
@@ -187,25 +198,25 @@ public class HeroKnight : MonoBehaviour
 
             //attack enemy
             Attack();
-
         }
 
-        //Testing projectile
-        /*if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
-            test = true;
-            m_animator.SetTrigger("Charge");
-            m_animator.SetBool("hold", true);
-            if (test)
+            if (projectile == null)
             {
-                Shoot();
+                Debug.Log("projectile null");
+            }
+
+            if(m_facingDirection == 1)
+            {
+                projectile.SendMessage("FacingRight", true);
+                Debug.Log("Trying to send msg");
+            }
+            else
+            {
+                projectile.SendMessage("FacingRight", false);
             }
         }
-        else if (Input.GetButtonUp("Fire1"))
-        {
-            m_animator.SetBool("hold", false);
-            //test = false;
-        }*/
 
         // Block
         else if (Input.GetKeyDown("e"))
@@ -248,9 +259,6 @@ public class HeroKnight : MonoBehaviour
                 if (m_delayToIdle < 0)
                     m_animator.SetInteger("AnimState", 0);
             }
-            //character dies
-            //Death();
-
         }
 
         // Called in slide animation.
@@ -294,8 +302,6 @@ public class HeroKnight : MonoBehaviour
                 m_animator.SetTrigger("Death");
                 //tell levelCanvas to pull up GameOver screen
                 levelCanvas.SendMessage("InvokeMenuAfterDeath");
-
-                //deactiveate enemy health bars so dont take up menu space??
             }
         }
         else //player blocked attack
@@ -332,7 +338,7 @@ public class HeroKnight : MonoBehaviour
             //enemy.GetComponent<BanditAI>().takeDamage(Damage);
             if (enemy.CompareTag("Enemy"))
             {
-                enemy.GetComponent<BanditAI>().takeDamage(Damage);
+                enemy.GetComponent<BanditAI>().TakeDamage(Damage);
             }
             else if (enemy.CompareTag("Boss"))
             {
@@ -367,18 +373,4 @@ public class HeroKnight : MonoBehaviour
             m_body2d.MovePosition(newPos);
         }
     }
-
-    /*void Shoot()
-    {
-        Instantiate(slashPrefab, FirePoint.position, FirePoint.rotation);
-        test = false;
-
-
-    }*/
-
-    /*void project()
-    {
-        Projectile test = GetComponent<Projectile>();
-        test.Shoot();
-    }*/
 }

@@ -16,6 +16,8 @@ TagManager:
   - MinoAttackL
   - MinoAttackR
   - Dialogue
+  - FirePtL
+  - FirePtR
   layers:
   - Default
   - TransparentFX
