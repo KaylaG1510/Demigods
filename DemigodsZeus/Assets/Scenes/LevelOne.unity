@@ -25988,6 +25988,10 @@ PrefabInstance:
       propertyPath: slashPrefab
       value: 
       objectReference: {fileID: 3340790888728631023, guid: da90a38ed8946474d8f075e1c3df5e0d, type: 3}
+    - target: {fileID: 1613373716416825512, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1493049323}
     - target: {fileID: 1727702559709651467, guid: 3bb55553d3f594917adb5273a2046e34, type: 3}
       propertyPath: m_Material
       value: 

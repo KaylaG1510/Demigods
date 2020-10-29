@@ -14,9 +14,6 @@ public class Projectile : MonoBehaviour
 
     void start()
     {
-        //Animator an = gameObject.GetComponent<Animator>();
-        //an.SetTrigger("Charge");
-        //an.SetBool("hold", true);
         nextAttackTime = 0f;
     }
 
@@ -36,7 +33,6 @@ public class Projectile : MonoBehaviour
 
     void Shoot()
     {
-        //GameObject test = Instantiate(slashPrefab, FirePoint.position, FirePoint.rotation);
         GameObject test;
         if(shootRight)
         {
@@ -56,23 +52,17 @@ public class Projectile : MonoBehaviour
         if(!facingRight)
         {
             shootRight = false;
-            Debug.Log(shootRight + "left");
-            //initialise both firepoints, then fire from correct one??
-            //FirePoint = GameObject.FindGameObjectWithTag("FirePtR").transform;
+            Debug.Log(shootRight + " left");
             FirePointL.transform.eulerAngles = new Vector3(0, -180, 0);
             Shoot();
-            //slashPrefab.GetComponent<Slash>().rb.velocity *= -1;
-            //Debug.Log(slashPrefab.GetComponent<Slash>().rb.velocity);
         }
         else
         {
-            Debug.Log("ShootRight");
+            Debug.Log(shootRight + " Right");
             shootRight = true;
-            //FirePoint = GameObject.FindGameObjectWithTag("FirePtL").transform;
             FirePointR.transform.eulerAngles = new Vector3(0, 0, 0);
             Shoot();
         }
-        //Debug.Log(slashPrefab.GetComponent<Slash>().rb.velocity);
     }
 }
 

@@ -2294,6 +2294,10 @@ PrefabInstance:
       propertyPath: enemyLayers.m_Bits
       value: 6144
       objectReference: {fileID: 0}
+    - target: {fileID: 3462664396431512853, guid: cd5ccc33e9f264c4aab08936d0b8b1c0, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 796608678}
     - target: {fileID: 4129083949399984852, guid: cd5ccc33e9f264c4aab08936d0b8b1c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -705
@@ -2374,7 +2378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae3997917f5b0984d9657813e3b6e768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirePoint: {fileID: 1630016580}
+  FirePointL: {fileID: 2094613253}
+  FirePointR: {fileID: 1630016580}
   slashPrefab: {fileID: 2617847326418794352, guid: 818322785b88734488e2e8f3740a322a, type: 3}
 --- !u!1 &836567727
 GameObject:
@@ -8341,8 +8346,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1630016580}
   m_Layer: 9
-  m_Name: FirePoint
-  m_TagString: Untagged
+  m_Name: FirePointR
+  m_TagString: FirePtR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9078,6 +9083,36 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7858571396631680181, guid: bdb14b73823e84ace9e217d1ba22efdc, type: 3}
   m_PrefabInstance: {fileID: 2080637688}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2094613252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094613253}
+  m_Layer: 9
+  m_Name: FirePointL
+  m_TagString: FirePtL
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2094613253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094613252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.334, y: 0.004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 796608671}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1589597919098920453
 PrefabInstance:
   m_ObjectHideFlags: 0

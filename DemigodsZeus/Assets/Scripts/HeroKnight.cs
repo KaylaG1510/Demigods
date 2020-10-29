@@ -18,9 +18,6 @@ public class HeroKnight : MonoBehaviour
     public HealthBar healthBar;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    //public Transform FirePoint;
-    //public GameObject slashPrefab;
-    //public Boolean test = false;
 
     public GameObject FirePointL;
     public GameObject FirePointR;
@@ -221,23 +218,6 @@ public class HeroKnight : MonoBehaviour
             }
         }
 
-        //Testing projectile
-        /*if (Input.GetButtonDown("Fire1"))
-        {
-            test = true;
-            m_animator.SetTrigger("Charge");
-            m_animator.SetBool("hold", true);
-            if (test)
-            {
-                Shoot();
-            }
-        }
-        else if (Input.GetButtonUp("Fire1"))
-        {
-            m_animator.SetBool("hold", false);
-            //test = false;
-        }*/
-
         // Block
         else if (Input.GetKeyDown("e"))
         {
@@ -279,9 +259,6 @@ public class HeroKnight : MonoBehaviour
                 if (m_delayToIdle < 0)
                     m_animator.SetInteger("AnimState", 0);
             }
-            //character dies
-            //Death();
-
         }
 
         // Called in slide animation.
@@ -325,8 +302,6 @@ public class HeroKnight : MonoBehaviour
                 m_animator.SetTrigger("Death");
                 //tell levelCanvas to pull up GameOver screen
                 levelCanvas.SendMessage("InvokeMenuAfterDeath");
-
-                //deactiveate enemy health bars so dont take up menu space??
             }
         }
         else //player blocked attack
