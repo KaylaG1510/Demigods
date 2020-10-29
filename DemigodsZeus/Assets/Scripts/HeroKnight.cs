@@ -330,8 +330,6 @@ public class HeroKnight : MonoBehaviour
             hitEnemies = Physics2D.OverlapCircleAll(AttackPtL.transform.position, attackRange, enemyLayers);
         }
 
-        //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPointR.position, attackRange, enemyLayers);
-
         //check each enemy
         foreach (Collider2D enemy in hitEnemies)
         {
